@@ -2,7 +2,7 @@
 
 > An interview that helps you zoom in on what to ship, to whom, by when; run by Claude or ChatGPT, or walked on this site; the output in your own words.
 
-*Source: <https://startups.sgit.ai/finder/index.html> · site v0.1.2 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/finder/index.html> · site v0.1.3 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

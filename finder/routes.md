@@ -2,7 +2,7 @@
 
 > The finder's routes, each with its next steps, and the rules that pick one from the signals.
 
-*Source: <https://startups.sgit.ai/finder/routes.html> · site v0.1.2 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/finder/routes.html> · site v0.1.3 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

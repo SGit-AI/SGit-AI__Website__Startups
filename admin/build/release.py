@@ -119,7 +119,7 @@ class Release:
         br = self.branch()
         self.push(br)
         if self.args.dev and br != "dev":
-            self.run("git", "push", "-u", "origin", f"{br}:dev")
+            self.run("git", "push", "origin", f"{br}:dev")  # no -u: the branch keeps tracking itself
         print(f"release: pushed {subject!r} to {br}" + (" and dev" if self.args.dev else ""))
 
     def push(self, br):
