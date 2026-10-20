@@ -10,6 +10,11 @@
    "version": "v0.1.1",
    "date": "2026-10-20",
    "what": "The first deploy verified: v0.1.0 went live from dev through validate, test, tag and deploy within a minute of the push, recorded in the reality file and the engineer's issue 003 closed; the release script gains a commit body for attribution and makes this release itself."
+  },
+  {
+   "version": "v0.1.2",
+   "date": "2026-10-20",
+   "what": "The release script no longer retargets the working branch's upstream to dev when it pushes dev; no page changes."
   }
  ]
 }

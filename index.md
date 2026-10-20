@@ -2,7 +2,7 @@
 
 > startups.sgit.ai: an interview that helps a founder zoom in on what to ship, to whom, by when, run by Claude or ChatGPT or walked on the site; and the vault substrate and business plans to build it on.
 
-*Source: <https://startups.sgit.ai/> · site v0.1.1 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/> · site v0.1.2 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

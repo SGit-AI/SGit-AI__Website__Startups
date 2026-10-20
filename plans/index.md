@@ -2,7 +2,7 @@
 
 > 8 complete business plans published as vaults on sgit.ai, for other people to build companies on: how to take one, and what every plan contains.
 
-*Source: <https://startups.sgit.ai/plans/index.html> · site v0.1.1 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/plans/index.html> · site v0.1.2 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

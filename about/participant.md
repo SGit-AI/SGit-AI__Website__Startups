@@ -2,7 +2,7 @@
 
 > Who publishes this site, how it is written, and where its approach loses.
 
-*Source: <https://startups.sgit.ai/about/participant.html> · site v0.1.1 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/about/participant.html> · site v0.1.2 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

@@ -1,6 +1,6 @@
 # startups.sgit.ai
 
-> Find your startup, then ship it. An interview (the finder) that helps a founder zoom in on what to ship, to whom, by when, run by Claude or ChatGPT or walked on the site, with the output in the founder's own words; the vault substrate that makes shipping cheap; and the business plans published as vaults to build on. By Dinis Cruz and this site's agents. Site v0.1.1.
+> Find your startup, then ship it. An interview (the finder) that helps a founder zoom in on what to ship, to whom, by when, run by Claude or ChatGPT or walked on the site, with the output in the founder's own words; the vault substrate that makes shipping cheap; and the business plans published as vaults to build on. By Dinis Cruz and this site's agents. Site v0.1.2.
 
 ## The rule of the finder
 We are not passing judgement. The right startup for a person is the one they are passionate about and will keep working on. What we help with is focus, and shipping: something a stranger can use, now.

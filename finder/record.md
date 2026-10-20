@@ -2,7 +2,7 @@
 
 > The finder's output, your startup in your own words: the template, the published examples, and how to keep yours.
 
-*Source: <https://startups.sgit.ai/finder/record.html> · site v0.1.1 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/finder/record.html> · site v0.1.2 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
