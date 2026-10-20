@@ -1,0 +1,11 @@
+{
+ "what": "The public half of this site's feedback lane: where the pane appends and the key it seals to. A vault id and a public key are publishable; the append token, which is the gate, is not here and never will be. Made by admin/build/feedback.py setup.",
+ "endpoint": "https://dev.send.sgraph.ai",
+ "vault": "rwx7kb5j",
+ "public_key": "MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAxt66h7R8vndV4n//W7+LaoQcnYUpd5il3ZeeuLaVpY3tLzlzyeU7IGNEqC8Rq82r5//cgsaxrPyxX0TnS+XFnbreMwe2mUErw0/x8R9sj/ipCkeiBhLr992w4cNAe7WzEkQTUxjWXhLFEk4Rc5q1z+FyiZyRzjDYR3oKqTba0cVbJjyjDigl21gLsIz3wzjavCmUmCjxMwTzsbXvNkmsnqU8gWQ3nwa/aN262Son3nVeydzOOz9uD/noKBRHX9pyVs2TQItTGFhwW6r4uvQIRbuNRTqSOyrNmrrvMG7Ohybuke2umWujKZmhG07Yo+C2PI9JIRxxuX04Kykvjoq/S035az8LWGQaAKbF9GWHzVAf/MFjDeFfIKehR7b8kB/gGhogXxJWJ3EwWiMpDfm3nIp24gdkRTbDkIG8IyFkct25OCL+YoG3YOccXwMr81j9SN81p+ZOXIytmm39P0UZejFkGwM6dwBfN8pCjoJxNhjQv7GnvxwBsiBtZ43uNKbHAgMBAAE=",
+ "fingerprint": "sha256:f5f598c0d02c4a19",
+ "kind": "startups-feedback/v1",
+ "code_prefix": "sgf1",
+ "created": "2026-10-20T22:55:22Z",
+ "rotated": []
+}

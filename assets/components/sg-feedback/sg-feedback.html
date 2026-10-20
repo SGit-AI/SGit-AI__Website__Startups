@@ -1,0 +1,55 @@
+<button type="button" class="tab" aria-expanded="false" aria-controls="pane" title="Feedback to this site's agent (shortcut: Alt+F)"><span class="tab-label">Feedback</span><span class="count" hidden></span></button>
+<aside class="pane" id="pane" aria-label="Feedback to this site's agent" hidden>
+  <header>
+    <div class="head-text"><b>Feedback</b><span class="lane-line"></span></div>
+    <button type="button" class="close" aria-label="Close the feedback pane">&times;</button>
+  </header>
+
+  <section class="setup" hidden>
+    <p>This pane sends notes to this site's agent, sealed in this browser and appended to a lane only the agent's owner can read. Enter the lane code you were given to start.</p>
+    <label class="field">Lane code <input type="password" class="code-in" autocomplete="off" spellcheck="false" placeholder="sgf1.&lt;vault&gt;.&lt;token&gt;"></label>
+    <div class="acts"><button type="button" class="btn primary use-code">Use this code</button></div>
+    <p class="msg setup-msg" aria-live="polite"></p>
+  </section>
+
+  <section class="compose" hidden>
+    <div class="context">
+      <div class="ctx-page"></div>
+      <div class="ctx-quote" hidden><span class="q"></span><button type="button" class="link drop-quote" aria-label="Remove the quoted selection">remove</button></div>
+      <button type="button" class="link use-selection" hidden>Quote the text selected on the page</button>
+    </div>
+    <textarea class="text" rows="6" placeholder="A comment, a question, a correction. Paste an image or a file here too."></textarea>
+    <div class="atts"></div>
+    <div class="tools">
+      <button type="button" class="btn rec" title="Record a voice memo; it is transcribed with your OpenRouter key if one is set">&#9679; Record</button>
+      <button type="button" class="btn shot" title="A screenshot of this page, with the pane out of the way">Screenshot</button>
+      <label class="btn file">Files<input type="file" class="file-in" multiple hidden></label>
+      <span class="rec-time" aria-live="polite"></span>
+    </div>
+    <p class="msg compose-msg" aria-live="polite"></p>
+    <div class="acts"><button type="button" class="btn primary add">Add to the list</button><span class="small saved"></span></div>
+  </section>
+
+  <section class="queue" hidden>
+    <h3>Waiting to send <span class="n"></span></h3>
+    <ol class="items"></ol>
+    <div class="acts"><button type="button" class="btn primary send">Send</button></div>
+    <p class="msg send-msg" aria-live="polite"></p>
+  </section>
+
+  <details class="settings">
+    <summary>Settings</summary>
+    <label class="field">Lane code <input type="password" class="code-in2" autocomplete="off" spellcheck="false"></label>
+    <label class="field">OpenRouter key, for transcribing voice memos <input type="password" class="or-in" autocomplete="off" spellcheck="false" placeholder="sk-or-v1-..."></label>
+    <label class="check"><input type="checkbox" class="or-keep"> Remember the key in this browser (otherwise this tab only)</label>
+    <label class="field">Model <input type="text" class="model-in" list="models" spellcheck="false"><datalist id="models"></datalist></label>
+    <label class="field">A name for this browser, so the agent knows which device wrote <input type="text" class="label-in" maxlength="40" placeholder="e.g. iPad, MacBook"></label>
+    <div class="acts"><button type="button" class="btn save-settings">Save</button><button type="button" class="btn danger forget">Forget everything here</button></div>
+    <p class="small what">Where things go: notes stay in this browser until Send; then they are encrypted here to the lane's public key and appended to the lane on dev.send.sgraph.ai, which keeps ciphertext it cannot read. Voice memos go to openrouter.ai with your key, for the transcript, and nowhere else.</p>
+  </details>
+
+  <details class="history">
+    <summary>Sent from this browser <span class="hn"></span></summary>
+    <ol class="sent-items"></ol>
+  </details>
+</aside>

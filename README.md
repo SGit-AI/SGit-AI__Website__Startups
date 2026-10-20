@@ -40,7 +40,8 @@ team/                      the roles: journalist, interviewer, librarian, engine
 storyboards/               generated from admin/content/storyboards/: the index with the strips, one page per storyboard (the kit's
                            deck, grid and script; storyboard.json, bundle.json, graph.json, script.md; the script is the page's twin),
                            the cast (cast sheet and model sheet), the design experiments, the brief back to storyboards.sgit.ai
-vault/                     generated: no vault yet, and what one would hold
+feedback/                  generated: the feedback page (the pattern, documented) and lane.json (the lane's public half)
+vault/                     generated: what a working vault would hold
 review/                    the review folder: intent/ from the brief; graph/ and join/ derived by tools/derive.py
 about/participant.html     the participant disclosure
 admin/
@@ -52,6 +53,8 @@ admin/
   build/storyboards.mjs    validates the storyboards with the kit's formats.js, checks from_finder lines, writes the derived files
   build/test_storyboards.mjs  the vendored kit against its manifest, the storyboards against the validator and finder.json
   build/release.py         fetch, bump, build, validate, test, tripwire, commit, push, verify live
+  build/feedback.py        the feedback lane's owner: setup, check, drain, rotate, code (owner keys from STARTUPS_FEEDBACK_OWNER)
+  build/test_feedback.mjs  the pane's core in Node; test_feedback_pane.mjs the pane in Chromium against the real lane
   content/                 the authored data: finder/, plans.json, pages/, briefs/, articles/, agent-articles/,
                            decisions/, versions.json, vault.json, storyboards/ (cast.json, NN__<slug>.json, kit.json, feedback.md)
   credentials/             the credentials tier, ignored by git except its README
@@ -59,7 +62,9 @@ admin/
 assets/site.css            the layout and type, for every page
 assets/themes.css          the colour: five themes, newsroom.sgit.ai's, every colour a token defined in all five
 assets/site.js             sets the theme before the first paint, draws the picker, opens the menu on a narrow screen
-assets/components/         sg-base (the base component), sg-finder (the interview) and sg-strip (a storyboard as a strip), three files each
+assets/components/         sg-base (the base component), sg-finder (the interview), sg-strip (a storyboard as a strip) and sg-feedback (the
+                           feedback pane), three files each
+assets/feedback/           the pane's core (the lane code, the envelope, WAV, the transcription request) and its storage (IndexedDB)
 assets/vendor/storyboards/ the storyboard kit, one immutable release folder with its manifest, hashes checked by the gate
 assets/storyboards/        this site's prop pack for the kit (the five, a price tag, a door, a parcel)
 REALITY.md                 what exists, by domain; BRIEF-CORRECTIONS.md: where the brief was departed from

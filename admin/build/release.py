@@ -25,6 +25,10 @@ VERSION = ROOT / "admin/build/version.txt"
 HISTORY = ROOT / "admin/content/versions.json"
 HOST    = (ROOT / "CNAME").read_text().strip()
 
+# fields of a JSON file in admin/credentials/ that are published on purpose (the feedback lane's public key and where it
+# is); every other field's value is a secret the staged diff must not carry
+PUBLIC_FIELDS = {"what", "v", "endpoint", "vault", "public", "fingerprint", "created", "rotated"}
+
 # the shapes the gate refuses, and the release script scans the staged diff for
 KEY_SHAPES = [
     (re.compile(r"sgit_private_\S+"),                              "a private sgit key"),
@@ -82,6 +86,8 @@ class Release:
         self.run("node", "admin/build/validate.js", capture=False)
         self.run("node", "admin/build/test_finder.mjs", capture=False)
         self.run("node", "admin/build/test_storyboards.mjs", capture=False)
+        self.run("node", "admin/build/test_feedback.mjs", capture=False)
+        self.run("node", "admin/build/test_feedback_pane.mjs", capture=False)  # real lane with the owner keys; skips without Playwright
         self.run("node", "admin/build/test_interview.mjs", capture=False)  # skips where Playwright is not installed
 
     def tripwire(self):
@@ -105,7 +111,14 @@ class Release:
         for p in (ROOT / "admin/credentials").glob("*"):
             if p.name == "README.md" or not p.is_file():
                 continue
-            for token in re.findall(r"[A-Za-z0-9_\-:]{24,}", p.read_text(errors="ignore")):
+            text = p.read_text(errors="ignore")
+            try:                                     # a JSON owner file: every field is scanned except the ones public by design
+                data = json.loads(text)
+                if isinstance(data, dict):
+                    text = "\n".join(str(v) for k, v in data.items() if k not in PUBLIC_FIELDS)
+            except ValueError:
+                pass
+            for token in re.findall(r"[A-Za-z0-9_\-:]{24,}", text):
                 secret = token.split(":")[0][-24:]
                 if secret and secret in added:
                     found.append(f"the secret part of a key held in admin/credentials/{p.name}")

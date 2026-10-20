@@ -304,9 +304,10 @@ def page(rel, title, body, description, crumbs=(), extra_head="", wide=False, tw
     canonical = BASE + ("" if rel == "index.html" else rel)
     twin_rel = rel[:-5] + ".md"
     twin_link = "" if noindex else f'<link rel="alternate" type="text/markdown" href="{twin_rel.split("/")[-1]}" title="This page as markdown">\n'
-    mod = f'<script type="module" src="{up}{module}"></script>\n' if module else ""
+    mod = (f'<script type="module" src="{up}{module}"></script>\n' if module else "") + f'<script type="module" src="{up}assets/components/sg-feedback/sg-feedback.js"></script>\n'
+    html_attrs = ' data-feedback="setup"' if rel == "feedback/index.html" else ""
     doc = f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en"{html_attrs}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -336,7 +337,7 @@ def page(rel, title, body, description, crumbs=(), extra_head="", wide=False, tw
 </div></main>
 <footer class="site"><div class="row">
 <span>startups.sgit.ai: find your startup, then build it on vaults. By Dinis Cruz and this site's agents. Content CC BY 4.0; code under the repository licence. <a href="{up}about/participant.html">Participant disclosure</a>.</span>
-<span>Part of <a href="https://sgit.ai">sgit.ai</a> &middot; <a href="{REPO}">GitHub</a> &middot; <a href="{up}admin/reality.html">what exists</a> &middot; <a href="{up}admin/versions.html">release history</a> &middot; <a href="{up}llms.txt">llms.txt</a>{"" if noindex else f' &middot; <a href="{twin_rel.split("/")[-1]}">this page as markdown</a>'}</span>
+<span>Part of <a href="https://sgit.ai">sgit.ai</a> &middot; <a href="{REPO}">GitHub</a> &middot; <a href="{up}feedback/index.html">feedback</a> &middot; <a href="{up}admin/reality.html">what exists</a> &middot; <a href="{up}admin/versions.html">release history</a> &middot; <a href="{up}llms.txt">llms.txt</a>{"" if noindex else f' &middot; <a href="{twin_rel.split("/")[-1]}">this page as markdown</a>'}</span>
 </div></footer>
 </body>
 </html>
@@ -854,6 +855,20 @@ def build_storyboards():
     return st
 
 
+# ------------------------------------------------------------------ the feedback pane
+def build_feedback():
+    """The lane's public half, published for the pane; the page that documents the pattern and holds the setup."""
+    (ROOT / "feedback").mkdir(exist_ok=True)
+    shutil.copyfile(ROOT / "admin/content/feedback/lane.json", ROOT / "feedback/lane.json")
+    written.append("feedback/lane.json")
+    lane = json.loads((ROOT / "admin/content/feedback/lane.json").read_text(encoding="utf-8"))
+    fm, text = frontmatter((ROOT / "admin/content/feedback/pattern.md").read_text(encoding="utf-8"))
+    text = text.replace("{{VAULT}}", lane["vault"]).replace("{{FINGERPRINT}}", lane["fingerprint"]).replace("{{ENDPOINT}}", lane["endpoint"]).replace("{{CREATED}}", lane["created"][:10])
+    body = f'<article class="doc"><p class="kicker">{esc(fm_get(fm, "kicker"))}</p><h1>{esc(fm_get(fm, "title"))}</h1><p class="lede">{esc(fm_get(fm, "description"))}</p><div class="body">{md(text)}</div></article>'
+    page("feedback/index.html", fm_get(fm, "title"), body, fm_get(fm, "description"), crumbs=(("Feedback", "feedback/index.html"),))
+    return lane
+
+
 # ------------------------------------------------------------------ the review folder
 def build_review(pages):
     d = Derive(ROOT)
@@ -1032,6 +1047,7 @@ def build_agent_surface(finder, counts, briefs, articles, plans):
 - [The team]({BASE}team/index.md): journalist, interviewer, librarian, engineer; [the vault]({BASE}vault/index.md) (none yet); [the review]({BASE}review/index.md)
 - [What exists]({BASE}admin/reality.md): the reality file; [corrections]({BASE}admin/corrections.md); [admin]({BASE}admin/index.md); [release history]({BASE}admin/versions.md)
 - [Participant disclosure]({BASE}about/participant.md)
+- [Feedback]({BASE}feedback/index.md): the pane on every page for sending notes, voice memos, screenshots and files to this site's agent over a sealed, write-only append lane; the pattern documented, with the prompt to hand another site's agent; the lane's public half at {BASE}feedback/lane.json
 
 ## The articles
 {chr(10).join(f"- [{a['title']}]({BASE}{rel[:-5]}.md)" for rel, a in articles)}
@@ -1059,6 +1075,7 @@ def main():
     roles = build_team()
     build_vault()
     storyboards = build_storyboards()
+    lane = build_feedback()
     # the review's derived layers need the list of pages so far, plus the ones written after; derive is run twice so that
     # surfaces.json lists every page, including review/index.html itself and the admin pages
     stats = build_review([w for w in written if w.endswith(".html")])

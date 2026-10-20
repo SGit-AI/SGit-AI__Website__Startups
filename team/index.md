@@ -2,7 +2,7 @@
 
 > The roles that run this site: journalist, interviewer, librarian, engineer.
 
-*Source: <https://startups.sgit.ai/team/index.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/team/index.html> · site v0.1.5 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -16,7 +16,7 @@ The roles that run this site, one folder each, after [the roles of gen-z-develop
 
 A site is not excused from the discipline because it is content. One version in one place going up on every push, a gate that refuses what it can check, every number counted, and a reality file that says what exists and what does not: that is what makes the site checkable by somebody who does not trust it.
 
-2 open, 1 blocked, 1 done
+4 open, 1 blocked, 1 done
 
 [The role →](engineer/index.md)
 

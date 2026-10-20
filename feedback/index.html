@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-feedback="setup">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feedback from the page &middot; startups.sgit.ai</title>
+<meta name="description" content="A pane on the right of every page for sending notes to this site&#x27;s agent while reading: text, a quote of the selection, voice memos transcribed with your own OpenRouter key, a screenshot of the page, pasted and dropped files. Kept in your browser until you send, then sealed in your browser and appended to a write-only lane only the owner can read. How to use it, exactly what is sent, the credentials and where each lives, how the agent reads it, the limits, and the prompt to build the same on another site.">
+<link rel="canonical" href="https://startups.sgit.ai/feedback/index.html">
+<meta property="og:title" content="Feedback from the page">
+<meta property="og:description" content="A pane on the right of every page for sending notes to this site&#x27;s agent while reading: text, a quote of the selection, voice memos transcribed with your own OpenRouter key, a screenshot of the page, pasted and dropped files. Kept in your browser until you send, then sealed in your browser and appended to a write-only lane only the owner can read. How to use it, exactly what is sent, the credentials and where each lives, how the agent reads it, the limits, and the prompt to build the same on another site.">
+<meta property="og:url" content="https://startups.sgit.ai/feedback/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="startups.sgit.ai">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23123c3a%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%279%27 fill=%27none%27 stroke=%27%235fd3c4%27 stroke-width=%273%27 stroke-dasharray=%2742 14%27/%3E%3Cpath d=%27M22 7l5 3-4 4z%27 fill=%27%235fd3c4%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/themes.css">
+<script src="../assets/site.js"></script>
+<script type="module" src="../assets/components/sg-feedback/sg-feedback.js"></script>
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../index.html">startups<span>.sgit.ai</span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+<div class="nav-items"><div class="ni"><a class="nl" href="../finder/index.html">Find your startup<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../finder/index.html">The finder</a><a class="sl" href="../finder/interview.html">Walk the interview</a><a class="sl" href="../finder/stages.html">The stages and questions</a><a class="sl" href="../finder/routes.html">The routes and rules</a><a class="sl" href="../finder/prompt.html">The prompt for Claude or ChatGPT</a><a class="sl" href="../finder/record.html">The record</a></div></div><div class="ni"><a class="nl" href="../vaults/index.html">Build on vaults<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../vaults/index.html">Build your startup on vaults</a><a class="sl" href="../plans/index.html">Business plans to build on</a></div></div><div class="ni"><a class="nl" href="../storyboards/index.html">Storyboards<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../storyboards/index.html">Storyboards</a><a class="sl" href="../storyboards/cast/index.html">The cast</a><a class="sl" href="../storyboards/design/index.html">Design experiments</a><a class="sl" href="../storyboards/feedback/index.html">Feedback to storyboards.sgit.ai</a></div></div><div class="ni"><a class="nl" href="../articles/index.html">Articles<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../articles/index.html">Articles</a><a class="sl" href="../decisions/index.html">Decisions</a><a class="sl" href="../briefs/index.html">The briefs</a></div></div><div class="ni"><a class="nl" href="../team/index.html">The team<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../team/index.html">The team</a><a class="sl" href="../vault/index.html">The vault</a><a class="sl" href="../review/index.html">The review</a><a class="sl" href="../admin/reality.html">What exists</a><a class="sl" href="../admin/index.html">Admin</a></div></div></div>
+<div class="nav-tools"><div class="theme-pick"></div><span class="ver">site <a href="../admin/versions.html" title="Site release history">v0.1.5</a></span></div>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../index.html">startups.sgit.ai</a> &rarr; <b>Feedback</b></div>
+<article class="doc"><p class="kicker">The pattern, documented · vault {{VAULT}} · key {{FINGERPRINT}} · lane made {{CREATED}}</p><h1>Feedback from the page</h1><p class="lede">A pane on the right of every page for sending notes to this site&#x27;s agent while reading: text, a quote of the selection, voice memos transcribed with your own OpenRouter key, a screenshot of the page, pasted and dropped files. Kept in your browser until you send, then sealed in your browser and appended to a write-only lane only the owner can read. How to use it, exactly what is sent, the credentials and where each lives, how the agent reads it, the limits, and the prompt to build the same on another site.</p><div class="body"><h2 id="use-it">Use it</h2>
+<ol>
+<li><strong>Enter the lane code</strong> in the pane on this page (it opens here on its own). It looks like <code>sgf1.&lt;vault&gt;.&lt;token&gt;</code> and was given to you with the owner keys. It is kept in this browser; from then on a <strong>Feedback</strong> tab sits on the right of every page, and <strong>Alt+F</strong> opens and closes it.</li>
+<li><strong>Optionally, your OpenRouter key</strong>, under Settings, if you want voice memos transcribed. It stays in this tab unless you tick <em>remember</em>, and it is sent to openrouter.ai and nowhere else.</li>
+<li><strong>Write as you read.</strong> The note knows the page, its title, the site version and, on a storyboard, the panel in the address. Select text on the page and it is quoted. <strong>Record</strong> a voice memo; with a key it is transcribed into the note, and the audio goes with it. <strong>Screenshot</strong> captures this tab with the pane out of the way (desktop Chrome and Edge ask which tab; choose this one). Paste an image, or drop or attach files.</li>
+<li><strong>Add to the list.</strong> The note waits in this browser, with the draft you are writing, across pages and reloads. Edit or delete any of them.</li>
+<li><strong>Send.</strong> The notes are encrypted here, to the lane's public key, and appended to the lane. The server answers <code>{"ok": true}</code> and nothing else. What you sent is listed under <em>Sent from this browser</em>, without the files.</li>
+</ol>
+<p>A reader with no lane code sees none of this: no tab, no pane, nothing sent. The only thing that runs is the check for a code.</p>
+<h2 id="what-is-sent-exactly">What is sent, exactly</h2>
+<p>One message per send (more if the notes are large), sealed, each carrying:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kind</code>, <code>to</code>, <code>sent_at</code>, <code>site</code></td>
+<td><code>startups-feedback/v1</code>, the key's fingerprint, the time, the site version</td>
+</tr>
+<tr>
+<td><code>from</code></td>
+<td>the name you gave this browser in Settings, and its platform</td>
+</tr>
+<tr>
+<td><code>notes[]</code></td>
+<td>each note: <code>id</code>, <code>at</code>, <code>text</code>, and <code>context</code>: the URL, path, page title, site version, storyboard and panel when there is one, the quoted selection and the page it came from, the window size and the theme</td>
+</tr>
+<tr>
+<td><code>notes[].attachments[]</code></td>
+<td><code>kind</code> (screenshot, audio, paste, file), name, type, size, the bytes as base64, and for audio its duration and transcript</td>
+</tr>
+</tbody>
+</table>
+<p>Nothing else: no reading history, no other tab, nothing from another site.</p>
+<h2 id="the-four-capabilities-and-where-each-lives">The four capabilities, and where each lives</h2>
+<p>The lane is an append lane on vault <code>rwx7kb5j</code> at <code>https://dev.send.sgraph.ai</code>, as <a href="https://sgit.ai/api/append-lanes.html">the append-lanes API</a> defines it. Its four capabilities are split on purpose:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Where it lives</th>
+<th>Can</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>append token</strong></td>
+<td>in the lane code: the owner hands it to you; your browser keeps it</td>
+<td>write to the lane; read nothing, list nothing, not even what it wrote</td>
+</tr>
+<tr>
+<td><strong>enum key</strong></td>
+<td>the owner file</td>
+<td>list, fetch, mark processed</td>
+</tr>
+<tr>
+<td><strong>write key</strong></td>
+<td>the owner file, derived from the vault key</td>
+<td>configure the lane (with the SG/Send access token), purge</td>
+</tr>
+<tr>
+<td><strong>private key</strong></td>
+<td>the owner file (RSA-OAEP 3072)</td>
+<td>decrypt; never sent anywhere</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>public key</strong> and the vault id are published in <a href="lane.json"><code>lane.json</code></a>, because a public key can only seal. The <strong>append token</strong> is the gate and is in no file of this repository; the gate checks that <code>lane.json</code> carries none of the four. The <strong>owner file</strong> (<code>admin/credentials/feedback-owner.json</code>, which git ignores) holds the rest; the owner escrows it and hands it to a session as the environment variable <code>STARTUPS_FEEDBACK_OWNER</code> when the agent should read the lane.</p>
+<p><strong>What the code proves, and what it does not.</strong> Only a holder of the code can write: a write with any other token is refused (404). Anyone you give the code to, or who copies it from your browser, can write as you; the lane cannot tell who. If the code leaks, the owner rotates it and the old code is refused from then on.</p>
+<h2 id="how-the-agent-reads-it">How the agent reads it</h2>
+<pre><code>STARTUPS_FEEDBACK_OWNER=&quot;$(cat feedback-owner.json)&quot; python3 admin/build/feedback.py drain
+</code></pre>
+<p><code>drain</code> lists the lane with the enum key, fetches every pending message, opens each with the private key, refuses any that is not a <code>startups-feedback/v1</code> message for this key, writes each note and its files to a folder outside the repository, prints a digest (page, quote, text, transcript, files) and marks the messages processed. <code>--keep</code> leaves them pending. The other commands:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>feedback.py setup</code></td>
+<td>once: a vault, the key pair, the token, the enum key, the lane configured, the owner file and <code>lane.json</code> written</td>
+</tr>
+<tr>
+<td><code>feedback.py check</code></td>
+<td>a sealed probe in, listed, fetched, opened and marked processed; and a random token refused, the negative control</td>
+</tr>
+<tr>
+<td><code>feedback.py rotate</code></td>
+<td>a new token; the old code is refused from then on; give the new code to whoever should keep writing</td>
+</tr>
+<tr>
+<td><code>feedback.py code</code></td>
+<td>prints the current lane code, to hand over</td>
+</tr>
+</tbody>
+</table>
+<h2 id="limits">Limits</h2>
+<table>
+<thead>
+<tr>
+<th>Limit</th>
+<th>Value</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A file</td>
+<td>2 MB</td>
+<td>sealed and encoded twice, a message grows about 2.4 times, and an append is at most 5 MB</td>
+</tr>
+<tr>
+<td>A message</td>
+<td>about 1.9 MB of JSON</td>
+<td>the same; more notes go as more messages</td>
+</tr>
+<tr>
+<td>A screenshot</td>
+<td>1600 wide, JPEG, under 1.5 MB</td>
+<td>quality drops until it fits</td>
+</tr>
+<tr>
+<td>A voice memo</td>
+<td>10 minutes</td>
+<td>transcribed in two-minute parts of 16 kHz mono WAV</td>
+</tr>
+<tr>
+<td>Waiting in the lane</td>
+<td>1000 messages per token</td>
+<td>the lane's own cap (507 after that); drain often</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-does-not-do">What this does not do</h2>
+<ul>
+<li><strong>It does not reply.</strong> The agent answers in a release, an article or a chat. A reply lane, the same machinery pointed the other way, is not built.</li>
+<li><strong>It does not sign.</strong> The code is the credential; a message is a claim from whoever held it, and is read as one.</li>
+<li><strong>It does not expire codes.</strong> The lane has no expiry; rotation is the revocation the server enforces.</li>
+<li><strong>Screenshots need a desktop browser that can share a tab.</strong> iPhone and iPad Safari cannot; take a screenshot with the system and paste it.</li>
+<li><strong>Transcription needs your key and a network.</strong> Without one the audio goes as it is, untranscribed.</li>
+<li><strong>It does not run in the vault host.</strong> This is a site page; a vault app sends through the bridge (<code>sg.append.write</code>) instead, as <a href="https://sgit.ai/docs/briefs/vault-telemetry-append-lanes.html">the telemetry brief</a> explains.</li>
+</ul>
+<h2 id="where-it-comes-from">Where it comes from</h2>
+<p>This was asked for on 20 October 2026 (<a href="../decisions/index.html#a-feedback-pane-on-every-page">decision 005</a>). The parts that existed and were reused: the append lane and its four capabilities, documented on sgit.ai (<a href="https://sgit.ai/api/append-lanes.html">the API</a>, <a href="https://sgit.ai/docs/briefs/vault-telemetry-append-lanes.html">the telemetry brief</a>, <a href="https://sgit.ai/docs/append-lane-messaging.html">append-lane messaging</a>); the sealed inbox and the sending page of newsroom.sgit.ai (<code>assets/vault-pane/inbox.js</code> and <code>send.js</code> there), whose envelope this copies exactly; the pane on the right of newsroom.sgit.ai; and its <em>Ask</em>, which calls openrouter.ai with the reader's own key. The parts that were new here: voice memos with transcription, the screenshot, paste and drop, the pane mounted only where a code is kept, and the owner's script. None of the sibling sites read for this had recorded voice or captured a screenshot.</p>
+<h2 id="the-prompt-to-build-the-same-on-another-site">The prompt to build the same on another site</h2>
+<pre><code>Add a feedback pane to SITE, after https://startups.sgit.ai/feedback/ (read it, and the
+source: assets/feedback/feedback-core.js, assets/feedback/feedback-store.js,
+assets/components/sg-feedback/, admin/build/feedback.py in SGit-AI/SGit-AI__Website__Startups).
+
+Copy those files rather than rewriting them. Run admin/build/feedback.py setup with
+SG_SEND_ACCESS_TOKEN in the environment: it makes the vault and the lane, writes the
+owner file under the repository's gitignored credentials folder, and writes the lane's
+public half for the site to publish. Run feedback.py check: the probe must round-trip
+and a random token must be refused.
+
+Rules: publish only the endpoint, the vault id and the public key. The append token is
+handed to the person who will write, never committed. The owner file is escrowed with the
+owner and handed to a session as an environment variable. The pane mounts only where a
+lane code is kept. Notes stay in the browser (IndexedDB) until Send. A voice memo goes to
+openrouter.ai with the reader's own key and nowhere else. Say on the page exactly what is
+sent. Add a gate check that the published file carries no token or key.
+</code></pre></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>startups.sgit.ai: find your startup, then build it on vaults. By Dinis Cruz and this site's agents. Content CC BY 4.0; code under the repository licence. <a href="../about/participant.html">Participant disclosure</a>.</span>
+<span>Part of <a href="https://sgit.ai">sgit.ai</a> &middot; <a href="https://github.com/SGit-AI/SGit-AI__Website__Startups">GitHub</a> &middot; <a href="../feedback/index.html">feedback</a> &middot; <a href="../admin/reality.html">what exists</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a> &middot; <a href="index.md">this page as markdown</a></span>
+</div></footer>
+</body>
+</html>

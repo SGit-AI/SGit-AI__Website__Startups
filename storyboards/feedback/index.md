@@ -2,7 +2,7 @@
 
 > Feedback to storyboards.sgit.ai and api.storyboards.sgit.ai from the first site to use the kit from outside: what worked unchanged, what this site had to do around the kit, and ten things the API could take, each with the experiment here that shows why.
 
-*Source: <https://startups.sgit.ai/storyboards/feedback/index.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/storyboards/feedback/index.html> · site v0.1.5 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

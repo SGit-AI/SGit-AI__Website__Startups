@@ -2,7 +2,7 @@
 
 > The storyboards laid out differently: strips, silent panels, captions outside, theme ink, sizes, a figure in prose.
 
-*Source: <https://startups.sgit.ai/storyboards/design/index.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/storyboards/design/index.html> · site v0.1.5 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 

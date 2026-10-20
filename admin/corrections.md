@@ -2,7 +2,7 @@
 
 > Where the brief was departed from, what was found, and what was done instead.
 
-*Source: <https://startups.sgit.ai/admin/corrections.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/admin/corrections.html> · site v0.1.5 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -25,6 +25,13 @@ The brief is [the voice memo](/briefs/01__find-your-startup.md), published verba
 1. **The storyboard kit is vendored, not embedded from the API.** The storyboards memo says the API is what gets used, by other sites embedding `embed.js` from `api.storyboards.sgit.ai`. The repository guidance says nothing is fetched at run time that is not vendored, and the site-pages brief says to copy house code in. Done: the release folder `v0/v0.1/v0.1.0/` copied byte for byte to `assets/vendor/storyboards/v0.1.0/` with its manifest, loaded with the manifest's integrity strings, and the gate recomputes every hash (check 13). The embed snippet on each storyboard page points other sites at the API, as the memo wants. Ask 9 of the feedback brief is a vendor archive per release.
 2. **Three characters are copied from the book's cast rather than imported.** No mechanism exists to share a character across sites; their looks are copied by hand and the cast file says so (ask 8).
 3. **Decision 004 is recorded from a typed message, not a voice memo.** Dinis's storyboards instruction came as a message in the session; it is quoted as written, with elisions marked.
+
+## 2026-10-20, site v0.1.5: the feedback pane
+
+1. **The pattern was half documented.** Dinis asked whether a pane for sending notes, voice and screenshots over an append lane was already documented. The append lane, its capabilities and a sealed inbox are (sgit.ai's API and briefs; newsroom.sgit.ai's `inbox.js` and `send.js`). Voice memos, their transcription and screenshots were not documented or built in any repository read. Done: built here, documented on `/feedback/` with the prompt to repeat it, and a brief to sgit.ai's guidance in the librarian's folder.
+2. **"Enter the vault lane ID" is a lane code, not an id.** A vault id names the lane; the append token is what lets anyone write. The pane asks for `sgf1.<vault>.<token>`; the vault id and the public key are published, the token is not.
+3. **"Local storage" is IndexedDB for the notes.** A screenshot or a voice memo is hundreds of kilobytes and localStorage holds a few megabytes in all. The lane code, the label and the model are in localStorage; the OpenRouter key is in sessionStorage unless remembered.
+4. **The credentials tier was being walked.** The review folder's derivation and the gate's freshness check walked `admin/credentials/`, which would have listed the owner file's path and hash in a committed file. Both now see only its README.
 
 Rendered from `BRIEF-CORRECTIONS.md` at the repository root; the file is the source.
 

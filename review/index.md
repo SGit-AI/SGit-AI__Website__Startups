@@ -2,7 +2,7 @@
 
 > The project as layered graphs: the intent from the brief, the tree, the join and the gaps.
 
-*Source: <https://startups.sgit.ai/review/index.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/review/index.html> · site v0.1.5 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -10,9 +10,9 @@
 
 The project as layered graphs, after [the review brief](https://sgit.ai/docs/briefs/code-review-graphs-in-the-repository.html): the intent, top down from the brief, as stories, rules and examples that name the surface each touches; the tree, bottom up, as files and surfaces; and the join between them. A subset, and it says so: no methods, no change files, no navigator yet.
 
-**100%**coverage**39**examples with a surface**0**gaps**108**source files**75**surfaces
+**100%**coverage**39**examples with a surface**0**gaps**123**source files**79**surfaces
 
-Coverage is the share of intent examples and flow steps whose surface exists in the tree. Every intent node is *proposed*: written by the engineer agent from the memo, not yet read back and accepted by Dinis. Source files by language: css 7, html 9, javascript 17, json 15, markdown 50, python 3, text 6, yaml 1.
+Coverage is the share of intent examples and flow steps whose surface exists in the tree. Every intent node is *proposed*: written by the engineer agent from the memo, not yet read back and accepted by Dinis. Source files by language: css 8, html 10, javascript 22, json 16, markdown 56, python 4, text 6, yaml 1.
 
 ## The intent
 

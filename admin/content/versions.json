@@ -25,6 +25,11 @@
    "version": "v0.1.4",
    "date": "2026-10-20",
    "what": "Storyboards, on pages of their own (decision 004): four short strips drawn by code with the storyboards kit (the loop, the spectrum, the excuses, the rules; 25 panels), a cast of seven (three shared with the book, four new, the Finder as an agent), the kit's release v0.1.0 vendored and verified by the gate, this site's prop pack, the sg-strip component (strips, silent panels, captions outside, theme ink), a page of seven design experiments, and the brief back to storyboards.sgit.ai with ten asks; lines quoted from finder.json are checked word for word on every build; the storyboards test and the browser test cover it."
+  },
+  {
+   "version": "v0.1.5",
+   "date": "2026-10-20",
+   "what": "A feedback pane on every page (decision 005): text, the quoted selection, voice memos transcribed with the reader's own OpenRouter key, a screenshot of the tab, pasted and attached files, kept in the browser until sent, then sealed in the browser and appended to a write-only lane on this site's own vault (rwx7kb5j), shown only where a lane code is kept; the owner's script makes, checks, drains and rotates the lane; the pattern documented on /feedback/ with the prompt to repeat it; tests in Node and in Chromium against the real lane; the credentials tier no longer walked by the gate or the review folder, and the tripwire knows which owner fields are public."
   }
  ]
 }

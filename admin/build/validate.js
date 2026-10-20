@@ -14,6 +14,7 @@
 //  11. the review folder is fresh: every source file's hash matches review/graph/files.json; the review page carries the join's coverage
 //  12. every script parses (node --check on .js and .mjs; py_compile on .py when python3 is available)
 //  13. the vendored storyboard kit is the release: every file under assets/vendor/storyboards/<release>/ hashes to its manifest
+//  14. the feedback lane's published half (feedback/lane.json) is its source and holds no token or key, only the public half
 // Any failure exits 1: no tag, no publish.
 'use strict';
 const fs = require('fs');
@@ -24,7 +25,7 @@ const { spawnSync } = require('child_process');
 const ROOT = process.argv[2] ? path.resolve(process.argv[2]) : path.resolve(__dirname, '..', '..');
 const errors = [];
 const rel = f => path.relative(ROOT, f).split(path.sep).join('/');
-const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', '.sg_vault', '__pycache__']);
+const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', '.sg_vault', '__pycache__', 'credentials']);
 
 function walk(dir, out = []) {
   for (const name of fs.readdirSync(dir)) {
@@ -163,13 +164,13 @@ for (const [name, out] of [['finder.json', 'finder.json'], ['prompt.md', 'finder
 try { JSON.parse(read(path.join(ROOT, 'finder/finder.json'))); } catch (e) { errors.push(`finder/finder.json does not parse: ${e.message}`); }
 
 // --- 11. the review folder is fresh -------------------------------------------
-const SOURCE_DIRS = ['.github', 'admin/build', 'admin/content', 'admin/credentials', 'assets', 'finder', 'review/intent', 'review/tools', 'team'];
+const SOURCE_DIRS = ['.github', 'admin/build', 'admin/content', 'assets', 'finder', 'review/intent', 'review/tools', 'team'];  // admin/credentials/: only its README, below
 const SOURCE_EXT = new Set(['.py', '.js', '.mjs', '.css', '.html', '.json', '.md', '.yml', '.txt']);
-const ROOT_FILES = ['README.md', 'CLAUDE.md', 'REALITY.md', 'BRIEF-CORRECTIONS.md', 'LICENSES.md', 'CNAME', 'robots.txt', 'review/README.md', 'review/BRIEF-CORRECTIONS.md', 'review/self/README.md'];
-const GENERATED = new Set(['finder/finder.json', 'finder/finder-prompt.md', 'finder/finder-record.md']);
+const ROOT_FILES = ['admin/credentials/README.md', 'README.md', 'CLAUDE.md', 'REALITY.md', 'BRIEF-CORRECTIONS.md', 'LICENSES.md', 'CNAME', 'robots.txt', 'review/README.md', 'review/BRIEF-CORRECTIONS.md', 'review/self/README.md'];
+const GENERATED = new Set(['finder/finder.json', 'finder/finder-prompt.md', 'finder/finder-record.md', 'feedback/lane.json']);
 function walkAll(dir, out = []) { // the derive tool's walk includes .github, which walk() above skips
   for (const name of fs.readdirSync(dir)) {
-    if (name === '.git' || name === 'node_modules' || name === '__pycache__') continue;
+    if (name === '.git' || name === 'node_modules' || name === '__pycache__' || (name !== 'README.md' && path.basename(dir) === 'credentials')) continue;
     const p = path.join(dir, name);
     if (fs.statSync(p).isDirectory()) walkAll(p, out); else out.push(p);
   }
@@ -213,6 +214,16 @@ if (py.status === 0) {
     const r = spawnSync('python3', ['-m', 'py_compile', f], { encoding: 'utf8' });
     if (r.status !== 0) errors.push(`${rel(f)}: does not compile: ${(r.stderr || '').trim().split('\n').pop()}`);
   }
+}
+
+// --- 14. the feedback lane: the published half is its source, and is only the public half --------------
+{
+  const a = path.join(ROOT, 'admin/content/feedback/lane.json'), b = path.join(ROOT, 'feedback/lane.json');
+  if (!fs.existsSync(b)) errors.push('feedback/lane.json is missing: rerun build.py');
+  else if (read(a) !== read(b)) errors.push('feedback/lane.json differs from admin/content/feedback/lane.json: rerun build.py');
+  const lane = JSON.parse(read(a));
+  for (const k of ['token', 'enum_key', 'write_key', 'vault_key', 'private']) if (k in lane) errors.push(`admin/content/feedback/lane.json carries "${k}": only the endpoint, the vault id and the public key may be published`);
+  if (!/^sha256:[0-9a-f]{16}$/.test(lane.fingerprint || '') || !/^[A-Za-z0-9+/=]{500,800}$/.test(lane.public_key || '')) errors.push('admin/content/feedback/lane.json: no public key and fingerprint in the expected shape');
 }
 
 // --- 13. the vendored storyboard kit is the release ------------------------------

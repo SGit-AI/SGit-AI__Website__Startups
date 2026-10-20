@@ -16,4 +16,4 @@ The rules, from [Every sgit repository, section 6](https://sgit.ai/docs/guidance
   message or a chat log that becomes a file.
 - **Nothing the site needs to build is a secret.** The build and the gate run with this directory empty.
 
-As of the first release this directory holds nothing but this file.
+In the session that made the feedback lane (site v0.1.5) it holds `feedback-owner.json`, the lane's owner keys, which `admin/build/feedback.py` reads and which were delivered to Dinis; a later session gets them from the environment as `STARTUPS_FEEDBACK_OWNER`. The gate and the review folder do not walk this directory except for this file.

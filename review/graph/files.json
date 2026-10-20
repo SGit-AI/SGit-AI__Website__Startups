@@ -3,30 +3,30 @@
  "provenance": {
   "tool": "review/tools/derive.py",
   "version": "0.1.0",
-  "site": "v0.1.4",
-  "derived_at": "2026-10-20T22:07:50Z"
+  "site": "v0.1.5",
+  "derived_at": "2026-10-20T23:09:26Z"
  },
  "files": [
   {
    "path": ".github/workflows/deploy-pages.yml",
-   "sha256": "4212757316c6bf4f969b43d9e7781bd251642be399c1e9fe08d481f6b935baa9",
+   "sha256": "784545752646bdf9834d0bfe3f4eab77e9009e68d313408442514b51fa76e4ef",
    "language": "yaml",
-   "size": 9009,
-   "lines": 187
+   "size": 9429,
+   "lines": 194
   },
   {
    "path": "BRIEF-CORRECTIONS.md",
-   "sha256": "a2f870d24fe83b880b2345b9492cf5aefe55253f01183831cacc216872ebdfbf",
+   "sha256": "ea39e9ce48f9922ca77fd138edb84c19826f0b51188cc1653d15396191cc939b",
    "language": "markdown",
-   "size": 4478,
-   "lines": 19
+   "size": 5802,
+   "lines": 26
   },
   {
    "path": "CLAUDE.md",
-   "sha256": "a1abab49498954b9fa3c34c27ac552d37d0a6a9934d1d5ef3b3c5055d54b5a89",
+   "sha256": "5c71aef8fdcdaea4b2e597e6933a00cdc4dd85004be8567507e159f056352c89",
    "language": "markdown",
-   "size": 6633,
-   "lines": 91
+   "size": 7458,
+   "lines": 101
   },
   {
    "path": "CNAME",
@@ -44,31 +44,38 @@
   },
   {
    "path": "README.md",
-   "sha256": "ae91fda1e32311288f48d47f53029397f9aa604f88ad8a9a3b2bedf5a5ce3740",
+   "sha256": "c437a511e2b11857cd6f7f8158703eb9f735b30ce05e19ac58152e39928c7aaa",
    "language": "markdown",
-   "size": 7070,
-   "lines": 100
+   "size": 7626,
+   "lines": 105
   },
   {
    "path": "REALITY.md",
-   "sha256": "d0a3cbce452686f6a20ac0928f497523fab3f2eb8a1e7e4b7fd2f306ad36989b",
+   "sha256": "048e57c5aaf3655bc4118178a09139b9eafb657348eadb9988ebe9faa6a94945",
    "language": "markdown",
-   "size": 6509,
-   "lines": 23
+   "size": 8246,
+   "lines": 25
   },
   {
    "path": "admin/build/build.py",
-   "sha256": "68930250e7cad37b8a7c355e3883687a4b3ea741c393660b0f64ffde3662ce57",
+   "sha256": "a29d7188c4ed05b7f738eddc9a68fe46d2be96083b8e75a8b1f154264ff9ecf8",
    "language": "python",
-   "size": 93931,
-   "lines": 1079
+   "size": 95654,
+   "lines": 1096
+  },
+  {
+   "path": "admin/build/feedback.py",
+   "sha256": "46e453da31ab2146538f9d969fcd0cad33b776c64202397dd5c9282cb55320cf",
+   "language": "python",
+   "size": 18493,
+   "lines": 320
   },
   {
    "path": "admin/build/release.py",
-   "sha256": "e9834b2737d054f50c44566e9185d09d4e7d84d5f4551a92b7378c7e4129d6ad",
+   "sha256": "d3e865789bf2b5623d7b10eab55a83775570066622d5ed9068e1c47f608b865c",
    "language": "python",
-   "size": 8774,
-   "lines": 173
+   "size": 9665,
+   "lines": 186
   },
   {
    "path": "admin/build/storyboards.mjs",
@@ -76,6 +83,20 @@
    "language": "javascript",
    "size": 4649,
    "lines": 70
+  },
+  {
+   "path": "admin/build/test_feedback.mjs",
+   "sha256": "44b64ae9121679dcf4737deed385996f93929a935001aecc27299117d23db7c5",
+   "language": "javascript",
+   "size": 7348,
+   "lines": 84
+  },
+  {
+   "path": "admin/build/test_feedback_pane.mjs",
+   "sha256": "7e64bb22d9dfdb201080e83abf71066299105054d65d9d2fdcce84f93cf34d0f",
+   "language": "javascript",
+   "size": 14697,
+   "lines": 155
   },
   {
    "path": "admin/build/test_finder.mjs",
@@ -100,14 +121,14 @@
   },
   {
    "path": "admin/build/validate.js",
-   "sha256": "37999630f8117a79bc63cf34b1421f5920962cf59030277a85f2c71530e70bd9",
+   "sha256": "8f679573942fab2fba0b5d86a942f005fb57bc1cea94b25820d79a07359e1156",
    "language": "javascript",
-   "size": 14067,
-   "lines": 237
+   "size": 15274,
+   "lines": 248
   },
   {
    "path": "admin/build/version.txt",
-   "sha256": "b09f5a7d12c32b61f984c3feb17671a42ce5949fbcb1e02f8f684b1eb4c56344",
+   "sha256": "e8d8eb5abc0c562af4d49747980e254261d0735f73e6202526d13d59a50d4c18",
    "language": "text",
    "size": 6,
    "lines": 1
@@ -125,6 +146,13 @@
    "language": "markdown",
    "size": 6594,
    "lines": 51
+  },
+  {
+   "path": "admin/content/agent-articles/03__a-feedback-pane-and-a-lane.md",
+   "sha256": "92244679bb334a12103371c22b6b0c5f4fb947cc9ae77d225fb0f0194e8fac90",
+   "language": "markdown",
+   "size": 7687,
+   "lines": 57
   },
   {
    "path": "admin/content/articles/01__find-your-startup.md",
@@ -174,6 +202,27 @@
    "language": "markdown",
    "size": 1701,
    "lines": 13
+  },
+  {
+   "path": "admin/content/decisions/005__a-feedback-pane-on-every-page.md",
+   "sha256": "bc065a434f714f9cba4a0f842694df41afb561f97baf0ba14baec5130d56b4ef",
+   "language": "markdown",
+   "size": 2287,
+   "lines": 13
+  },
+  {
+   "path": "admin/content/feedback/lane.json",
+   "sha256": "eb714fc2744c23c9c00a2036304cdedc1b2cd195f383299cae3af6fd2853d427",
+   "language": "json",
+   "size": 1061,
+   "lines": 11
+  },
+  {
+   "path": "admin/content/feedback/pattern.md",
+   "sha256": "8089a5b8bf47ff4875baf3ae48bc4483dccc462f104ca111435bd28f93a4f5d4",
+   "language": "markdown",
+   "size": 8918,
+   "lines": 102
   },
   {
    "path": "admin/content/finder/finder.json",
@@ -275,16 +324,16 @@
   },
   {
    "path": "admin/content/versions.json",
-   "sha256": "ce133388a28aef8fb917d4711ba3561b529264bf89d552e942ed0ba7b2930854",
+   "sha256": "e2dfaa4441a9f839707d500868fed8b62df08f1c2c05cdc0406085b52fa5b88e",
    "language": "json",
-   "size": 2926,
-   "lines": 30
+   "size": 3662,
+   "lines": 35
   },
   {
    "path": "admin/credentials/README.md",
-   "sha256": "7baf38b7ac153679a16fc3084e787f6477c646d0f08d8ce17434a2fc511f602a",
+   "sha256": "48221fe3c6ea7b2ac3572dfd59966e2f0af5e1e8abb09d48918c628c64a100eb",
    "language": "markdown",
-   "size": 1290,
+   "size": 1564,
    "lines": 19
   },
   {
@@ -307,6 +356,27 @@
    "language": "javascript",
    "size": 2587,
    "lines": 73
+  },
+  {
+   "path": "assets/components/sg-feedback/sg-feedback.css",
+   "sha256": "4587a2636b62128ce5ec1289f1a8b3bda0b57f7bda4b4bb8e3af3661d562d7e0",
+   "language": "css",
+   "size": 5524,
+   "lines": 60
+  },
+  {
+   "path": "assets/components/sg-feedback/sg-feedback.html",
+   "sha256": "1999ac2cb77f9e3ebca2e0e6ab47f269b8f191847a04ce37c76c58882713ef4b",
+   "language": "html",
+   "size": 3996,
+   "lines": 55
+  },
+  {
+   "path": "assets/components/sg-feedback/sg-feedback.js",
+   "sha256": "b26270d43dead9bd68537e8f50346344717e97ee1049142134576beb0cb635e1",
+   "language": "javascript",
+   "size": 24895,
+   "lines": 384
   },
   {
    "path": "assets/components/sg-finder/sg-finder.css",
@@ -351,11 +421,25 @@
    "lines": 136
   },
   {
+   "path": "assets/feedback/feedback-core.js",
+   "sha256": "1fb262b928a788b9bc044ff3f78f3995e1b064895b8a72d9f12fa162fa68459f",
+   "language": "javascript",
+   "size": 10581,
+   "lines": 160
+  },
+  {
+   "path": "assets/feedback/feedback-store.js",
+   "sha256": "1c3cf6f199298012356ccdb1f0a48a92534e6263e46328aafe7c86a0b96de031",
+   "language": "javascript",
+   "size": 3817,
+   "lines": 71
+  },
+  {
    "path": "assets/site.css",
-   "sha256": "5a86e9cb3f8ea90235d31cf334ac96aa01c13befb5980543f231e6f3b023d314",
+   "sha256": "c035a5214a4e8aca20719fa65743fefe97a71bee261a1668c9447cb2c253502c",
    "language": "css",
-   "size": 13910,
-   "lines": 197
+   "size": 14170,
+   "lines": 200
   },
   {
    "path": "assets/site.js",
@@ -471,84 +555,84 @@
   },
   {
    "path": "finder/index.html",
-   "sha256": "c7b068050bdecf0c109a3ecb968ba4af63face2b884a104f62a7770019d43125",
+   "sha256": "5050423830637bf4d5bcf5393808892cbfba2dba152e8beab7e0c834b4a72524",
    "language": "html",
-   "size": 11270,
-   "lines": 63
+   "size": 11411,
+   "lines": 64
   },
   {
    "path": "finder/index.md",
-   "sha256": "494c5b2d7ef85a18fc766889cf9f9138fbe5f91e454cf258c5a9724da142ebaf",
+   "sha256": "f33b266e6a6cb4d9829d90c1460b2d267fed862c33051aa36bbef78c8019be73",
    "language": "markdown",
    "size": 5954,
    "lines": 143
   },
   {
    "path": "finder/interview.html",
-   "sha256": "71606bd291b68dfb185b10bb9c233823e731a93da70994b18cead5467e94e807",
+   "sha256": "edef421597a4b304e0afecb72b82893349e76f696c6d8aaba00777af74129fb0",
    "language": "html",
-   "size": 6078,
-   "lines": 42
+   "size": 6219,
+   "lines": 43
   },
   {
    "path": "finder/interview.md",
-   "sha256": "5215618a0edd167736b13be32f4082c823b09ccde0fc61c815e5a777c1556048",
+   "sha256": "678bd2cbf0f60e9cc609dd71fccfdbd651e3fc25e71ca8cfeb772fd08a980720",
    "language": "markdown",
    "size": 1270,
    "lines": 18
   },
   {
    "path": "finder/prompt.html",
-   "sha256": "5f4a29f123fa9c036083ff2b991cd2fba83de936658de3d7fb6d8a0006e40a7f",
+   "sha256": "3091c40f141e3fd5615f24f95e50c29c04f6f29ef9c4b24b8572103edc213519",
    "language": "html",
-   "size": 10164,
-   "lines": 93
+   "size": 10305,
+   "lines": 94
   },
   {
    "path": "finder/prompt.md",
-   "sha256": "3cd7472967e1c48fb9fc846743b4ece04a058d955fde14d05a27d526e57bdc11",
+   "sha256": "2d1e3b632cb992b06ec1060caefad7323d85b74c20f0a24be86bf5f99898df5f",
    "language": "markdown",
    "size": 5588,
    "lines": 79
   },
   {
    "path": "finder/record.html",
-   "sha256": "19afd20512a88dbf4fe3f64e6625e426219005e398051ce698f2f71e4a832f75",
+   "sha256": "3169feee8398d08f983a2e3288f495591007393f733aea6fdc3d760151910a60",
    "language": "html",
-   "size": 7826,
-   "lines": 98
+   "size": 7967,
+   "lines": 99
   },
   {
    "path": "finder/record.md",
-   "sha256": "30f7ff46b3e34f66321f793b25f3bb1f891c43cdac0bf798dc8f4006d5f4ac70",
+   "sha256": "3c226433cb5cf08d2f43bd02878417781b17b80131d23bd2adc8a67796189931",
    "language": "markdown",
    "size": 3273,
    "lines": 84
   },
   {
    "path": "finder/routes.html",
-   "sha256": "3f49bf81218c644f74e2c13fce8ff32c68edc8525fe88b3f2e60c22a2329c6ea",
+   "sha256": "858d220ba36048a1378a7ccc689706c12d35828e37f63750975c7ffef9134698",
    "language": "html",
-   "size": 11152,
-   "lines": 44
+   "size": 11293,
+   "lines": 45
   },
   {
    "path": "finder/routes.md",
-   "sha256": "74b9f7e348e291520698d384cd191251c305ac8c8a522a0386932d302282cc51",
+   "sha256": "b95624b4929de95e08b50a7bcd672876750af45045391a0b59428d7b7f8d08d1",
    "language": "markdown",
    "size": 5642,
    "lines": 95
   },
   {
    "path": "finder/stages.html",
-   "sha256": "62a2685fae18555ce1f493a254fddc180432481655b1ad37a01db896be216298",
+   "sha256": "5bc616f1e9f2378e367257cb5a7b790d56453fe725c73d16a29b7cfedf9eb3eb",
    "language": "html",
-   "size": 19206,
-   "lines": 43
+   "size": 19347,
+   "lines": 44
   },
   {
    "path": "finder/stages.md",
-   "sha256": "59129e57c2e599d82d3bf3139cbd473ab2ac076c76b420f918eb2b41f36d2f5b",
+   "sha256": "67e5de3f2c554439b90f4c1aed7d95c90c2d0d1efac4b471dce39f12a287dd8f",
    "language": "markdown",
    "size": 10667,
    "lines": 282
@@ -604,9 +688,9 @@
   },
   {
    "path": "review/tools/derive.py",
-   "sha256": "27529f8a103ffcef10723167c171afbeb7267af58c34b6c41dc3ae4b1dc0ba15",
+   "sha256": "d207af26be5b9293353350e314eb6618f115d65a81c83d3fc58251bf7dc27b1c",
    "language": "python",
-   "size": 6828,
+   "size": 6838,
    "lines": 108
   },
   {
@@ -625,10 +709,10 @@
   },
   {
    "path": "team/engineer/index.md",
-   "sha256": "8e822a60dec74975c48b1c2d6d67a462c1db2dc5721f3d014efe7b503470540c",
+   "sha256": "f5ba149aaf19a1f03a9f7353219272ac2144eeca714b163abfe30ce15edf9f42",
    "language": "markdown",
-   "size": 4169,
-   "lines": 70
+   "size": 4295,
+   "lines": 72
   },
   {
    "path": "team/engineer/issues/blocked/004__theme-ink-in-the-kit.md",
@@ -659,6 +743,20 @@
    "lines": 7
   },
   {
+   "path": "team/engineer/issues/open/005__the-reply-lane.md",
+   "sha256": "77d929277c7e1fd06bdf99e2c590ecbc4aa0f5cefff226f5fb603822efecebbf",
+   "language": "markdown",
+   "size": 678,
+   "lines": 7
+  },
+  {
+   "path": "team/engineer/issues/open/006__a-scheduled-drain.md",
+   "sha256": "7461d0b7aa64bd2eb1074f3a2e27309750069238505002854b8f63206aca7687",
+   "language": "markdown",
+   "size": 767,
+   "lines": 9
+  },
+  {
    "path": "team/engineer/role.md",
    "sha256": "dab1d47dfaf3d67a60d1e7ec5c069f65ab39aff4d88e4dba5ce5b0934c4d2c19",
    "language": "markdown",
@@ -667,14 +765,14 @@
   },
   {
    "path": "team/index.md",
-   "sha256": "a188c6ca36dc197f9aed0a59581f66cf4805b116091c3be060d20ce9ea08ead5",
+   "sha256": "b815563cdac6c15ca0962d44db7cc2a78aec6e2f2457850afd89a632b596007d",
    "language": "markdown",
    "size": 3493,
    "lines": 60
   },
   {
    "path": "team/interviewer/index.md",
-   "sha256": "7b73472929370216612d635396d076c82f9c81dcc3449c63ce1834a09ad2a15f",
+   "sha256": "0f0aa8383095217b4ea5b52952613eb17776f7c488aa37a9462ef002118c8d97",
    "language": "markdown",
    "size": 4036,
    "lines": 68
@@ -702,7 +800,7 @@
   },
   {
    "path": "team/journalist/index.md",
-   "sha256": "8262c93f1cec5f77906f1278adf69e924520eda660bf5379f8dcbe593cf1ecdf",
+   "sha256": "f401f9035d4d60911fc98605409990904490af2d54658b86d3917193314b4b8a",
    "language": "markdown",
    "size": 5086,
    "lines": 71
@@ -736,10 +834,17 @@
    "lines": 33
   },
   {
-   "path": "team/librarian/index.md",
-   "sha256": "c5fe2b26b6fe18001de151a19e393f849cf41b6436384f642a9eeb08893386f3",
+   "path": "team/librarian/briefs/v0.1.5__voice-and-screenshots-for-sgit-ai-guidance.md",
+   "sha256": "9c7ee7d04d91ddfd2bd36c4a2a6865ace7b2fbfad23fdd38b04cce6a32e4a3e5",
    "language": "markdown",
-   "size": 3974,
+   "size": 734,
+   "lines": 7
+  },
+  {
+   "path": "team/librarian/index.md",
+   "sha256": "ec6673c83a24f5efa3aab99a1a04dd3c4c13e68f3a85771b1678182f44e189b4",
+   "language": "markdown",
+   "size": 4080,
    "lines": 68
   },
   {

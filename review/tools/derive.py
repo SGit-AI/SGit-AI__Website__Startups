@@ -16,9 +16,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT        = Path(__file__).resolve().parents[2]
-SOURCE_DIRS = [".github", "admin/build", "admin/content", "admin/credentials", "assets", "finder", "review/intent", "review/tools", "team"]
+SOURCE_DIRS = [".github", "admin/build", "admin/content", "assets", "finder", "review/intent", "review/tools", "team"]
 SOURCE_EXT  = {".py", ".js", ".mjs", ".css", ".html", ".json", ".md", ".yml", ".txt"}
-ROOT_FILES  = ["README.md", "CLAUDE.md", "REALITY.md", "BRIEF-CORRECTIONS.md", "LICENSES.md", "CNAME", "robots.txt", "review/README.md", "review/BRIEF-CORRECTIONS.md", "review/self/README.md"]
+ROOT_FILES  = ["admin/credentials/README.md", "README.md", "CLAUDE.md", "REALITY.md", "BRIEF-CORRECTIONS.md", "LICENSES.md", "CNAME", "robots.txt", "review/README.md", "review/BRIEF-CORRECTIONS.md", "review/self/README.md"]
 GENERATED   = {"finder/finder.json", "finder/finder-prompt.md", "finder/finder-record.md"}  # copies the build writes from admin/content/finder/
 LANG        = {".py": "python", ".js": "javascript", ".mjs": "javascript", ".css": "css", ".html": "html", ".json": "json", ".md": "markdown", ".yml": "yaml", ".txt": "text"}
 

@@ -3,8 +3,8 @@
  "provenance": {
   "tool": "review/tools/derive.py",
   "version": "0.1.0",
-  "site": "v0.1.4",
-  "derived_at": "2026-10-20T22:07:50Z"
+  "site": "v0.1.5",
+  "derived_at": "2026-10-20T23:09:26Z"
  },
  "surfaces": [
   {
@@ -81,6 +81,11 @@
    "id": "agent-articles/storyboards-on-a-separate-page.html",
    "kind": "page",
    "path": "agent-articles/storyboards-on-a-separate-page.html"
+  },
+  {
+   "id": "agent-articles/a-feedback-pane-and-a-lane.html",
+   "kind": "page",
+   "path": "agent-articles/a-feedback-pane-and-a-lane.html"
   },
   {
    "id": "articles/index.html",
@@ -161,6 +166,11 @@
    "id": "storyboards/index.html",
    "kind": "page",
    "path": "storyboards/index.html"
+  },
+  {
+   "id": "feedback/index.html",
+   "kind": "page",
+   "path": "feedback/index.html"
   },
   {
    "id": "review/index.html",
@@ -333,6 +343,11 @@
    "path": "agent-articles/storyboards-on-a-separate-page.md"
   },
   {
+   "id": "agent-articles/a-feedback-pane-and-a-lane.md",
+   "kind": "twin",
+   "path": "agent-articles/a-feedback-pane-and-a-lane.md"
+  },
+  {
    "id": "articles/index.md",
    "kind": "twin",
    "path": "articles/index.md"
@@ -411,6 +426,11 @@
    "id": "storyboards/index.md",
    "kind": "twin",
    "path": "storyboards/index.md"
+  },
+  {
+   "id": "feedback/index.md",
+   "kind": "twin",
+   "path": "feedback/index.md"
   },
   {
    "id": "review/index.md",

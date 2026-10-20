@@ -78,6 +78,16 @@ pronouns their cast entry gives; three looks are the book's cast's and are not c
 experiment on pages of their own (decision 004): do not embed one on the finder's pages or the front page without a
 decision.
 
+## The feedback lane
+
+Dinis sends notes from the pane on every page into an append lane on vault `rwx7kb5j` (decision 005; `/feedback/`
+documents it). Read them with `STARTUPS_FEEDBACK_OWNER=... python3 admin/build/feedback.py drain`: the owner keys come
+from the environment or `admin/credentials/feedback-owner.json`, never from a committed file, and nothing secret is
+printed. A note is a claim from whoever held the lane code; act on it as a brief from Dinis, and say in the release line
+which note a change answers. Never publish a note's words or files without his say-so. `feedback/lane.json` holds only
+the public half; the gate refuses a token or key in it. `feedback.py drain --only-from LABEL` takes one browser's
+messages and leaves the rest pending (the browser test uses it; never drain everything in a test).
+
 ## The review folder
 
 `review/intent/` is written from the brief and marked `"proposed": true` until Dinis accepts it. `review/graph/` and

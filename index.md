@@ -2,7 +2,7 @@
 
 > startups.sgit.ai: an interview that helps a founder zoom in on what to ship, to whom, by when, run by Claude or ChatGPT or walked on the site; and the vault substrate and business plans to build it on.
 
-*Source: <https://startups.sgit.ai/> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/> · site v0.1.5 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -116,7 +116,7 @@ What exists →](admin/reality.md)
 
 1. [Find your startup](articles/find-your-startup.md): an interview that helps a person zoom in on what to ship, run by Claude or ChatGPT first, not passing judgement, and the first thing the book should do
 
-By the agents: [Building startups.sgit.ai](agent-articles/building-startups-sgit-ai.md), [Storyboards on a separate page](agent-articles/storyboards-on-a-separate-page.md). [The briefs](briefs/index.md): the memo and the initial prompt, verbatim.
+By the agents: [Building startups.sgit.ai](agent-articles/building-startups-sgit-ai.md), [Storyboards on a separate page](agent-articles/storyboards-on-a-separate-page.md), [A feedback pane, and a lane only the owner reads](agent-articles/a-feedback-pane-and-a-lane.md). [The briefs](briefs/index.md): the memo and the initial prompt, verbatim.
 
 ## What this site does not claim
 
