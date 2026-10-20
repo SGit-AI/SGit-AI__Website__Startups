@@ -2,7 +2,7 @@
 
 > The engineer: its mandate, what it refuses, and its work.
 
-*Source: <https://startups.sgit.ai/team/engineer/index.html> · site v0.1.3 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/team/engineer/index.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -48,9 +48,9 @@ The folder is the status: an issue moves between open/, blocked/ and done/ with 
 - [001__the-review-navigator](issues/open/001__the-review-navigator.md)
 - [002__the-honest-row-on-nfrs](issues/open/002__the-honest-row-on-nfrs.md)
 
-### Issues: blocked (0)
+### Issues: blocked (1)
 
-- none
+- [004__theme-ink-in-the-kit](issues/blocked/004__theme-ink-in-the-kit.md)
 
 ### Issues: done (1)
 

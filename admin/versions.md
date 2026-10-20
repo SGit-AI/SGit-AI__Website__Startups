@@ -2,7 +2,7 @@
 
 > Every release of startups.sgit.ai, narrated.
 
-*Source: <https://startups.sgit.ai/admin/versions.html> · site v0.1.3 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/admin/versions.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -12,6 +12,7 @@ Every release of this site, narrated: a reader should understand the change with
 
 | Site | Date | What changed, and why |
 |---|---|---|
+| **v0.1.4** | 2026-10-20 | Storyboards, on pages of their own (decision 004): four short strips drawn by code with the storyboards kit (the loop, the spectrum, the excuses, the rules; 25 panels), a cast of seven (three shared with the book, four new, the Finder as an agent), the kit's release v0.1.0 vendored and verified by the gate, this site's prop pack, the sg-strip component (strips, silent panels, captions outside, theme ink), a page of seven design experiments, and the brief back to storyboards.sgit.ai with ten asks; lines quoted from finder.json are checked word for word on every build; the storyboards test and the browser test cover it. |
 | **v0.1.3** | 2026-10-20 | Correction: v0.1.2's line said the release script no longer retargets the working branch's upstream, but that edit had missed its line and v0.1.2 changed nothing; this release carries the fix. |
 | **v0.1.2** | 2026-10-20 | The release script no longer retargets the working branch's upstream to dev when it pushes dev; no page changes. |
 | **v0.1.1** | 2026-10-20 | The first deploy verified: v0.1.0 went live from dev through validate, test, tag and deploy within a minute of the push, recorded in the reality file and the engineer's issue 003 closed; the release script gains a commit body for attribution and makes this release itself. |

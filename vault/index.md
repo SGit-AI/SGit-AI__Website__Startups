@@ -2,13 +2,13 @@
 
 > No vault yet, why, and what one would hold.
 
-*Source: <https://startups.sgit.ai/vault/index.html> · site v0.1.3 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/vault/index.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
 # The vault
 
-None yet, and this page says so rather than describing one in the present tense. The sibling sites keep their working versions in a public, zero-knowledge encrypted vault with the read key published; this site has nothing that needs one as of v0.1.3.
+None yet, and this page says so rather than describing one in the present tense. The sibling sites keep their working versions in a public, zero-knowledge encrypted vault with the read key published; this site has nothing that needs one as of v0.1.4.
 
 ## Why not yet
 

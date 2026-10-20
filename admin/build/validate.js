@@ -13,6 +13,7 @@
 //  10. the finder's published file is its source
 //  11. the review folder is fresh: every source file's hash matches review/graph/files.json; the review page carries the join's coverage
 //  12. every script parses (node --check on .js and .mjs; py_compile on .py when python3 is available)
+//  13. the vendored storyboard kit is the release: every file under assets/vendor/storyboards/<release>/ hashes to its manifest
 // Any failure exits 1: no tag, no publish.
 'use strict';
 const fs = require('fs');
@@ -141,7 +142,7 @@ for (const f of htmlFiles) {
 }
 
 // --- 8. no em-dash ------------------------------------------------------------
-for (const f of files.filter(f => /\.(html|md|txt|json)$/.test(f) && !rel(f).startsWith('admin/credentials/'))) {
+for (const f of files.filter(f => /\.(html|md|txt|json)$/.test(f) && !rel(f).startsWith('admin/credentials/') && !rel(f).startsWith('assets/vendor/'))) {
   const t = read(f);
   const i = t.indexOf('—');
   if (i >= 0) errors.push(`${rel(f)}: an em-dash at offset ${i} ("...${t.slice(Math.max(0, i - 20), i + 20).replace(/\n/g, ' ')}...")`);
@@ -211,6 +212,20 @@ if (py.status === 0) {
   for (const f of files.filter(f => f.endsWith('.py'))) {
     const r = spawnSync('python3', ['-m', 'py_compile', f], { encoding: 'utf8' });
     if (r.status !== 0) errors.push(`${rel(f)}: does not compile: ${(r.stderr || '').trim().split('\n').pop()}`);
+  }
+}
+
+// --- 13. the vendored storyboard kit is the release ------------------------------
+const kit = JSON.parse(read(path.join(ROOT, 'admin/content/storyboards/kit.json')));
+const kitBase = path.join(ROOT, 'assets/vendor/storyboards', kit.release);
+if (!fs.existsSync(path.join(kitBase, 'manifest.json'))) errors.push(`assets/vendor/storyboards/${kit.release}/manifest.json is missing`);
+else {
+  const man = JSON.parse(read(path.join(kitBase, 'manifest.json')));
+  if (man.release !== kit.release) errors.push(`the vendored manifest says ${man.release}, kit.json says ${kit.release}`);
+  for (const f of man.files) {
+    const p = path.join(kitBase, f.path);
+    if (!fs.existsSync(p)) errors.push(`vendored kit: ${f.path} is missing`);
+    else if (sha(fs.readFileSync(p)) !== f.sha256) errors.push(`vendored kit: ${f.path} does not hash to the manifest's sha256 (a published byte moved)`);
   }
 }
 

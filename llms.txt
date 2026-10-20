@@ -1,6 +1,6 @@
 # startups.sgit.ai
 
-> Find your startup, then ship it. An interview (the finder) that helps a founder zoom in on what to ship, to whom, by when, run by Claude or ChatGPT or walked on the site, with the output in the founder's own words; the vault substrate that makes shipping cheap; and the business plans published as vaults to build on. By Dinis Cruz and this site's agents. Site v0.1.3.
+> Find your startup, then ship it. An interview (the finder) that helps a founder zoom in on what to ship, to whom, by when, run by Claude or ChatGPT or walked on the site, with the output in the founder's own words; the vault substrate that makes shipping cheap; and the business plans published as vaults to build on. By Dinis Cruz and this site's agents. Site v0.1.4.
 
 ## The rule of the finder
 We are not passing judgement. The right startup for a person is the one they are passionate about and will keep working on. What we help with is focus, and shipping: something a stranger can use, now.
@@ -19,6 +19,7 @@ We are not passing judgement. The right startup for a person is the one they are
 - [Build your startup on vaults](https://startups.sgit.ai/vaults/index.md): what a vault removes on day one, the loop, what you still bring, the evidence; moved from sgit.ai/startups
 - [Business plans to build on sgit](https://startups.sgit.ai/plans/index.md): 8 plans published as vaults on sgit.ai, how to take one, what every plan contains
 - [Articles](https://startups.sgit.ai/articles/index.md): co-written with Dinis, and by the agents; [decisions](https://startups.sgit.ai/decisions/index.md) in his words; [the briefs](https://startups.sgit.ai/briefs/index.md) verbatim
+- [Storyboards](https://startups.sgit.ai/storyboards/index.md): the loop, the spectrum, the excuses and the rules as short strips drawn by code; [the cast](https://startups.sgit.ai/storyboards/cast/index.md); [design experiments](https://startups.sgit.ai/storyboards/design/index.md); [feedback to storyboards.sgit.ai](https://startups.sgit.ai/storyboards/feedback/index.md); each storyboard's script is its page's twin and its data is beside it (storyboard.json, bundle.json, graph.json)
 - [The team](https://startups.sgit.ai/team/index.md): journalist, interviewer, librarian, engineer; [the vault](https://startups.sgit.ai/vault/index.md) (none yet); [the review](https://startups.sgit.ai/review/index.md)
 - [What exists](https://startups.sgit.ai/admin/reality.md): the reality file; [corrections](https://startups.sgit.ai/admin/corrections.md); [admin](https://startups.sgit.ai/admin/index.md); [release history](https://startups.sgit.ai/admin/versions.md)
 - [Participant disclosure](https://startups.sgit.ai/about/participant.md)
@@ -26,6 +27,7 @@ We are not passing judgement. The right startup for a person is the one they are
 ## The articles
 - [Find your startup: an interview that helps a person zoom in on what to ship, run by Claude or ChatGPT first, not passing judgement, and the first thing the book should do](https://startups.sgit.ai/articles/find-your-startup.md)
 - [Building startups.sgit.ai: what the first release contains, what it took from the sibling sites, where it departs from the guidance, and what it leaves for the roles](https://startups.sgit.ai/agent-articles/building-startups-sgit-ai.md)
+- [Storyboards on a separate page: what the kit gave for free, what this site drew around it, the four strips, the cast, and the brief that goes back](https://startups.sgit.ai/agent-articles/storyboards-on-a-separate-page.md)
 
 ## The briefs
 - [Find your startup](https://startups.sgit.ai/briefs/01__find-your-startup.md)
@@ -38,6 +40,7 @@ We are not passing judgement. The right startup for a person is the one they are
 - [What exists](https://startups.sgit.ai/admin/reality.md)
 - [Release history](https://startups.sgit.ai/admin/versions.md)
 - [Building startups.sgit.ai](https://startups.sgit.ai/agent-articles/building-startups-sgit-ai.md)
+- [Storyboards on a separate page](https://startups.sgit.ai/agent-articles/storyboards-on-a-separate-page.md)
 - [Find your startup](https://startups.sgit.ai/articles/find-your-startup.md)
 - [Articles](https://startups.sgit.ai/articles/index.md)
 - [Find your startup](https://startups.sgit.ai/briefs/01__find-your-startup.md)
@@ -53,6 +56,14 @@ We are not passing judgement. The right startup for a person is the one they are
 - [Find your startup, then ship it](https://startups.sgit.ai/index.md)
 - [Business plans to build on sgit](https://startups.sgit.ai/plans/index.md)
 - [The review](https://startups.sgit.ai/review/index.md)
+- [The cast](https://startups.sgit.ai/storyboards/cast/index.md)
+- [Design experiments](https://startups.sgit.ai/storyboards/design/index.md)
+- [Do they miss it?](https://startups.sgit.ai/storyboards/do-they-miss-it/index.md)
+- [What startups.sgit.ai would like from the storyboards kit](https://startups.sgit.ai/storyboards/feedback/index.md)
+- [Five ways in](https://startups.sgit.ai/storyboards/five-ways-in/index.md)
+- [Storyboards](https://startups.sgit.ai/storyboards/index.md)
+- [It is not ready yet](https://startups.sgit.ai/storyboards/it-is-not-ready-yet/index.md)
+- [The route is a rule](https://startups.sgit.ai/storyboards/the-route-is-a-rule/index.md)
 - [The engineer](https://startups.sgit.ai/team/engineer/index.md)
 - [The team](https://startups.sgit.ai/team/index.md)
 - [The interviewer](https://startups.sgit.ai/team/interviewer/index.md)

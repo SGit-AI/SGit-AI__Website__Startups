@@ -18,6 +18,8 @@ Sources (never edited by this script):
   admin/content/decisions/NNN__*.md      Dinis's decisions, in his words
   admin/content/versions.json            the site's release history, narrated
   admin/content/vault.json               the vaults (none yet)
+  admin/content/storyboards/             cast.json, NN__<slug>.json storyboards, kit.json (the vendored kit release), feedback.md;
+                                         admin/build/storyboards.mjs validates them with the kit's formats.js and writes the derived files
   team/<role>/role.md, issues/, briefs/  the roles
   REALITY.md, BRIEF-CORRECTIONS.md       the reality file and the corrections file, rendered under admin/
   review/intent/*.json                   the review folder's intent; review/tools/derive.py writes the derived layers
@@ -55,6 +57,7 @@ NAV_GROUPS = [
     ("Find your startup", [("The finder", "finder/index.html"), ("Walk the interview", "finder/interview.html"), ("The stages and questions", "finder/stages.html"),
                            ("The routes and rules", "finder/routes.html"), ("The prompt for Claude or ChatGPT", "finder/prompt.html"), ("The record", "finder/record.html")]),
     ("Build on vaults", [("Build your startup on vaults", "vaults/index.html"), ("Business plans to build on", "plans/index.html")]),
+    ("Storyboards", [("Storyboards", "storyboards/index.html"), ("The cast", "storyboards/cast/index.html"), ("Design experiments", "storyboards/design/index.html"), ("Feedback to storyboards.sgit.ai", "storyboards/feedback/index.html")]),
     ("Articles", [("Articles", "articles/index.html"), ("Decisions", "decisions/index.html"), ("The briefs", "briefs/index.html")]),
     ("The team", [("The team", "team/index.html"), ("The vault", "vault/index.html"), ("The review", "review/index.html"), ("What exists", "admin/reality.html"), ("Admin", "admin/index.html")]),
 ]
@@ -418,7 +421,7 @@ def build_finder():
 <li><b>The page does not hold a conversation.</b> It asks the questions as written. The follow-up when an answer is vague, and the reading of documents, are the model's, through the prompt.</li>
 <li><b>The storyboard version and the programmatic version do not exist.</b> The memo names both as later.</li>
 </ul>
-<p class="small dim">The finder is the brief's own ask: <a href="../articles/find-your-startup.html">Find your startup</a>, in Dinis's words, with the brief for the roles at its end. The agent surface is <a href="../llms.txt">llms.txt</a>.</p>
+<p class="small dim">The loop, the spectrum, the excuses and the rules are also drawn, as short strips, in <a href="../storyboards/index.html">the storyboards section</a>, an experiment on pages of its own. The finder is the brief's own ask: <a href="../articles/find-your-startup.html">Find your startup</a>, in Dinis's words, with the brief for the roles at its end. The agent surface is <a href="../llms.txt">llms.txt</a>.</p>
 """
     page("finder/index.html", "Find your startup", body, "An interview that helps you zoom in on what to ship, to whom, by when; run by Claude or ChatGPT, or walked on this site; the output in your own words.", crumbs=(("Find your startup", "finder/index.html"),))
 
@@ -690,6 +693,167 @@ def build_vault():
     return v
 
 
+# ------------------------------------------------------------------ storyboards
+def kit_head():
+    """The storyboard kit's files, vendored, loaded with the manifest's integrity strings (same origin, so no crossorigin).
+    Classic scripts in order: fonts, styles, Rough.js, the security pack, this site's pack, the kit. The prefs key is this
+    site's own so the viewer's settings are not shared with another site's."""
+    kit = json.loads((ROOT / "admin/content/storyboards/kit.json").read_text(encoding="utf-8"))
+    base = f"assets/vendor/storyboards/{kit['release']}/"
+    man = json.loads((ROOT / base / "manifest.json").read_text(encoding="utf-8"))
+    integ = {f["path"]: f["integrity"] for f in man["files"]}
+    def tag(rel, up):
+        if rel.endswith(".css"):
+            return f'<link rel="stylesheet" href="{up}{base}{rel}" integrity="{integ[rel]}">'
+        return f'<script src="{up}{base}{rel}" integrity="{integ[rel]}"></script>'
+    def head(up):
+        return "\n".join([tag("fonts.css", up), tag("storyboard.css", up), tag("vendor/rough-4.6.6.js", up), tag("props/security.js", up),
+                          f'<script src="{up}assets/storyboards/startups-props.js"></script>',
+                          "<script>window.StoryboardPrefsKey = 'startups.storyboards.v1';</script>", tag("storyboard.js", up)]) + "\n"
+    return kit, head
+
+
+def build_storyboards():
+    import subprocess
+    r = subprocess.run(["node", str(ROOT / "admin/build/storyboards.mjs")], capture_output=True, text=True)
+    if r.returncode:
+        sys.exit("build: storyboards.mjs failed\n" + r.stderr + r.stdout)
+    st = json.loads(r.stdout)
+    kit, head = kit_head()
+    cast = json.loads((ROOT / "admin/content/storyboards/cast.json").read_text(encoding="utf-8"))
+    for name in ("cast.json",):
+        written.append(f"storyboards/{name}")
+    for b in st["boards"]:
+        for f in ("storyboard.json", "bundle.json", "graph.json", "script.md"):
+            written.append(f"storyboards/{b['slug']}/{f}")
+    api = f"{kit['host']}/{kit['path']}/"
+
+    # ---- one page per storyboard: the kit's viewer, wired from the same markup storyboards.sgit.ai writes
+    tools = ('<div class="sb-tools" role="toolbar" aria-label="How to view the panels"><span class="sb-views" role="group" aria-label="View">'
+             '<button type="button" data-view="deck" title="One panel at a time (d)">Deck</button><button type="button" data-view="grid" title="Every panel on one page (g)">Grid</button>'
+             '<button type="button" data-view="script" title="The storyboard as text (t)">Script</button></span>'
+             '<label class="sb-for-grid">Per row <select class="sb-cols"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></label>'
+             '<label title="Panels play as they arrive (a)"><input type="checkbox" class="sb-anim"> Animation</label>'
+             '<label class="sb-for-grid" title="Each panel\'s script under it (x)"><input type="checkbox" class="sb-showtext"> Text</label>'
+             '<button type="button" class="sb-playall sb-for-grid" title="Play the panels one after another (p)">Play in order</button>'
+             '<input type="search" class="sb-filter sb-for-list" placeholder="Filter: a word, a name, a mood" aria-label="Filter the panels"></div>')
+    deck = ('<div class="sb-deck" hidden><div class="sb-track"></div><div class="sb-bar"><button type="button" class="sb-prev" aria-label="Previous panel">&larr;</button>'
+            '<span class="sb-count"></span><button type="button" class="sb-next" aria-label="Next panel">&rarr;</button><button type="button" class="sb-replay" title="Play this panel (p)">&#9654; Play</button>'
+            '<button type="button" class="sb-notes-toggle" title="Notes (n)">Notes</button><button type="button" class="sb-full" title="Full screen (f)">Full screen</button></div><div class="sb-notes"></div></div>')
+    for i, b in enumerate(st["boards"]):
+        sb = json.loads((ROOT / "storyboards" / b["slug"] / "storyboard.json").read_text(encoding="utf-8"))
+        rel = f"storyboards/{b['slug']}/index.html"
+        script = (ROOT / "storyboards" / b["slug"] / "script.md").read_text(encoding="utf-8")
+        payload = json.dumps({"storyboard": sb, "cast": cast}, ensure_ascii=False).replace("</", "<\\/")
+        prev = st["boards"][i - 1] if i else None
+        nxt = st["boards"][i + 1] if i + 1 < len(st["boards"]) else None
+        panels = "".join(f'<li><a href="#scene-{j + 1}">{j + 1}.</a> {esc(sc.get("caption") or sc.get("punchline") or sc.get("title") or "")} <span class="small dim">({esc(sc.get("kind", "scene"))})</span></li>' for j, sc in enumerate(sb["scenes"]))
+        body = f"""<p class="kicker">storyboard {i + 1} of {len(st["boards"])} &middot; {b["panels"]} panels &middot; <span class="badge proposed">{esc(sb.get("status", "draft"))}</span> &middot; drawn by the kit {esc(kit["release"])}</p>
+<h1>{esc(sb["title"])}</h1>
+<p class="lede">{esc(sb.get("subtitle", ""))}</p>
+<p class="small dim">{esc(sb.get("by", ""))}. {esc(sb.get("rule", ""))}</p>
+<div class="sb-viewer">{tools}{deck}<div class="sb-grid" hidden></div><div class="sb-script" hidden></div><script type="application/json" class="sb-data">{payload}</script></div>
+<h2 id="take">Take it with you</h2>
+<p>The same storyboard in the shapes the kit gives it. The pictures are drawn in your browser from the data; nothing here is an image file.</p>
+<div class="cards">
+<a class="card" href="storyboard.json"><span class="k">storyboard.json</span><h3>The data</h3><p>As written in <code>admin/content/storyboards/</code>.</p></a>
+<a class="card" href="bundle.json"><span class="k">bundle.json</span><h3>With its cast</h3><p>What an embed fetches: the storyboard, the cast and the packs it names.</p></a>
+<a class="card" href="index.md"><span class="k">index.md</span><h3>The script</h3><p>Every panel as text, made by the kit's formats.js; this page's markdown twin.</p></a>
+<a class="card" href="graph.json"><span class="k">graph.json</span><h3>The graph</h3><p>{b["stats"].get("panels", b["panels"])} panels as nodes and the edges that carry the meaning: says, shows, quotes, next.</p></a>
+</div>
+<h2 id="embed">Put it on another page</h2>
+<p>Two lines, from any site, with the kit pinned to the release this site vendors. The embed knows the kit's own props and the security pack; this site's pack (the five, the tag, the door, the parcel) is not loadable by the embed yet, so those props are left out of the drawing there (<a href="../feedback/index.html">ask 4</a>).</p>
+<pre>&lt;script src="{esc(api)}embed.js" defer&gt;&lt;/script&gt;
+&lt;sg-storyboard src="{BASE}storyboards/{b["slug"]}/bundle.json" view="deck"&gt;&lt;/sg-storyboard&gt;</pre>
+<h2 id="panels">The panels</h2>
+<ol>{panels}</ol>
+<div class="prevnext">{f'<a href="../{prev["slug"]}/index.html">&larr; {esc(prev["title"])}</a>' if prev else '<a href="../index.html">&larr; All storyboards</a>'}{f'<a href="../{nxt["slug"]}/index.html">{esc(nxt["title"])} &rarr;</a>' if nxt else '<a href="../design/index.html">The design experiments &rarr;</a>'}</div>
+"""
+        twin = twin_text(rel, sb["title"], sb.get("subtitle", ""), script)
+        page(rel, sb["title"], body, sb.get("subtitle", "")[:300], crumbs=(("Storyboards", "storyboards/index.html"), (sb["title"], rel)), extra_head=head("../../"), wide=True, twin=twin)
+
+    # ---- the cast
+    rows = "".join(f'<tr><td><b>{esc(c["name"])}</b><br><span class="small dim">{esc(c["id"])} &middot; {esc(c.get("pronouns", ""))}{(" &middot; " + str(c["age"])) if c.get("age") else ""}</span></td><td>{esc(c.get("role", ""))}</td><td>{esc(c.get("stands_for", ""))}</td><td><i>{esc(c.get("line", ""))}</i></td><td>{esc(c.get("from", "this site"))}</td></tr>' for c in cast["characters"])
+    cast_payload = json.dumps({"cast": cast}, ensure_ascii=False).replace("</", "<\\/")
+    body = f"""<h1>The cast</h1>
+<p class="lede">{len(cast["characters"])} characters, one per way in on the finder's spectrum plus the voice of the site and the agent that runs the interview. Three are shared with <a href="https://storyboards.sgit.ai/gen-z-developers/cast.html">the book's cast</a>, look unchanged, so the family of sites reads the same; four are this site's own. Every look is data in <a href="../cast.json"><code>cast.json</code></a>, drawn by the kit; nothing is an image.</p>
+<div class="sb-cast"><div class="sb-cast-grid">{"".join(f'<div class="card"><svg data-who="{esc(c["id"])}" data-poses="stand,point,wave,think" data-moods="happy,determined,happy,thinking" role="img" aria-label="{esc(c["name"])} in four poses"></svg><h3>{esc(c["name"])}</h3><p>{esc(c.get("role", ""))}</p><p class="small"><i>{esc(c.get("line", ""))}</i></p></div>' for c in cast["characters"])}</div><script type="application/json" class="sb-data">{cast_payload}</script></div>
+<h2 id="who">Who they are</h2>
+<div class="tablewrap"><table><thead><tr><th>Character</th><th>Role</th><th>Stands for</th><th>Line</th><th>From</th></tr></thead><tbody>{rows}</tbody></table></div>
+<h2 id="sheet">The model sheet</h2>
+<p>Every character in every mood and every pose the kit knows, so a storyboard's author can pick by eye.</p>
+<div class="sb-sheet"><script type="application/json" class="sb-data">{cast_payload}</script></div>
+<p class="small dim">The cast is a proposal for Dinis (<code>cast.json</code>, <code>what</code>). Characters use the pronouns their cast entry gives. A character's badge (explorer, villager, town planner) is a centre of gravity, not a box, as the book describes it.</p>
+"""
+    page("storyboards/cast/index.html", "The cast", body, "The characters of this site's storyboards: one per way in on the finder's spectrum, the Guide and the Finder.", crumbs=(("Storyboards", "storyboards/index.html"), ("The cast", "storyboards/cast/index.html")), extra_head=head("../../"), wide=True)
+
+    # ---- the design experiments
+    strip = lambda slug, **kw: f'<sg-strip src="../{slug}/bundle.json" href="../{slug}/index.html" ' + " ".join(f'{k}="{v}"' for k, v in kw.items()) + "></sg-strip>"
+    body = f"""<h1>Design experiments</h1>
+<p class="lede">The same storyboards, drawn by the same kit, laid out differently. Dinis's brief: the storyboards are a nice thing to have on this site rather than the main thing, they are quite big as they come, and the design is the thing to explore: layouts, schemas, colours, characters. Each experiment below names what it changes and what it costs, and feeds <a href="../feedback/index.html">the brief back to the storyboards team</a>. Switch the theme in the top bar to see the ink experiment.</p>
+<h2 id="kit">0. As the kit draws it</h2>
+<p>The deck: one panel at a time in a dark frame, a toolbar, a bar, notes, full screen. Right for a storyboard page; heavy for a figure in a page of prose. <a href="../do-they-miss-it/index.html">Open the first strip in the deck.</a></p>
+<h2 id="strip">1. A strip, three per row, as the kit draws each panel</h2>
+<p>The <code>sg-strip</code> component draws each panel with <code>drawScene</code> into its own grid: no toolbar, no frame, a number and nothing else under each panel. A click opens the deck at that panel. The bubbles are the kit's; at a third of the measure the four-line ones are hard to read.</p>
+{strip("do-they-miss-it", cols=3)}
+<h2 id="silent">2. Silent panels, the lines under them</h2>
+<p>The same strip with the speech taken out of a copy of each scene before drawing, and printed under the panel. The picture carries the setting, the people and their moods; the text carries the words. Small panels become legible, and the lines are selectable text. The cost: the panel no longer says who speaks first without the text.</p>
+{strip("do-they-miss-it", cols=3, mode="silent")}
+<h2 id="captions">3. Captions outside too</h2>
+<p>The yellow caption box is the kit's narrator voice. Outside the panel it reads as a figure caption, and the panel is only the drawing.</p>
+{strip("five-ways-in", cols=4, mode="silent", captions="out")}
+<h2 id="ink">4. Theme ink</h2>
+<p>The kit draws on cream paper with dark ink in every theme, like a printed picture, on purpose. This experiment maps the kit's two constants and its white fills to this site's tokens after drawing, so the panel follows Night, Paper, Blueprint or Ember. It is a remap of the output, not a kit option: the hachure fills and the coloured props keep their colours, which is why it is here and not on the front page. Ask 1 in the brief is the kit doing this properly.</p>
+{strip("the-route-is-a-rule", cols=3, mode="silent", ink="theme")}
+<h2 id="sizes">5. One per row, with the script beside it</h2>
+<p>At the full measure a panel reads as the kit intends, bubbles included, and the lines under it become a transcript. Two panels a row is the shape a strip in prose wants; one is a figure.</p>
+{strip("it-is-not-ready-yet", cols=2, panels="2-3")}
+<h2 id="figure">6. A figure in prose</h2>
+<div class="twocol">
+<div>{strip("it-is-not-ready-yet", cols=1, panels="4", mode="silent", captions="out")}</div>
+<div><p>One panel beside a paragraph, silent, caption as a figure caption. This is the shape the finder's pages would use if the storyboards left this section: the evidence panel of <a href="../it-is-not-ready-yet/index.html">It is not ready yet</a> quoting the rule of the finder, word for word from <code>finder.json</code>, beside the paragraph that explains it.</p><p>The quote in the panel is checked by the build against the file: a line marked <code>from_finder</code> must equal a string in <code>finder.json</code>, or the build fails. The same rule the book's site applied to its chapters.</p></div>
+</div>
+<h2 id="try">7. Try the combinations</h2>
+<p>Every switch above, live, on the spectrum strip.</p>
+{strip("five-ways-in", cols=4, controls="")}
+<h2 id="what">What these do not settle</h2>
+<ul>
+<li><b>Panel format.</b> Everything is 16:10, the kit's one shape. A square or a 4:5 portrait would hold two people and a prop better in a strip (ask 6).</li>
+<li><b>Text scale.</b> Silent panels dodge the problem; a kit option would solve it (ask 7).</li>
+<li><b>The characters.</b> The cast page shows them; whether Rui, Inês and Ana are the right four, and whether the Finder should look like an agent or like a page, is for Dinis.</li>
+<li><b>Where they go.</b> Nothing on the finder's pages embeds a strip yet; this section is the experiment. Decision 004.</li>
+</ul>
+"""
+    page("storyboards/design/index.html", "Design experiments", body, "The storyboards laid out differently: strips, silent panels, captions outside, theme ink, sizes, a figure in prose.", crumbs=(("Storyboards", "storyboards/index.html"), ("Design experiments", "storyboards/design/index.html")), extra_head=head("../../"), wide=True, module="assets/components/sg-strip/sg-strip.js")
+
+    # ---- the feedback brief
+    fm, text = frontmatter((ROOT / "admin/content/storyboards/feedback.md").read_text(encoding="utf-8"))
+    body = f'<article class="doc"><p class="kicker">{esc(fm_get(fm, "kicker"))}</p><h1>{esc(fm_get(fm, "title"))}</h1><p class="lede">{esc(fm_get(fm, "description"))}</p><div class="body">{md(text)}</div></article>'
+    page("storyboards/feedback/index.html", fm_get(fm, "title"), body, fm_get(fm, "description"), crumbs=(("Storyboards", "storyboards/index.html"), ("Feedback", "storyboards/feedback/index.html")))
+
+    # ---- the index
+    cards = "".join(f'<div class="card"><span class="k">storyboard {i + 1} &middot; {b["panels"]} panels</span><h3><a href="{b["slug"]}/index.html">{esc(b["title"])}</a></h3><p>{esc(b["subtitle"])}</p><a class="more" href="{b["slug"]}/index.html">Open the deck &rarr;</a></div>' for i, b in enumerate(st["boards"]))
+    strips = "".join(f'<h3 id="{b["slug"]}"><a href="{b["slug"]}/index.html">{esc(b["title"])}</a></h3><sg-strip src="{b["slug"]}/bundle.json" href="{b["slug"]}/index.html" cols="{min(b["panels"], 4)}" mode="silent" captions="out"></sg-strip>' for b in st["boards"])
+    body = f"""<p class="kicker">An experiment, on a page of its own &middot; decision 004 &middot; kit {esc(kit["release"])} from api.storyboards.sgit.ai, vendored</p>
+<h1>Storyboards</h1>
+<p class="lede">This site's concepts as storyboards: the loop, the spectrum, the excuses and the rules, drawn by code from data with <a href="https://storyboards.sgit.ai/">the storyboards kit</a>. {len(st["boards"])} strips, {st["panels"]} panels, {st["characters"]} characters. Short on purpose: a nice thing to have beside the pages, not the main thing. The <a href="design/index.html">design experiments</a> try other layouts; <a href="feedback/index.html">the brief</a> sends what was learnt back.</p>
+<div class="cards">{cards}</div>
+<h2 id="strips">The strips, silent, captions as text</h2>
+<p>Each strip as the design experiments ended up drawing it: the panels small, the words under them as text, a click opening the deck. The lines a character speaks from <code>finder.json</code> are the file's, word for word, and the build checks them.</p>
+{strips}
+<h2 id="how">How they are made</h2>
+<ul>
+<li><b>Data.</b> One JSON file per storyboard and one cast in <code>admin/content/storyboards/</code>, in <a href="https://api.storyboards.sgit.ai/docs/format.html">the kit's format</a>, validated by its <code>formats.js</code> on every build. <a href="cast/index.html">The cast</a> is three characters shared with the book and four of this site's own.</li>
+<li><b>Drawing.</b> The kit's release {esc(kit["release"])}, vendored byte for byte under <code>assets/vendor/storyboards/</code> with its manifest; the gate recomputes every hash. This site adds a prop pack (the five, a price tag, a door, a parcel) and the <code>sg-strip</code> component.</li>
+<li><b>Quotes.</b> A line marked <code>from_finder</code> must be in <code>finder.json</code> word for word (decision 002: nothing about the interview is written twice).</li>
+<li><b>Shapes.</b> Each storyboard has its data, its bundle for an embed, its graph and its script as the page's markdown twin.</li>
+</ul>
+<p class="small dim">The storyboards began on <a href="https://gen-z-developers.sgit.ai/storyboards/index.html">the book's site</a>, moved to <a href="https://storyboards.sgit.ai/">storyboards.sgit.ai</a> on 20 October 2026, and this is the first site to draw its own with the kit from outside. Status: a proposal for Dinis; the cast and every panel are drafts.</p>
+"""
+    page("storyboards/index.html", "Storyboards", body, "This site's concepts as storyboards drawn by code: the loop, the spectrum, the excuses and the rules; an experiment with the storyboards kit.", crumbs=(("Storyboards", "storyboards/index.html"),), extra_head=head("../"), wide=True, module="assets/components/sg-strip/sg-strip.js")
+    return st
+
+
 # ------------------------------------------------------------------ the review folder
 def build_review(pages):
     d = Derive(ROOT)
@@ -748,7 +912,8 @@ def build_admin(stats):
 <pre>python3 admin/build/build.py        # every page and twin, llms.txt, the sitemap, the review's derived layers
 node admin/build/validate.js        # the gate, below
 node admin/build/test_finder.mjs    # the finder's rules against finder.json, with sample answers
-node admin/build/test_interview.mjs # the interview page in a real browser (Playwright; skips without it)
+node admin/build/test_interview.mjs # the interview page and the storyboards in a real browser (Playwright; skips without it)
+node admin/build/test_storyboards.mjs # the vendored kit against its manifest, the storyboards against the validator and finder.json
 python3 admin/build/release.py --what "one sentence" [--minor] [--dev]   # fetch, bump, build, validate, test, tripwire, commit, push, verify live</pre>
 <h2>The gate</h2>
 <p>Every check fails the build; CI runs the gate and the finder test before it tags a release.</p>
@@ -765,6 +930,7 @@ python3 admin/build/release.py --what "one sentence" [--minor] [--dev]   # fetch
 <li><b>The finder's published file is its source:</b> <code>finder/finder.json</code> equals <code>admin/content/finder/finder.json</code>; the deep checks are the finder test.</li>
 <li><b>The review folder is fresh:</b> every source file's hash matches <code>review/graph/files.json</code>, and the coverage on the review page is the join's.</li>
 <li><b>Every script parses:</b> <code>node --check</code> on every JavaScript file, <code>py_compile</code> on every Python file.</li>
+<li><b>The vendored storyboard kit is the release:</b> every file under <code>assets/vendor/storyboards/&lt;release&gt;/</code> hashes to its manifest; the storyboards validate with the kit's own validator and every line marked from_finder is in <code>finder.json</code> (the storyboards test).</li>
 </ol>
 <p class="small dim">Not here, and said so: a linter or a formatter, as on every sibling site; the Type_Safe guards and crypto vectors of the guidance's list, which have no code to guard here. <a href="corrections.html">The corrections file</a> records both.</p>
 <h2>The rules</h2>
@@ -812,6 +978,7 @@ def build_home(finder, counts, plans, briefs, articles, roles, stats, mdpages):
 <a class="card" href="plans/index.html"><span class="k">Business plans</span><h3>{len(plans["plans"])} plans, published as vaults, to take and run</h3><p>Each with the numbers marked as hypotheses, the facts with their sources, and prototypes enough to serve the first customer. We are looking for partners to build them.</p><span class="more">The plans &rarr;</span></a>
 <a class="card" href="articles/index.html"><span class="k">Articles</span><h3>The brief, in Dinis's voice</h3><p>What the finder is and why, ending with the brief for the roles; the memo verbatim; the decisions in his words; the agents' accounts of their work.</p><span class="more">Articles &rarr;</span></a>
 <a class="card" href="team/index.html"><span class="k">The team</span><h3>Journalist, interviewer, librarian, engineer</h3><p>Each with what it refuses and its first issues. No session has run as a role yet; the first release was one session as all four.</p><span class="more">The roles &rarr;</span></a>
+<a class="card" href="storyboards/index.html"><span class="k">Storyboards &middot; an experiment</span><h3>The loop, the spectrum, the excuses and the rules, drawn</h3><p>Short strips drawn by code from data with the storyboards kit, a cast of seven, and a page of design experiments. On a page of their own, by decision.</p><span class="more">Storyboards &rarr;</span></a>
 <a class="card" href="admin/reality.html"><span class="k">What exists</span><h3>The reality file, by domain</h3><p>What is on this site and what is not: a feature that is not in the file does not exist. Review coverage {int(stats["coverage"] * 100)}%, {stats["gaps"]} gaps named.</p><span class="more">What exists &rarr;</span></a>
 </div>
 <div class="twocol">
@@ -861,6 +1028,7 @@ def build_agent_surface(finder, counts, briefs, articles, plans):
 - [Build your startup on vaults]({BASE}vaults/index.md): what a vault removes on day one, the loop, what you still bring, the evidence; moved from sgit.ai/startups
 - [Business plans to build on sgit]({BASE}plans/index.md): {len(plans["plans"])} plans published as vaults on sgit.ai, how to take one, what every plan contains
 - [Articles]({BASE}articles/index.md): co-written with Dinis, and by the agents; [decisions]({BASE}decisions/index.md) in his words; [the briefs]({BASE}briefs/index.md) verbatim
+- [Storyboards]({BASE}storyboards/index.md): the loop, the spectrum, the excuses and the rules as short strips drawn by code; [the cast]({BASE}storyboards/cast/index.md); [design experiments]({BASE}storyboards/design/index.md); [feedback to storyboards.sgit.ai]({BASE}storyboards/feedback/index.md); each storyboard's script is its page's twin and its data is beside it (storyboard.json, bundle.json, graph.json)
 - [The team]({BASE}team/index.md): journalist, interviewer, librarian, engineer; [the vault]({BASE}vault/index.md) (none yet); [the review]({BASE}review/index.md)
 - [What exists]({BASE}admin/reality.md): the reality file; [corrections]({BASE}admin/corrections.md); [admin]({BASE}admin/index.md); [release history]({BASE}admin/versions.md)
 - [Participant disclosure]({BASE}about/participant.md)
@@ -890,6 +1058,7 @@ def main():
     articles = build_articles()
     roles = build_team()
     build_vault()
+    storyboards = build_storyboards()
     # the review's derived layers need the list of pages so far, plus the ones written after; derive is run twice so that
     # surfaces.json lists every page, including review/index.html itself and the admin pages
     stats = build_review([w for w in written if w.endswith(".html")])

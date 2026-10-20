@@ -5,3 +5,5 @@
 **Done when.** The article is published with the brief for the engineer, and the question is on Dinis's list.
 
 **From.** [Find your startup](../../../../articles/find-your-startup.md), the questions for Dinis.
+
+**Done.** 2026-10-20, site v0.1.4. Dinis answered the question himself the same day (decision 004): storyboards come here as an experiment on a page of their own. The proposal became the storyboards section (four strips, the cast, the design experiments, the brief back to storyboards.sgit.ai), accounted for in the engineer's agent article. The interview itself as a strip is a new issue, 003.

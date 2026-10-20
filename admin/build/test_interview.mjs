@@ -106,6 +106,26 @@ try {
   await page.waitForFunction(() => { const f = document.querySelector('sg-finder'); return f && f.shadowRoot && f.shadowRoot.querySelector('.stage-title') && f.shadowRoot.querySelector('.stage-title').textContent }, null, { timeout: 15000 })
   expect((await inShadow('.stage-title')).startsWith('3.'), `after reload the page should open the first unanswered stage (3, where two text answers were left blank), got ${await inShadow('.stage-title')}`)
 
+  // the storyboards: the strips draw panels, the deck has slides, the cast sheet draws, the design page draws every experiment
+  await page.goto(base + 'storyboards/index.html')
+  await page.waitForFunction(() => { const s = document.querySelectorAll('sg-strip'); return s.length && [...s].every(e => e.shadowRoot && e.shadowRoot.querySelectorAll('figure svg path').length > 0) }, null, { timeout: 30000 })
+  const drawn = await page.evaluate(() => [...document.querySelectorAll('sg-strip')].map(e => e.shadowRoot.querySelectorAll('figure').length))
+  expect(drawn.length === 4 && drawn.reduce((a, b) => a + b, 0) === 25, `the index should draw 4 strips with 25 panels, got ${JSON.stringify(drawn)}`)
+  expect(await page.evaluate(() => [...document.querySelectorAll('sg-strip')][0].shadowRoot.querySelectorAll('figcaption .line').length) > 0, 'silent strips should print the lines under the panels')
+  if (shots) await page.screenshot({ path: path.join(shots, 'storyboards-index.png'), fullPage: true })
+  await page.goto(base + 'storyboards/it-is-not-ready-yet/index.html')
+  await page.waitForFunction(() => document.querySelectorAll('.sb-deck .sb-slide svg path').length > 0, null, { timeout: 30000 })
+  expect((await page.evaluate(() => document.querySelectorAll('.sb-deck .sb-slide').length)) === 6, 'the deck should hold six slides')
+  expect((await page.evaluate(() => document.querySelector('.sb-deck .sb-slide svg').textContent || '')).includes('It is not ready yet'), 'the first slide should carry the cover title')
+  if (shots) await page.screenshot({ path: path.join(shots, 'storyboard-deck.png'), fullPage: false })
+  await page.goto(base + 'storyboards/cast/index.html')
+  await page.waitForFunction(() => document.querySelectorAll('.sb-cast svg path').length > 0 && document.querySelectorAll('.sb-sheet svg').length > 0, null, { timeout: 30000 })
+  await page.goto(base + 'storyboards/design/index.html')
+  await page.waitForFunction(() => { const s = document.querySelectorAll('sg-strip'); return s.length === 7 && [...s].every(e => e.shadowRoot && e.shadowRoot.querySelectorAll('figure svg path').length > 0) }, null, { timeout: 30000 })
+  expect(await page.evaluate(() => { const s = [...document.querySelectorAll('sg-strip')].find(e => e.getAttribute('ink') === 'theme'); return s.shadowRoot.querySelectorAll('[stroke="var(--sb-ink)"]').length > 0 }), 'the theme-ink strip should have remapped its ink')
+  expect(await page.evaluate(() => { const s = [...document.querySelectorAll('sg-strip')].find(e => e.hasAttribute('controls')); return !s.shadowRoot.querySelector('.bar').hidden }), 'the controls strip should show its bar')
+  if (shots) { await page.evaluate(() => window.__startupsTheme.set('night')); await page.waitForTimeout(300); await page.screenshot({ path: path.join(shots, 'design-night.png'), fullPage: true }) }
+
   // the stages page and the prompt page render without script errors
   for (const p of ['finder/stages.html', 'finder/prompt.html', 'finder/routes.html', 'vaults/index.html', 'plans/index.html', 'review/index.html']) {
     await page.goto(base + p)
@@ -122,4 +142,4 @@ if (failures.length) {
   for (const f of failures) console.error('  - ' + f)
   process.exit(1)
 }
-console.log('test_interview: ok, the interview walks seven stages, picks the route by rule, writes the record, keeps the answers, and the pages load with no browser error')
+console.log('test_interview: ok, the interview walks seven stages, picks the route by rule, writes the record, keeps the answers; the storyboards draw in strips, the deck, the cast sheet and the design page; the pages load with no browser error')

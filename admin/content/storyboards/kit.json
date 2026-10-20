@@ -1,0 +1,8 @@
+{
+ "what": "The release of api.storyboards.sgit.ai this site draws with, vendored byte for byte under assets/vendor/storyboards/<release>/ with its manifest.json; the gate recomputes every hash against the manifest. Every page that draws a storyboard loads the kit from that path with the manifest's integrity strings. Moving to a new release is copying its folder here and changing this file.",
+ "host": "https://api.storyboards.sgit.ai",
+ "release": "v0.1.0",
+ "path": "v0/v0.1/v0.1.0",
+ "vendored_on": "2026-10-20",
+ "source": "https://github.com/SGit-AI/SGit-AI__Website__Storyboards__API, v0/v0.1/v0.1.0/"
+}

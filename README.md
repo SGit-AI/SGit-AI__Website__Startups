@@ -37,6 +37,9 @@ team/                      the roles: journalist, interviewer, librarian, engine
   <role>/role.md           Identity, Foundation, Primary Responsibilities, Core Workflows
   <role>/issues/           open/ blocked/ done/
   <role>/briefs/, debriefs/
+storyboards/               generated from admin/content/storyboards/: the index with the strips, one page per storyboard (the kit's
+                           deck, grid and script; storyboard.json, bundle.json, graph.json, script.md; the script is the page's twin),
+                           the cast (cast sheet and model sheet), the design experiments, the brief back to storyboards.sgit.ai
 vault/                     generated: no vault yet, and what one would hold
 review/                    the review folder: intent/ from the brief; graph/ and join/ derived by tools/derive.py
 about/participant.html     the participant disclosure
@@ -45,16 +48,20 @@ admin/
   build/build.py           writes every page, every markdown twin, llms.txt, the sitemap, and runs derive.py
   build/validate.js        the gate (twelve checks; see /admin/)
   build/test_finder.mjs    the finder's rules against the finder's file
-  build/test_interview.mjs the interview page walked in a real browser (Playwright; skips without it)
+  build/test_interview.mjs the interview page and the storyboards in a real browser (Playwright; skips without it)
+  build/storyboards.mjs    validates the storyboards with the kit's formats.js, checks from_finder lines, writes the derived files
+  build/test_storyboards.mjs  the vendored kit against its manifest, the storyboards against the validator and finder.json
   build/release.py         fetch, bump, build, validate, test, tripwire, commit, push, verify live
   content/                 the authored data: finder/, plans.json, pages/, briefs/, articles/, agent-articles/,
-                           decisions/, versions.json, vault.json
+                           decisions/, versions.json, vault.json, storyboards/ (cast.json, NN__<slug>.json, kit.json, feedback.md)
   credentials/             the credentials tier, ignored by git except its README
   index.html, versions.html, reality.html, corrections.html   admin, the release history, the reality file, the corrections
 assets/site.css            the layout and type, for every page
 assets/themes.css          the colour: five themes, newsroom.sgit.ai's, every colour a token defined in all five
 assets/site.js             sets the theme before the first paint, draws the picker, opens the menu on a narrow screen
-assets/components/         sg-base (the base component) and sg-finder (the interview), three files each
+assets/components/         sg-base (the base component), sg-finder (the interview) and sg-strip (a storyboard as a strip), three files each
+assets/vendor/storyboards/ the storyboard kit, one immutable release folder with its manifest, hashes checked by the gate
+assets/storyboards/        this site's prop pack for the kit (the five, a price tag, a door, a parcel)
 REALITY.md                 what exists, by domain; BRIEF-CORRECTIONS.md: where the brief was departed from
 llms.txt, sitemap.xml, robots.txt, 404.html, CNAME, LICENSE, LICENSES.md
 .github/workflows/deploy-pages.yml   validate -> test -> tag -> deploy, the same pipeline as the sibling sites
@@ -69,7 +76,8 @@ two cannot drift; an article's twin is its source file. `llms.txt` lists every t
 python3 admin/build/build.py       # every page and twin, llms.txt, the sitemap, the review's derived layers
 node admin/build/validate.js       # the gate
 node admin/build/test_finder.mjs   # the finder's rules against finder.json
-node admin/build/test_interview.mjs  # the interview page in a real browser; skips without Playwright
+node admin/build/test_interview.mjs  # the interview page and the storyboards in a real browser; skips without Playwright
+node admin/build/test_storyboards.mjs  # the vendored kit against its manifest, the storyboards against the validator and finder.json
 ```
 
 Dependencies: Python 3 with `markdown` (`pip install markdown`), Node 18+; Playwright with Chromium for the browser

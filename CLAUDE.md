@@ -67,6 +67,17 @@ default, and sample answers land where expected), add a release line, and tell t
 Ids never change meaning: they appear in records people keep. The rules module `finder/finder-rules.js` is the only
 code that applies the rules; the component and the test both import it.
 
+## The storyboards
+
+`admin/content/storyboards/` holds the cast and the storyboards in the kit's format (api.storyboards.sgit.ai, docs/format).
+The kit is vendored under `assets/vendor/storyboards/<release>/` with its manifest: never edit a file there; moving to a
+new release is copying its folder and changing `admin/content/storyboards/kit.json`. A line, a board, a quote or a
+punchline that is the finder's is marked `"from_finder": true` and must equal a string in `finder.json` word for word;
+the build refuses a paraphrase. Everything else a character says is the storyboard's own words. Characters use the
+pronouns their cast entry gives; three looks are the book's cast's and are not changed here. The strips are an
+experiment on pages of their own (decision 004): do not embed one on the finder's pages or the front page without a
+decision.
+
 ## The review folder
 
 `review/intent/` is written from the brief and marked `"proposed": true` until Dinis accepts it. `review/graph/` and

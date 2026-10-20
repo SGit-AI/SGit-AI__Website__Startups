@@ -1,0 +1,217 @@
+{
+ "slug": "it-is-not-ready-yet",
+ "title": "It is not ready yet",
+ "subtitle": "Rui builds frameworks. His product is three components away, and that is fine: the route is to ship the component.",
+ "status": "draft",
+ "by": "startups.engineer, 20 October 2026, a first strip for Dinis to review",
+ "rule": "The Finder's questions, the board of excuses, the rule of the finder and the route title are finder.json's strings word for word (from_finder); the build checks them. Rui's and the Guide's lines are the storyboard's words.",
+ "scenes": [
+  {
+   "kind": "cover",
+   "title": "It is not ready yet",
+   "subtitle": "The author's own path, through Rui: a component builder ships the component.",
+   "cast": [
+    {
+     "who": "rui",
+     "pose": "think",
+     "mood": "thinking"
+    },
+    {
+     "who": "finder",
+     "pose": "stand",
+     "mood": "happy"
+    }
+   ],
+   "note": "From the memo: 'I'm a framework guy ... I arrive at my profitable and effective startups three, four startups later and X components later. I think that's okay.'",
+   "source": "briefs/01__find-your-startup.html"
+  },
+  {
+   "kind": "scene",
+   "setting": "office",
+   "caption": "The ship stage",
+   "cast": [
+    {
+     "who": "finder",
+     "x": 0.76,
+     "pose": "point",
+     "mood": "happy",
+     "says": "What is the smallest version a stranger could use this week?",
+     "from_finder": true,
+     "flip": true,
+     "max": 24
+    },
+    {
+     "who": "rui",
+     "x": 0.28,
+     "pose": "think",
+     "mood": "thinking",
+     "says": "The library, I suppose. The product is not there yet."
+    }
+   ],
+   "props": [
+    {
+     "kind": "laptop",
+     "x": 0.52,
+     "y": 700
+    },
+    {
+     "kind": "desk",
+     "x": 0.52,
+     "y": 712
+    }
+   ],
+   "note": "Question ship.smallest. Held together with tape is fine; nobody using it cares how it was built.",
+   "source": "finder.json, question ship.smallest"
+  },
+  {
+   "kind": "scene",
+   "setting": "none",
+   "caption": "Every excuse in the book, listed, so you can pick yours",
+   "cast": [
+    {
+     "who": "rui",
+     "x": 0.2,
+     "pose": "point",
+     "mood": "worried",
+     "says": "The first one. Obviously."
+    }
+   ],
+   "props": [
+    {
+     "kind": "board",
+     "x": 0.62,
+     "y": 720,
+     "lines": [
+      "It is not ready yet",
+      "One more feature, then it is ready",
+      "I have not asked anyone to use it",
+      "I need money, people or permission first",
+      "Showing it before it is good",
+      "Nothing. I could ship this week"
+     ],
+     "from_finder": true
+    }
+   ],
+   "note": "The six options of question ship.blocker, as the file has them. The blocker is a signal, not a judgement.",
+   "source": "finder.json, question ship.blocker",
+   "not_a_quote": true
+  },
+  {
+   "kind": "evidence",
+   "setting": "none",
+   "caption": "What the finder does not do",
+   "evidence": {
+    "quote": "We are not passing judgement. The right startup for a person is the one they are passionate about and will keep working on. What we help with is focus, and shipping: something a stranger can use, now.",
+    "source": "finder.json, rule_of_the_finder",
+    "from_finder": true
+   },
+   "cast": [
+    {
+     "who": "guide",
+     "x": 0.2,
+     "pose": "point",
+     "mood": "determined"
+    }
+   ],
+   "note": "Decision 003, in the file's words. The route is a direction of travel, not a verdict.",
+   "source": "decisions/index.html#we-are-not-passing-judgement"
+  },
+  {
+   "kind": "graph",
+   "caption": "The signals, the rule, the route",
+   "graph": {
+    "nodes": [
+     {
+      "id": "builder",
+      "label": "builder = framework",
+      "x": 0.14,
+      "y": 0.3,
+      "colour": "#fde68a"
+     },
+     {
+      "id": "exists",
+      "label": "exists = demo",
+      "x": 0.14,
+      "y": 0.68,
+      "colour": "#fde68a"
+     },
+     {
+      "id": "r7",
+      "label": "rule R7",
+      "x": 0.5,
+      "y": 0.5,
+      "colour": "#fecaca"
+     },
+     {
+      "id": "route",
+      "label": "Ship the component",
+      "x": 0.84,
+      "y": 0.5,
+      "colour": "#bbf7d0"
+     }
+    ],
+    "edges": [
+     {
+      "from": "builder",
+      "to": "r7",
+      "label": "read by"
+     },
+     {
+      "from": "exists",
+      "to": "r7",
+      "label": "read by"
+     },
+     {
+      "from": "r7",
+      "to": "route",
+      "label": "picks"
+     }
+    ],
+    "path": [
+     "builder",
+     "r7",
+     "route"
+    ]
+   },
+   "cast": [
+    {
+     "who": "finder",
+     "x": 0.86,
+     "pose": "point",
+     "mood": "happy",
+     "says": "A component builder with no product yet ships the component.",
+     "from_finder": true,
+     "max": 22
+    }
+   ],
+   "note": "The rule's because line, from the file. The same answers give the same route on the page, in a model and in the test.",
+   "source": "finder.json, rule R7"
+  },
+  {
+   "kind": "punchline",
+   "setting": "none",
+   "punchline": "Ship the component",
+   "caption": "Three or four startups and a number of components later is a path, not a failure",
+   "cast": [
+    {
+     "who": "rui",
+     "x": 0.22,
+     "pose": "arms-up",
+     "mood": "happy",
+     "says": "Open source, this week. A package name is the whole distribution."
+    },
+    {
+     "who": "guide",
+     "x": 0.84,
+     "pose": "stand",
+     "mood": "happy",
+     "flip": true
+    }
+   ],
+   "note": "The route title is finder.json's (from_finder on the punchline). Watch who uses it; the product is in what they ask for next.",
+   "source": "finder.json, route component-first",
+   "from_finder": true,
+   "not_a_quote": true
+  }
+ ]
+}

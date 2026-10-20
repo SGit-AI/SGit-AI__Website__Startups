@@ -1,0 +1,286 @@
+{
+ "slug": "five-ways-in",
+ "title": "Five ways in",
+ "subtitle": "The finder's spectrum, one person per entry: where you are decides what it asks next.",
+ "status": "draft",
+ "by": "startups.engineer, 20 October 2026, a first strip for Dinis to review",
+ "rule": "Each character's first line is the entry label from finder.json word for word (from_finder), and the Finder's lines marked from_finder are the file's own; the build checks them. The rest is the storyboard's words.",
+ "scenes": [
+  {
+   "kind": "cover",
+   "title": "Five ways in",
+   "subtitle": "Where you are decides what the finder asks next.",
+   "cast": [
+    {
+     "who": "zara",
+     "pose": "wave",
+     "mood": "happy"
+    },
+    {
+     "who": "ines",
+     "pose": "arms-up",
+     "mood": "excited"
+    },
+    {
+     "who": "rui",
+     "pose": "think",
+     "mood": "thinking"
+    },
+    {
+     "who": "marta",
+     "pose": "point",
+     "mood": "determined"
+    },
+    {
+     "who": "ana",
+     "pose": "stand",
+     "mood": "happy"
+    }
+   ],
+   "note": "The five entries of the spectrum, each a person.",
+   "source": "finder.json, entries"
+  },
+  {
+   "kind": "spectrum",
+   "setting": "none",
+   "caption": "The spectrum: from no startup yet to shipping",
+   "stops": [
+    {
+     "label": "blank",
+     "note": "no startup yet",
+     "colour": "#fde68a"
+    },
+    {
+     "label": "many",
+     "note": "several ideas",
+     "colour": "#fed7aa"
+    },
+    {
+     "label": "one",
+     "note": "one idea, not shipped",
+     "colour": "#fecaca"
+    },
+    {
+     "label": "plan",
+     "note": "a plan, wants focus",
+     "colour": "#bfdbfe"
+    },
+    {
+     "label": "shipping",
+     "note": "shipping, next step",
+     "colour": "#bbf7d0"
+    }
+   ],
+   "cast": [
+    {
+     "who": "finder",
+     "x": 0.5,
+     "pose": "point",
+     "mood": "happy",
+     "says": "Where are you?",
+     "from_finder": true
+    }
+   ],
+   "note": "The first question, and the ids the record will carry. There is no wrong answer; it picks the route in.",
+   "source": "finder.json, question where.entry"
+  },
+  {
+   "kind": "scene",
+   "setting": "none",
+   "caption": "blank: start the loop",
+   "cast": [
+    {
+     "who": "zara",
+     "x": 0.3,
+     "pose": "shrug",
+     "mood": "thinking",
+     "says": "I do not have a startup yet",
+     "from_finder": true
+    },
+    {
+     "who": "finder",
+     "x": 0.74,
+     "pose": "wave",
+     "mood": "happy",
+     "says": "Then we start from what you naturally build, and three people you could make something for.",
+     "flip": true,
+     "max": 26
+    }
+   ],
+   "note": "Rule R1. The startup is found by shipping, not by thinking about shipping.",
+   "source": "finder.json, route start-the-loop",
+   "not_a_quote": true
+  },
+  {
+   "kind": "scene",
+   "setting": "none",
+   "caption": "many: zoom in",
+   "cast": [
+    {
+     "who": "ines",
+     "x": 0.24,
+     "pose": "arms-up",
+     "mood": "excited",
+     "says": "I have several ideas and cannot pick",
+     "from_finder": true
+    },
+    {
+     "who": "finder",
+     "x": 0.84,
+     "pose": "point",
+     "mood": "calm",
+     "says": "Pick the slice one person can use on day one.",
+     "flip": true,
+     "max": 20
+    }
+   ],
+   "props": [
+    {
+     "kind": "board",
+     "x": 0.55,
+     "y": 700,
+     "lines": [
+      "a padel app",
+      "a newsletter",
+      "a tool for vets",
+      "a marketplace",
+      "a course",
+      "..."
+     ]
+    }
+   ],
+   "note": "Rule R5. The rest goes in the not-doing list, dated.",
+   "source": "finder.json, route zoom-in",
+   "not_a_quote": true
+  },
+  {
+   "kind": "scene",
+   "setting": "office",
+   "caption": "one: the usual case",
+   "cast": [
+    {
+     "who": "rui",
+     "x": 0.3,
+     "pose": "think",
+     "mood": "worried",
+     "says": "I have one idea and have not shipped it",
+     "from_finder": true
+    },
+    {
+     "who": "finder",
+     "x": 0.78,
+     "pose": "stand",
+     "mood": "calm",
+     "says": "What exists today?",
+     "from_finder": true,
+     "flip": true
+    }
+   ],
+   "props": [
+    {
+     "kind": "laptop",
+     "x": 0.54,
+     "y": 700
+    },
+    {
+     "kind": "desk",
+     "x": 0.54,
+     "y": 712
+    }
+   ],
+   "note": "A good idea, and every reason in the book why it is not ready yet. The honest state comes first.",
+   "source": "finder.json, entry one and question thing.exists"
+  },
+  {
+   "kind": "scene",
+   "setting": "none",
+   "caption": "plan: focus",
+   "cast": [
+    {
+     "who": "marta",
+     "x": 0.28,
+     "pose": "point",
+     "mood": "determined",
+     "says": "I have a plan, maybe a company, and I want focus",
+     "from_finder": true
+    },
+    {
+     "who": "finder",
+     "x": 0.8,
+     "pose": "stand",
+     "mood": "happy",
+     "says": "Then we zoom in on the next thing to ship, and what waits.",
+     "flip": true,
+     "max": 22
+    }
+   ],
+   "props": [
+    {
+     "kind": "record",
+     "x": 0.54,
+     "y": 780,
+     "lines": [
+      "the plan",
+      "40 pages"
+     ],
+     "stamp": "v3"
+    }
+   ],
+   "note": "A plan already written; the record ends with what she is not doing, for now.",
+   "source": "finder.json, entry plan",
+   "not_a_quote": true
+  },
+  {
+   "kind": "scene",
+   "setting": "none",
+   "caption": "shipping: the miss test",
+   "cast": [
+    {
+     "who": "ana",
+     "x": 0.2,
+     "pose": "wave",
+     "mood": "happy",
+     "says": "I am shipping and want the next step",
+     "from_finder": true
+    },
+    {
+     "who": "finder",
+     "x": 0.86,
+     "pose": "point",
+     "mood": "happy",
+     "says": "Give it away, take it away",
+     "from_finder": true,
+     "flip": true,
+     "max": 16
+    }
+   ],
+   "props": [
+    {
+     "kind": "crowd",
+     "x": 0.54,
+     "n": 5,
+     "label": "the five"
+    }
+   ],
+   "note": "Rule R4: the route is the title of the first strip.",
+   "source": "finder.json, route next-step"
+  },
+  {
+   "kind": "punchline",
+   "setting": "none",
+   "punchline": "The first question is which of these you are.",
+   "caption": "Then the questions change with your answers",
+   "cast": [
+    {
+     "who": "finder",
+     "x": 0.2,
+     "pose": "wave",
+     "mood": "happy"
+    }
+   ],
+   "note": "A who-done-it of questions: the next one depends on the last. A person starting from zero is not asked for a sentence about a thing that does not exist.",
+   "source": "articles/find-your-startup.html, the spectrum",
+   "not_a_quote": true
+  }
+ ]
+}

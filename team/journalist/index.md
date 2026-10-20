@@ -2,7 +2,7 @@
 
 > The journalist: its mandate, what it refuses, and its work.
 
-*Source: <https://startups.sgit.ai/team/journalist/index.html> · site v0.1.3 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/team/journalist/index.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -46,16 +46,16 @@ The folder is the status: an issue moves between open/, blocked/ and done/ with 
 
 ### Issues: open (2)
 
-- [001__the-storyboard-version-of-the-finder](issues/open/001__the-storyboard-version-of-the-finder.md)
 - [002__the-finder-as-the-opening-of-the-book](issues/open/002__the-finder-as-the-opening-of-the-book.md)
+- [003__the-interview-as-a-strip](issues/open/003__the-interview-as-a-strip.md)
 
 ### Issues: blocked (0)
 
 - none
 
-### Issues: done (0)
+### Issues: done (1)
 
-- none
+- [001__the-storyboard-version-of-the-finder](issues/done/001__the-storyboard-version-of-the-finder.md)
 
 ### Briefs
 

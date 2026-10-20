@@ -3,8 +3,8 @@
  "provenance": {
   "tool": "review/tools/derive.py",
   "version": "0.1.0",
-  "site": "v0.1.3",
-  "derived_at": "2026-10-20T15:03:16Z"
+  "site": "v0.1.4",
+  "derived_at": "2026-10-20T22:07:50Z"
  },
  "surfaces": [
   {
@@ -78,6 +78,11 @@
    "path": "agent-articles/building-startups-sgit-ai.html"
   },
   {
+   "id": "agent-articles/storyboards-on-a-separate-page.html",
+   "kind": "page",
+   "path": "agent-articles/storyboards-on-a-separate-page.html"
+  },
+  {
    "id": "articles/index.html",
    "kind": "page",
    "path": "articles/index.html"
@@ -116,6 +121,46 @@
    "id": "vault/index.html",
    "kind": "page",
    "path": "vault/index.html"
+  },
+  {
+   "id": "storyboards/do-they-miss-it/index.html",
+   "kind": "page",
+   "path": "storyboards/do-they-miss-it/index.html"
+  },
+  {
+   "id": "storyboards/five-ways-in/index.html",
+   "kind": "page",
+   "path": "storyboards/five-ways-in/index.html"
+  },
+  {
+   "id": "storyboards/it-is-not-ready-yet/index.html",
+   "kind": "page",
+   "path": "storyboards/it-is-not-ready-yet/index.html"
+  },
+  {
+   "id": "storyboards/the-route-is-a-rule/index.html",
+   "kind": "page",
+   "path": "storyboards/the-route-is-a-rule/index.html"
+  },
+  {
+   "id": "storyboards/cast/index.html",
+   "kind": "page",
+   "path": "storyboards/cast/index.html"
+  },
+  {
+   "id": "storyboards/design/index.html",
+   "kind": "page",
+   "path": "storyboards/design/index.html"
+  },
+  {
+   "id": "storyboards/feedback/index.html",
+   "kind": "page",
+   "path": "storyboards/feedback/index.html"
+  },
+  {
+   "id": "storyboards/index.html",
+   "kind": "page",
+   "path": "storyboards/index.html"
   },
   {
    "id": "review/index.html",
@@ -283,6 +328,11 @@
    "path": "agent-articles/building-startups-sgit-ai.md"
   },
   {
+   "id": "agent-articles/storyboards-on-a-separate-page.md",
+   "kind": "twin",
+   "path": "agent-articles/storyboards-on-a-separate-page.md"
+  },
+  {
    "id": "articles/index.md",
    "kind": "twin",
    "path": "articles/index.md"
@@ -321,6 +371,46 @@
    "id": "vault/index.md",
    "kind": "twin",
    "path": "vault/index.md"
+  },
+  {
+   "id": "storyboards/do-they-miss-it/index.md",
+   "kind": "twin",
+   "path": "storyboards/do-they-miss-it/index.md"
+  },
+  {
+   "id": "storyboards/five-ways-in/index.md",
+   "kind": "twin",
+   "path": "storyboards/five-ways-in/index.md"
+  },
+  {
+   "id": "storyboards/it-is-not-ready-yet/index.md",
+   "kind": "twin",
+   "path": "storyboards/it-is-not-ready-yet/index.md"
+  },
+  {
+   "id": "storyboards/the-route-is-a-rule/index.md",
+   "kind": "twin",
+   "path": "storyboards/the-route-is-a-rule/index.md"
+  },
+  {
+   "id": "storyboards/cast/index.md",
+   "kind": "twin",
+   "path": "storyboards/cast/index.md"
+  },
+  {
+   "id": "storyboards/design/index.md",
+   "kind": "twin",
+   "path": "storyboards/design/index.md"
+  },
+  {
+   "id": "storyboards/feedback/index.md",
+   "kind": "twin",
+   "path": "storyboards/feedback/index.md"
+  },
+  {
+   "id": "storyboards/index.md",
+   "kind": "twin",
+   "path": "storyboards/index.md"
   },
   {
    "id": "review/index.md",

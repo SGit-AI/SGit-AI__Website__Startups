@@ -1,0 +1,32 @@
+{
+ "slug": "do-they-miss-it",
+ "title": "Do they miss it?",
+ "subtitle": "The loop every route on this site leads to, in five panels: ship it, give it away, take it away, ask, then charge or ship again.",
+ "status": "draft",
+ "by": "startups.engineer, 20 October 2026, a first strip for Dinis to review",
+ "rule": "Every line is the storyboard's own words unless marked from_finder, in which case it is a string from finder.json word for word, and the build checks it. The loop is the operating model of the newsroom article 'the most important question is whether they miss it'.",
+ "scenes": [
+  {"kind": "cover", "title": "Do they miss it?", "subtitle": "The loop, in five panels.",
+   "cast": [{"who": "ana", "pose": "wave", "mood": "happy"}, {"who": "guide", "pose": "stand", "mood": "happy"}],
+   "note": "The cover. Ana is the character who already ships; the Guide says what this site says.", "source": "admin/content/storyboards/cast.json"},
+  {"kind": "scene", "setting": "office", "caption": "1. Ship it: a thing a stranger can use on their own, this week",
+   "cast": [{"who": "ana", "x": 0.3, "pose": "point", "mood": "happy", "says": "Three clinics can open it with a key. No account, no install."}],
+   "props": [{"kind": "box", "x": 0.66, "label": "v0.1"}, {"kind": "key", "x": 0.86, "y": 780, "label": "a read key", "colour": "#0f766e"}],
+   "note": "Not a demo, not a video: a thing in a stranger's hands. The key is the whole distribution.", "source": "vaults/index.html, 'First vault to first customer'", "not_a_quote": true},
+  {"kind": "scene", "setting": "none", "caption": "2. Give it to five people, by name, for a short while",
+   "cast": [{"who": "ana", "x": 0.18, "pose": "wave", "mood": "happy", "says": "It is yours until the third."}],
+   "props": [{"kind": "crowd", "x": 0.6, "n": 5, "label": "the five"}, {"kind": "calendar", "x": 0.9, "y": 760, "label": "until the 3rd"}],
+   "note": "The window is short so the feedback is tight and the cost of generosity stays small. The finder's miss stage asks for the five by name.", "source": "finder.json, stage miss", "not_a_quote": true},
+  {"kind": "scene", "setting": "none", "caption": "3. Take it away. Nothing else changes, and no apology is needed",
+   "cast": [{"who": "ana", "x": 0.2, "pose": "stand", "mood": "calm", "says": "The trial has ended."}, {"who": "guide", "x": 0.86, "pose": "think", "mood": "thinking", "says": "Now the only question that matters.", "flip": true, "max": 18}],
+   "props": [{"kind": "padlock", "x": 0.42, "y": 760}, {"kind": "crowd", "x": 0.6, "n": 5, "mood": "shrug"}],
+   "note": "The step almost nobody runs on purpose. Decide the date before you give it.", "source": "finder.json, question miss.take", "not_a_quote": true},
+  {"kind": "punchline", "setting": "none", "punchline": "Do they miss it?", "caption": "4. Ask",
+   "cast": [{"who": "ana", "x": 0.2, "pose": "think", "mood": "thinking", "says": "Two of the five wrote back the same day."}, {"who": "guide", "x": 0.86, "pose": "point", "mood": "determined", "says": "That is the signal.", "flip": true, "max": 16}],
+   "note": "A shrug means no why now. Somebody asking for it back is the only thing that earns the right to charge.", "source": "newsroom.sgit.ai, the most important question is whether they miss it", "not_a_quote": true},
+  {"kind": "scene", "setting": "none", "caption": "5. If they ask for it back, charge. If they shrug, ship again",
+   "cast": [{"who": "ana", "x": 0.26, "pose": "arms-up", "mood": "excited", "says": "A price they are happy to pay, and profitable for me."}, {"who": "guide", "x": 0.82, "pose": "stand", "mood": "happy", "says": "If they shrug, there is no why now. Back to one, with better information.", "flip": true, "max": 26}],
+   "props": [{"kind": "tag", "x": 0.52, "y": 820, "label": "on demand"}],
+   "note": "Two questions, and people answer only the first: is the price one they are happy to pay, and is it profitable for you. Pay on demand is usually the healthier shape.", "source": "finder.json, stage money", "not_a_quote": true}
+ ]
+}

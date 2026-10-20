@@ -2,7 +2,7 @@
 
 > Where the brief was departed from, what was found, and what was done instead.
 
-*Source: <https://startups.sgit.ai/admin/corrections.html> · site v0.1.3 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/admin/corrections.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -19,6 +19,12 @@ The brief is [the voice memo](/briefs/01__find-your-startup.md), published verba
 5. **Gate checks that do not apply.** Section 4 of the guidance lists the Type_Safe structural guards and crypto vectors; this repository has no schema classes and no cryptography, so neither check exists here. A check is added the day the code it guards appears.
 6. **The honest row on nfrs.sgit.ai is not written.** Item 10 of the new-repository checklist; it needs a brief to that site's team. Engineer's issue 002.
 7. **Settled choices from coding.sgit.ai's open questions.** No semicolons in the components (the newer tree's convention); one banner style, a JSDoc block per file; the event namespace is `startups:`; `_`-prefixed private fields in JavaScript, which that site says contradicts a Python rule and which this repository treats as JavaScript-only. The gate does not yet enforce them.
+
+## 2026-10-20, site v0.1.4: the storyboards
+
+1. **The storyboard kit is vendored, not embedded from the API.** The storyboards memo says the API is what gets used, by other sites embedding `embed.js` from `api.storyboards.sgit.ai`. The repository guidance says nothing is fetched at run time that is not vendored, and the site-pages brief says to copy house code in. Done: the release folder `v0/v0.1/v0.1.0/` copied byte for byte to `assets/vendor/storyboards/v0.1.0/` with its manifest, loaded with the manifest's integrity strings, and the gate recomputes every hash (check 13). The embed snippet on each storyboard page points other sites at the API, as the memo wants. Ask 9 of the feedback brief is a vendor archive per release.
+2. **Three characters are copied from the book's cast rather than imported.** No mechanism exists to share a character across sites; their looks are copied by hand and the cast file says so (ask 8).
+3. **Decision 004 is recorded from a typed message, not a voice memo.** Dinis's storyboards instruction came as a message in the session; it is quoted as written, with elisions marked.
 
 Rendered from `BRIEF-CORRECTIONS.md` at the repository root; the file is the source.
 

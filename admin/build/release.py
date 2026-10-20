@@ -81,6 +81,7 @@ class Release:
         self.run(sys.executable, "admin/build/build.py", capture=False)
         self.run("node", "admin/build/validate.js", capture=False)
         self.run("node", "admin/build/test_finder.mjs", capture=False)
+        self.run("node", "admin/build/test_storyboards.mjs", capture=False)
         self.run("node", "admin/build/test_interview.mjs", capture=False)  # skips where Playwright is not installed
 
     def tripwire(self):

@@ -1,0 +1,27 @@
+{
+ "slug": "the-route-is-a-rule",
+ "title": "The route is a rule",
+ "subtitle": "Eight rules, applied in order, first match wins. You can read them, and you can disagree with one.",
+ "status": "draft",
+ "by": "startups.engineer, 20 October 2026, a first strip for Dinis to review",
+ "rule": "The route titles on the graph and the Finder's because line are finder.json's strings word for word (from_finder); the rest is the storyboard's words.",
+ "scenes": [
+  {"kind": "cover", "title": "The route is a rule", "subtitle": "Deterministic on purpose: disagree with the rule, not with a verdict.",
+   "cast": [{"who": "marta", "pose": "point", "mood": "determined"}, {"who": "finder", "pose": "stand", "mood": "calm"}],
+   "note": "Marta has a plan and wants focus; the Finder will not tell her what to do.", "source": "finder.json, rules"},
+  {"kind": "scene", "setting": "office", "caption": "A plan that wants focus",
+   "cast": [{"who": "marta", "x": 0.26, "pose": "point", "mood": "determined", "says": "Forty pages of plan. Tell me what to do."}, {"who": "finder", "x": 0.8, "pose": "stand", "mood": "calm", "says": "I will not tell you what to do. I will show you which rule fires, and why.", "flip": true, "max": 24}],
+   "props": [{"kind": "record", "x": 0.53, "y": 780, "lines": ["the plan", "40 pages"], "stamp": "v3"}],
+   "note": "The interviewer refuses a verdict; its mandate is decision 003.", "source": "team/interviewer/role.md", "not_a_quote": true},
+  {"kind": "graph", "caption": "First match wins: Marta's answers, walked down the rules",
+   "graph": {"nodes": [{"id": "r1", "label": "R1 Start the loop", "x": 0.1, "y": 0.22}, {"id": "r23", "label": "R2, R3 Go old school", "x": 0.34, "y": 0.22}, {"id": "r4", "label": "R4 Give it away, take it away", "x": 0.62, "y": 0.22}, {"id": "r56", "label": "R5, R6 Zoom in", "x": 0.9, "y": 0.22}, {"id": "r7", "label": "R7 Ship the component", "x": 0.3, "y": 0.72}, {"id": "r8", "label": "R8 Ship it this week", "x": 0.68, "y": 0.72, "colour": "#bbf7d0"}],
+    "edges": [{"from": "r1", "to": "r23", "label": "no"}, {"from": "r23", "to": "r4", "label": "no"}, {"from": "r4", "to": "r56", "label": "no"}, {"from": "r56", "to": "r7", "label": "no"}, {"from": "r7", "to": "r8", "label": "no"}], "path": ["r1", "r23", "r4", "r56", "r7", "r8"]},
+   "note": "entry = plan, exists = usable, scope = few, cost = people, raise = no: no rule before the default matches. The route titles are the file's.", "source": "finder.json, rules and routes", "from_finder": true},
+  {"kind": "scene", "setting": "none", "caption": "The rule is shown, not hidden",
+   "cast": [{"who": "finder", "x": 0.26, "pose": "point", "mood": "happy", "says": "Everything else can ship this week.", "from_finder": true, "max": 18}, {"who": "marta", "x": 0.76, "pose": "shrug", "mood": "thinking", "says": "And if I disagree?", "flip": true}],
+   "note": "Rule R8's because line. The record names the rule, so the disagreement has an address.", "source": "finder.json, rule R8"},
+  {"kind": "punchline", "setting": "none", "punchline": "Disagree with the rule, not with a verdict.", "caption": "Change a signal, and a different rule fires",
+   "cast": [{"who": "finder", "x": 0.2, "pose": "wave", "mood": "happy", "says": "The conversation is not deterministic. The rule is."}],
+   "note": "What a model adds is the conversation that gets to honest answers; what the file adds is a route anyone can check.", "source": "finder/routes.html", "not_a_quote": true}
+ ]
+}

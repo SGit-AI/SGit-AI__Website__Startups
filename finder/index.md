@@ -2,7 +2,7 @@
 
 > An interview that helps you zoom in on what to ship, to whom, by when; run by Claude or ChatGPT, or walked on this site; the output in your own words.
 
-*Source: <https://startups.sgit.ai/finder/index.html> · site v0.1.3 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/finder/index.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -135,7 +135,7 @@ The interview is one file, [`finder.json`](finder.json): 7 stages, 24 questions,
 - **The page does not hold a conversation.** It asks the questions as written. The follow-up when an answer is vague, and the reading of documents, are the model's, through the prompt.
 - **The storyboard version and the programmatic version do not exist.** The memo names both as later.
 
-The finder is the brief's own ask: [Find your startup](../articles/find-your-startup.md), in Dinis's words, with the brief for the roles at its end. The agent surface is [llms.txt](../llms.txt).
+The loop, the spectrum, the excuses and the rules are also drawn, as short strips, in [the storyboards section](../storyboards/index.md), an experiment on pages of its own. The finder is the brief's own ask: [Find your startup](../articles/find-your-startup.md), in Dinis's words, with the brief for the roles at its end. The agent surface is [llms.txt](../llms.txt).
 
 
 ---

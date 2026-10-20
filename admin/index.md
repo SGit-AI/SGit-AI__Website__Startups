@@ -2,7 +2,7 @@
 
 > How startups.sgit.ai is built, and the gate it passes.
 
-*Source: <https://startups.sgit.ai/admin/index.html> · site v0.1.3 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/admin/index.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -16,7 +16,8 @@ How this site is built, the gate it passes, and the rules it keeps.
 python3 admin/build/build.py        # every page and twin, llms.txt, the sitemap, the review's derived layers
 node admin/build/validate.js        # the gate, below
 node admin/build/test_finder.mjs    # the finder's rules against finder.json, with sample answers
-node admin/build/test_interview.mjs # the interview page in a real browser (Playwright; skips without it)
+node admin/build/test_interview.mjs # the interview page and the storyboards in a real browser (Playwright; skips without it)
+node admin/build/test_storyboards.mjs # the vendored kit against its manifest, the storyboards against the validator and finder.json
 python3 admin/build/release.py --what "one sentence" [--minor] [--dev]   # fetch, bump, build, validate, test, tripwire, commit, push, verify live
 ```
 
@@ -36,6 +37,7 @@ Every check fails the build; CI runs the gate and the finder test before it tags
 10. **The finder's published file is its source:** `finder/finder.json` equals `admin/content/finder/finder.json`; the deep checks are the finder test.
 11. **The review folder is fresh:** every source file's hash matches `review/graph/files.json`, and the coverage on the review page is the join's.
 12. **Every script parses:** `node --check` on every JavaScript file, `py_compile` on every Python file.
+13. **The vendored storyboard kit is the release:** every file under `assets/vendor/storyboards/<release>/` hashes to its manifest; the storyboards validate with the kit's own validator and every line marked from_finder is in `finder.json` (the storyboards test).
 
 Not here, and said so: a linter or a formatter, as on every sibling site; the Type_Safe guards and crypto vectors of the guidance's list, which have no code to guard here. [The corrections file](corrections.md) records both.
 

@@ -47,6 +47,8 @@ jobs:
         run: node admin/build/validate.js
       - name: Test the finder's rules against finder.json
         run: node admin/build/test_finder.mjs
+      - name: Test the storyboards against the kit's validator, finder.json and the vendored manifest
+        run: node admin/build/test_storyboards.mjs
       - name: Test the interview page in a browser (skips when Playwright is not installed)
         run: node admin/build/test_interview.mjs
 

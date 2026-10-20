@@ -2,7 +2,7 @@
 
 > What exists on startups.sgit.ai, by domain, and what does not yet.
 
-*Source: <https://startups.sgit.ai/admin/reality.html> · site v0.1.3 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/admin/reality.html> · site v0.1.4 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -10,7 +10,7 @@
 
 What exists on startups.sgit.ai, by domain, kept current by whoever ships. The rule, from the Send repository's Librarian by way of [Every sgit repository](https://sgit.ai/docs/guidance/repositories.html): a feature that is not in this file does not exist, and nobody may say a thing works because a brief describes it. A row changes in the same commit as the thing it describes. Rendered at `/admin/reality.html`.
 
-Last changed: 2026-10-20, site v0.1.1.
+Last changed: 2026-10-20, site v0.1.4.
 
 | Domain | Exists | Does not exist yet |
 |---|---|---|
@@ -20,8 +20,9 @@ Last changed: 2026-10-20, site v0.1.1.
 | **The finder: in the browser** | `finder/interview.html`: the `sg-finder` component walks the stages from `finder.json`, keeps answers in `localStorage` (`startups.finder.v1`) only, applies the rules through `finder/finder-rules.js`, and writes the record as markdown to copy or save. Nothing is sent anywhere. `admin/build/test_interview.mjs` walks it in Chromium: seven stages, the route by rule, the record, the answers kept across a reload. | A conversation: the page asks the questions as written and does not follow up. The storyboard version (journalist, issue 001). A programmatic version beyond the rules. |
 | **Build on vaults** | `vaults/index.html`: the section moved from sgit.ai/startups/index.html at site v0.7.87, 20 October 2026, with the operating model, the day-one table, the loop, what a founder still brings, and the evidence. | The notice on sgit.ai's old page pointing here (librarian, issue 002, blocked on sgit.ai's team). |
 | **Business plans** | `plans/index.html` from `admin/content/plans.json`: the 8 plans published as vaults on sgit.ai as of 20 October 2026, each with its link; how to take one; what every plan contains. | A plan written on this site. The plans' text, which lives in their vaults on sgit.ai and is linked, not copied. |
-| **Articles and decisions** | 1 co-written article in Dinis's voice; 1 agent article by the engineer; 3 decisions from the memo; the brief verbatim and the initial prompt. | A second article. Any decision not in the memo. |
-| **The team** | 4 roles (journalist, interviewer, librarian, engineer), `role.md` each, 7 issues open, 1 blocked, 1 done; `team/ISSUES.md`. | A session that has run as a role. A debrief. The board as a page beyond the role pages. |
+| **Articles and decisions** | 1 co-written article in Dinis's voice; 2 agent articles by the engineer; 4 decisions, three from the memo and one from Dinis's storyboards message; the brief verbatim and the initial prompt. | A second article. Any decision not in the memo. |
+| **The team** | 4 roles (journalist, interviewer, librarian, engineer), `role.md` each, 7 issues open, 2 blocked, 2 done; `team/ISSUES.md`. | A session that has run as a role. A debrief. The board as a page beyond the role pages. |
+| **Storyboards** | `storyboards/`: 4 strips (25 panels) and a cast of 7 in `admin/content/storyboards/`, in the kit's format, validated by the kit's `formats.js` on every build; lines marked `from_finder` checked word for word against `finder.json`; each storyboard's page with the kit's deck, grid and script, its data, bundle, graph and script twin; the cast page with the cast sheet and the model sheet; the design page with 7 experiments; the brief back to storyboards.sgit.ai. The kit's release v0.1.0 vendored under `assets/vendor/storyboards/` with its manifest, every hash checked by the gate. This site's prop pack (`crowd`, `tag`, `door`, `box`) and the `sg-strip` component (strip, silent, captions out, theme ink). `test_storyboards.mjs`; the browser test draws every page. | A strip on the finder's pages or the front page (decision 004: a separate page first). The interview itself as a strip (journalist, issue 003). Theme ink done in the kit (engineer, issue 004, blocked). Thumbnails and link previews drawn at build (the storyboards site does; this one does not yet). The brief sent to the storyboards repository. |
 | **The vault** | Nothing. `vault/index.html` says what a vault would hold and why none is needed yet. | A working vault; a read key on the vault page. |
 | **The review folder** | `review/intent/` (stories, flows, components, deploy) from the brief; `review/graph/files.json` and `surfaces.json` derived by `review/tools/derive.py`; `review/join/matches.json` and `gaps.json` with the coverage figure; `review/README.md`; `review/index.html` written by the build. The gate fails if `files.json` is older than the tree. | The navigator as web components (engineer, issue 001). Methods, classes and change files. `review/self/` beyond a README. |
 | **The gate** | `admin/build/validate.js`: version agreement, internal links and orphans, twins and `llms.txt`, canonical and og:url, no external script, stylesheet or image, the key tripwire, div balance, em-dashes in content, the sitemap both ways, the finder's data, the review folder's freshness, parse checks on every script. Run in CI before the tag. | A linter or a formatter, as on every sibling site. |

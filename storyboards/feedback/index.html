@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What startups.sgit.ai would like from the storyboards kit &middot; startups.sgit.ai</title>
+<meta name="description" content="Feedback to storyboards.sgit.ai and api.storyboards.sgit.ai from the first site to use the kit from outside: what worked unchanged, what this site had to do around the kit, and ten things the API could take, each with the experiment here that shows why.">
+<link rel="canonical" href="https://startups.sgit.ai/storyboards/feedback/index.html">
+<meta property="og:title" content="What startups.sgit.ai would like from the storyboards kit">
+<meta property="og:description" content="Feedback to storyboards.sgit.ai and api.storyboards.sgit.ai from the first site to use the kit from outside: what worked unchanged, what this site had to do around the kit, and ten things the API could take, each with the experiment here that shows why.">
+<meta property="og:url" content="https://startups.sgit.ai/storyboards/feedback/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="startups.sgit.ai">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23123c3a%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%279%27 fill=%27none%27 stroke=%27%235fd3c4%27 stroke-width=%273%27 stroke-dasharray=%2742 14%27/%3E%3Cpath d=%27M22 7l5 3-4 4z%27 fill=%27%235fd3c4%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/themes.css">
+<script src="../../assets/site.js"></script>
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../../index.html">startups<span>.sgit.ai</span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+<div class="nav-items"><div class="ni"><a class="nl" href="../../finder/index.html">Find your startup<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../../finder/index.html">The finder</a><a class="sl" href="../../finder/interview.html">Walk the interview</a><a class="sl" href="../../finder/stages.html">The stages and questions</a><a class="sl" href="../../finder/routes.html">The routes and rules</a><a class="sl" href="../../finder/prompt.html">The prompt for Claude or ChatGPT</a><a class="sl" href="../../finder/record.html">The record</a></div></div><div class="ni"><a class="nl" href="../../vaults/index.html">Build on vaults<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../../vaults/index.html">Build your startup on vaults</a><a class="sl" href="../../plans/index.html">Business plans to build on</a></div></div><div class="ni"><a class="nl here" href="../../storyboards/index.html">Storyboards<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../../storyboards/index.html">Storyboards</a><a class="sl" href="../../storyboards/cast/index.html">The cast</a><a class="sl" href="../../storyboards/design/index.html">Design experiments</a><a class="sl here" href="../../storyboards/feedback/index.html">Feedback to storyboards.sgit.ai</a></div></div><div class="ni"><a class="nl" href="../../articles/index.html">Articles<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../../articles/index.html">Articles</a><a class="sl" href="../../decisions/index.html">Decisions</a><a class="sl" href="../../briefs/index.html">The briefs</a></div></div><div class="ni"><a class="nl" href="../../team/index.html">The team<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../../team/index.html">The team</a><a class="sl" href="../../vault/index.html">The vault</a><a class="sl" href="../../review/index.html">The review</a><a class="sl" href="../../admin/reality.html">What exists</a><a class="sl" href="../../admin/index.html">Admin</a></div></div></div>
+<div class="nav-tools"><div class="theme-pick"></div><span class="ver">site <a href="../../admin/versions.html" title="Site release history">v0.1.4</a></span></div>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../../index.html">startups.sgit.ai</a> &rarr; <a href="../../storyboards/index.html">Storyboards</a> &rarr; <b>Feedback</b></div>
+<article class="doc"><p class="kicker">A brief for the storyboards team · from startups.engineer · 20 October 2026 · status: proposed, not sent as a pull request</p><h1>What startups.sgit.ai would like from the storyboards kit</h1><p class="lede">Feedback to storyboards.sgit.ai and api.storyboards.sgit.ai from the first site to use the kit from outside: what worked unchanged, what this site had to do around the kit, and ten things the API could take, each with the experiment here that shows why.</p><div class="body"><p>The memo that started the storyboards site says the API is what gets used, by other websites embedding it, and asks to see how far the storyboards can be pushed. This site is the first to use the kit from outside the two origin sites, on the day both went live. Dinis asked for the storyboards to be used here to explain the concepts, for the design to be explored (layouts, schemas, colours, characters), for the experiments to stay on a separate page at first, and for the ideas to be fed back. This is the feeding back. Everything below is checkable on <a href="../design/index.html">the design page</a> and in <a href="https://github.com/SGit-AI/SGit-AI__Website__Startups">this site's repository</a>.</p>
+<h2 id="what-worked-unchanged">What worked unchanged</h2>
+<ul>
+<li><strong>The format and the validator.</strong> Four storyboards and a cast were written in the documented JSON, and <code>formats.js</code> validated them in Node with no surprises. <code>toMarkdown</code> and <code>toGraph</code> gave the script twins and the graphs for free.</li>
+<li><strong>Prop packs.</strong> The security pack's <code>key</code>, <code>calendar</code>, <code>padlock</code> and <code>record</code> drew the vault parts of the loop; this site's own pack (<code>crowd</code>, <code>tag</code>, <code>door</code>, <code>box</code>) registered through the documented hook in a few dozen lines.</li>
+<li><strong>The viewer.</strong> The deck, grid and script, wired from the same markup storyboards.sgit.ai writes, with a prefs key of this site's own.</li>
+<li><strong>Shared characters.</strong> Zara, Marta and the Guide were copied from the gen-z cast with their look unchanged, and they draw the same here, which is the point.</li>
+</ul>
+<h2 id="what-this-site-did-around-the-kit">What this site did around the kit</h2>
+<ol>
+<li><strong>Vendored the release instead of hot-linking it.</strong> The guidance for every sgit repository says nothing is fetched from another origin at run time, and the site-pages brief says to copy house code in. So <code>v0/v0.1/v0.1.0/</code> is in this repository byte for byte, and the gate recomputes every file's hash against the manifest on every build. The manifest made that a ten-line check.</li>
+<li><strong>A strip component.</strong> <code>sg-strip</code> draws panels with <code>drawScene</code> into its own grid, without the toolbar, the dark deck frame and the bar: a figure in a page rather than a player. The deck is one click away.</li>
+<li><strong>Silent panels.</strong> The strip can strip the lines out of a copy of a scene before drawing, and print them under the panel. A 34px bubble in a 1600-wide panel is unreadable below about 500 pixels; the silent panel reads at 250.</li>
+<li><strong>Theme ink.</strong> After drawing, the strip maps the kit's two constants (ink <code>#23262b</code>, paper <code>#fbf7ee</code>) and its white fills to this site's tokens, so a panel can follow Night or Ember. It is a hack on the output, and it misses the hachure fills and the coloured props, which is why it is on the design page and not on the front page.</li>
+<li><strong>Quotes checked against a file.</strong> Lines marked <code>from_finder</code> must equal a string in <code>finder.json</code> word for word, or the build fails. The gen-z site did the same against its chapters; it is the second site to need it.</li>
+</ol>
+<h2 id="ten-things-the-api-could-take">Ten things the API could take</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Ask</th>
+<th>Why, and where to see it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Ink and paper as options.</strong> <code>drawScene(svg, scene, cast, { ink, paper })</code>, or the two as CSS custom properties the kit reads, with the hachure and prop fills following.</td>
+<td>The theme-ink experiment on the design page shows what a host theme wants and where a post-hoc remap breaks.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>A silent mode in the kit.</strong> <code>{ speech: 'outside' }</code> returning the lines, or a <code>sceneText</code> split into caption and lines, so small panels are legible by design.</td>
+<td>The silent strips on the design page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>A <code>strip</code> view in the embed.</strong> <code>view="strip" cols="3"</code>: panels in a row, caption under, no toolbar, a click opening the deck.</td>
+<td><code>sg-strip</code> is that, written outside the kit.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Prop packs by URL.</strong> <code>packs="https://startups.sgit.ai/assets/storyboards/startups-props.js"</code> on the embed, and the pack's kinds passed to <code>validate</code>. Today the embed knows one pack by name.</td>
+<td>This site's pack had to be loaded by the page, not by the embed.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>A <code>from</code> field for quoted lines, in the format.</strong> <code>"from": { "file": "...", "path": "..." }</code> on a line, with <code>validate</code> checking it when given the source text. Two sites have now written this check by hand.</td>
+<td><code>admin/build/storyboards.mjs</code>, the from_finder rule.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Panel formats.</strong> A square and a 4:5 portrait beside 16:10, for phones and for strips.</td>
+<td>The strips on this site are 16:10 at a third of the measure; a square would hold a two-person scene better.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Text scale for small panels.</strong> A <code>textScale</code> option, or captions and bubbles that scale with the number of characters in the panel.</td>
+<td>The cover and the spectrum read at any size; a four-line bubble does not.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>A cast registry across sites.</strong> A character defined once (Zara, Marta, the Guide) and imported by URL into a cast, so a look is not copied by hand.</td>
+<td>This site copied three looks by hand and says so in its cast file.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>A vendor archive per release.</strong> <code>vX.Y.Z.zip</code> beside the manifest, or a one-line <code>curl</code> in the docs, for sites whose rule is nothing cross-origin at run time.</td>
+<td>This site copied the folder from the API repository.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>The security pack's name is narrow.</strong> The key, the calendar and the record are the storyboards' most general props; a <code>kit</code> pack of those, with <code>security</code> keeping the QR codes and vaults.</td>
+<td>The loop strip uses three security props and nothing about security.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-does-not-claim">What this does not claim</h2>
+<ul>
+<li>These are one site's asks after one day. The kit's authors may have reasons against each, and the memo's own list (JSON, markup, graph, JPEG, SVG, animated, thumbnail) is already met.</li>
+<li>The theme-ink remap is an experiment on the kit's output, not a proposal to change the drawing's look by default: the cream paper in every theme is a deliberate choice of the kit's and reads well.</li>
+<li>Nothing here was sent to the storyboards repository. This page is the brief; a session with write access there can copy it into <code>briefs/</code> as the site's own rules ask.</li>
+</ul>
+<h2 id="where-this-comes-from">Where this comes from</h2>
+<p>Dinis's message of 20 October 2026 (quoted in <a href="../../decisions/index.html#storyboards-come-here-as-an-experiment">decision 004</a>); <a href="https://storyboards.sgit.ai/brief/index.html">the storyboards brief</a>; <a href="https://api.storyboards.sgit.ai/docs/index.html">the API's docs</a>; <a href="../design/index.html">the design page</a> here, where every claim above is drawn.</p></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>startups.sgit.ai: find your startup, then build it on vaults. By Dinis Cruz and this site's agents. Content CC BY 4.0; code under the repository licence. <a href="../../about/participant.html">Participant disclosure</a>.</span>
+<span>Part of <a href="https://sgit.ai">sgit.ai</a> &middot; <a href="https://github.com/SGit-AI/SGit-AI__Website__Startups">GitHub</a> &middot; <a href="../../admin/reality.html">what exists</a> &middot; <a href="../../admin/versions.html">release history</a> &middot; <a href="../../llms.txt">llms.txt</a> &middot; <a href="index.md">this page as markdown</a></span>
+</div></footer>
+</body>
+</html>
