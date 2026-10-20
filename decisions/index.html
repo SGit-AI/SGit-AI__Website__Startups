@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decisions &middot; startups.sgit.ai</title>
+<meta name="description" content="Dinis&#x27;s decisions on what the finder is and how this site works, in his words.">
+<link rel="canonical" href="https://startups.sgit.ai/decisions/index.html">
+<meta property="og:title" content="Decisions">
+<meta property="og:description" content="Dinis&#x27;s decisions on what the finder is and how this site works, in his words.">
+<meta property="og:url" content="https://startups.sgit.ai/decisions/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="startups.sgit.ai">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23123c3a%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%279%27 fill=%27none%27 stroke=%27%235fd3c4%27 stroke-width=%273%27 stroke-dasharray=%2742 14%27/%3E%3Cpath d=%27M22 7l5 3-4 4z%27 fill=%27%235fd3c4%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/themes.css">
+<script src="../assets/site.js"></script>
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../index.html">startups<span>.sgit.ai</span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+<div class="nav-items"><div class="ni"><a class="nl" href="../finder/index.html">Find your startup<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../finder/index.html">The finder</a><a class="sl" href="../finder/interview.html">Walk the interview</a><a class="sl" href="../finder/stages.html">The stages and questions</a><a class="sl" href="../finder/routes.html">The routes and rules</a><a class="sl" href="../finder/prompt.html">The prompt for Claude or ChatGPT</a><a class="sl" href="../finder/record.html">The record</a></div></div><div class="ni"><a class="nl" href="../vaults/index.html">Build on vaults<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../vaults/index.html">Build your startup on vaults</a><a class="sl" href="../plans/index.html">Business plans to build on</a></div></div><div class="ni"><a class="nl here" href="../articles/index.html">Articles<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../articles/index.html">Articles</a><a class="sl here" href="../decisions/index.html">Decisions</a><a class="sl" href="../briefs/index.html">The briefs</a></div></div><div class="ni"><a class="nl" href="../team/index.html">The team<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../team/index.html">The team</a><a class="sl" href="../vault/index.html">The vault</a><a class="sl" href="../review/index.html">The review</a><a class="sl" href="../admin/reality.html">What exists</a><a class="sl" href="../admin/index.html">Admin</a></div></div></div>
+<div class="nav-tools"><div class="theme-pick"></div><span class="ver">site <a href="../admin/versions.html" title="Site release history">v0.1.0</a></span></div>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../index.html">startups.sgit.ai</a> &rarr; <b>Decisions</b></div>
+<h1>Decisions</h1>
+<p class="lede">Dinis&rsquo;s decisions on what the finder is and how this site works, one record each, in the order made, in his words. A decision is never deleted; a later one supersedes it and says so.</p>
+<div class="tablewrap"><table><thead><tr><th>#</th><th>Decided</th><th>Decision</th></tr></thead><tbody><tr><td><a href="#for-now-the-finder-needs-an-llm">001</a></td><td>2026-10-20</td><td>For now, the finder is run by an LLM</td></tr><tr><td><a href="#it-works-for-humans-and-for-agents">002</a></td><td>2026-10-20</td><td>The guidance works for humans and for agents</td></tr><tr><td><a href="#we-are-not-passing-judgement">003</a></td><td>2026-10-20</td><td>The finder does not pass judgement</td></tr></tbody></table></div>
+<div class="doc"><div class="body"><section id="for-now-the-finder-needs-an-llm"><h2>001 &middot; For now, the finder is run by an LLM</h2><p><strong>Decided.</strong> 2026-10-20</p>
+<p><strong>By.</strong> Dinis Cruz.</p>
+<p><strong>Said.</strong> "So I think for now, let's start by this is something that they will is designed to be used by Claude or ChatGPT because you need that data analysis. You need an agent behind the scenes. So what we're going to be doing is creating the primitives, and maybe I'll show some examples. Right, I'll do it myself. [...] for now, assume that you're going to need an LLM to run it, and I think once we've done a whole part of this, we can find a better way to do it, programme some of it programmatically."</p>
+<p><strong>Means.</strong> The first version of the finder is a toolkit for Claude or ChatGPT to run: the stages, questions, signals, routes and rules as one data file, a prompt that tells the model how to run them, and a record template for the output. The in-browser page that walks the same data is the deterministic part made visible, not a replacement for the interview. A version that runs programmatically on the site, with storyboards or otherwise, comes after the primitives have been used; the memo asks for examples first, and Dinis will do one himself.</p>
+<p><strong>Supersedes.</strong> Nothing; the first decision on this site.</p>
+<p><strong>Recorded in.</strong> <a href="/articles/find-your-startup.md">Find your startup</a>, the first co-written article, and the engineer's agent article <a href="/agent-articles/building-startups-sgit-ai.md">Building startups.sgit.ai</a>.</p></section><section id="it-works-for-humans-and-for-agents"><h2>002 &middot; The guidance works for humans and for agents</h2><p><strong>Decided.</strong> 2026-10-20</p>
+<p><strong>By.</strong> Dinis Cruz.</p>
+<p><strong>Said.</strong> "Let's make this so that it works from the website, but also is almost designed to be worked by another [LLM] like Claude running interviews. [...] So this guidance needs to work for humans and for agents."</p>
+<p><strong>Means.</strong> One source serves both readers. The finder's questions, signals, routes and rules are written once, in <code>finder.json</code>, and every surface reads it: the pages a person reads, the page that walks the interview in the browser, the prompt a model follows, and the test that checks the rules. A change to a question is a change to the file, and every surface follows. Nothing about the interview is written in two places.</p>
+<p><strong>Supersedes.</strong> Nothing.</p>
+<p><strong>Recorded in.</strong> <a href="/articles/find-your-startup.md">Find your startup</a>; the rule is kept in the finder file's own <code>what</code> line.</p></section><section id="we-are-not-passing-judgement"><h2>003 &middot; The finder does not pass judgement</h2><p><strong>Decided.</strong> 2026-10-20</p>
+<p><strong>By.</strong> Dinis Cruz.</p>
+<p><strong>Said.</strong> "I think what's important here is that we're not passing judgement. You know, the right startup for the person is the one they're passionate about. Is the one they want to work. [...] I think we're not passing judgement. I think what we can help is we can help with focus, but also we can help open there for them to ship. [...] ultimately it's about coming up with their own words and coming up with their own description of this is kind of what you should be focusing on."</p>
+<p><strong>Means.</strong> The finder never says whether an idea is good. It helps with two things: focus, and shipping. Its output is a record in the person's own words, which they correct until it reads as theirs; the route it picks is a direction of travel with the rule that chose it shown, and the person can change a signal and get a different route. "You have to go old school and raise money first" is a valid route, said plainly, not a verdict. The prompt tells the model the same, and tells it that "it is not ready yet" is the problem the finder exists for, not a reason.</p>
+<p><strong>Supersedes.</strong> Nothing.</p>
+<p><strong>Recorded in.</strong> <a href="/articles/find-your-startup.md">Find your startup</a>; the rule is the <code>rule_of_the_finder</code> line in <code>finder.json</code> and is printed on the finder's front page.</p></section></div></div>
+<p class="small dim">The sources are in <code>admin/content/decisions/</code>. Each names the article that recorded it.</p>
+
+</div></main>
+<footer class="site"><div class="row">
+<span>startups.sgit.ai: find your startup, then build it on vaults. By Dinis Cruz and this site's agents. Content CC BY 4.0; code under the repository licence. <a href="../about/participant.html">Participant disclosure</a>.</span>
+<span>Part of <a href="https://sgit.ai">sgit.ai</a> &middot; <a href="https://github.com/SGit-AI/SGit-AI__Website__Startups">GitHub</a> &middot; <a href="../admin/reality.html">what exists</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a> &middot; <a href="index.md">this page as markdown</a></span>
+</div></footer>
+</body>
+</html>

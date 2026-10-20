@@ -1,0 +1,356 @@
+{
+ "what": "What the site exposes: pages, their twins, data and code files a reader or an agent can fetch.",
+ "provenance": {
+  "tool": "review/tools/derive.py",
+  "version": "0.1.0",
+  "site": "v0.1.0",
+  "derived_at": "2026-10-20T14:57:32Z"
+ },
+ "surfaces": [
+  {
+   "id": "vaults/index.html",
+   "kind": "page",
+   "path": "vaults/index.html"
+  },
+  {
+   "id": "about/participant.html",
+   "kind": "page",
+   "path": "about/participant.html"
+  },
+  {
+   "id": "finder/index.html",
+   "kind": "page",
+   "path": "finder/index.html"
+  },
+  {
+   "id": "finder/interview.html",
+   "kind": "page",
+   "path": "finder/interview.html"
+  },
+  {
+   "id": "finder/stages.html",
+   "kind": "page",
+   "path": "finder/stages.html"
+  },
+  {
+   "id": "finder/routes.html",
+   "kind": "page",
+   "path": "finder/routes.html"
+  },
+  {
+   "id": "finder/prompt.html",
+   "kind": "page",
+   "path": "finder/prompt.html"
+  },
+  {
+   "id": "finder/record.html",
+   "kind": "page",
+   "path": "finder/record.html"
+  },
+  {
+   "id": "plans/index.html",
+   "kind": "page",
+   "path": "plans/index.html"
+  },
+  {
+   "id": "briefs/01__find-your-startup.html",
+   "kind": "page",
+   "path": "briefs/01__find-your-startup.html"
+  },
+  {
+   "id": "briefs/02__note-the-initial-prompt.html",
+   "kind": "page",
+   "path": "briefs/02__note-the-initial-prompt.html"
+  },
+  {
+   "id": "briefs/index.html",
+   "kind": "page",
+   "path": "briefs/index.html"
+  },
+  {
+   "id": "articles/find-your-startup.html",
+   "kind": "page",
+   "path": "articles/find-your-startup.html"
+  },
+  {
+   "id": "agent-articles/building-startups-sgit-ai.html",
+   "kind": "page",
+   "path": "agent-articles/building-startups-sgit-ai.html"
+  },
+  {
+   "id": "articles/index.html",
+   "kind": "page",
+   "path": "articles/index.html"
+  },
+  {
+   "id": "decisions/index.html",
+   "kind": "page",
+   "path": "decisions/index.html"
+  },
+  {
+   "id": "team/engineer/index.html",
+   "kind": "page",
+   "path": "team/engineer/index.html"
+  },
+  {
+   "id": "team/interviewer/index.html",
+   "kind": "page",
+   "path": "team/interviewer/index.html"
+  },
+  {
+   "id": "team/journalist/index.html",
+   "kind": "page",
+   "path": "team/journalist/index.html"
+  },
+  {
+   "id": "team/librarian/index.html",
+   "kind": "page",
+   "path": "team/librarian/index.html"
+  },
+  {
+   "id": "team/index.html",
+   "kind": "page",
+   "path": "team/index.html"
+  },
+  {
+   "id": "vault/index.html",
+   "kind": "page",
+   "path": "vault/index.html"
+  },
+  {
+   "id": "review/index.html",
+   "kind": "page",
+   "path": "review/index.html"
+  },
+  {
+   "id": "admin/versions.html",
+   "kind": "page",
+   "path": "admin/versions.html"
+  },
+  {
+   "id": "admin/reality.html",
+   "kind": "page",
+   "path": "admin/reality.html"
+  },
+  {
+   "id": "admin/corrections.html",
+   "kind": "page",
+   "path": "admin/corrections.html"
+  },
+  {
+   "id": "admin/index.html",
+   "kind": "page",
+   "path": "admin/index.html"
+  },
+  {
+   "id": "index.html",
+   "kind": "page",
+   "path": "index.html"
+  },
+  {
+   "id": "finder/finder.json",
+   "kind": "data",
+   "path": "finder/finder.json"
+  },
+  {
+   "id": "finder/finder-prompt.md",
+   "kind": "data",
+   "path": "finder/finder-prompt.md"
+  },
+  {
+   "id": "finder/finder-record.md",
+   "kind": "data",
+   "path": "finder/finder-record.md"
+  },
+  {
+   "id": "finder/finder-rules.js",
+   "kind": "code",
+   "path": "finder/finder-rules.js"
+  },
+  {
+   "id": "llms.txt",
+   "kind": "data",
+   "path": "llms.txt"
+  },
+  {
+   "id": "sitemap.xml",
+   "kind": "data",
+   "path": "sitemap.xml"
+  },
+  {
+   "id": "admin/build/version.txt",
+   "kind": "data",
+   "path": "admin/build/version.txt"
+  },
+  {
+   "id": "admin/build/validate.js",
+   "kind": "code",
+   "path": "admin/build/validate.js"
+  },
+  {
+   "id": "admin/build/test_finder.mjs",
+   "kind": "code",
+   "path": "admin/build/test_finder.mjs"
+  },
+  {
+   "id": "admin/build/release.py",
+   "kind": "code",
+   "path": "admin/build/release.py"
+  },
+  {
+   "id": ".github/workflows/deploy-pages.yml",
+   "kind": "code",
+   "path": ".github/workflows/deploy-pages.yml"
+  },
+  {
+   "id": "assets/themes.css",
+   "kind": "code",
+   "path": "assets/themes.css"
+  },
+  {
+   "id": "assets/components/sg-finder/sg-finder.js",
+   "kind": "code",
+   "path": "assets/components/sg-finder/sg-finder.js"
+  },
+  {
+   "id": "vaults/index.md",
+   "kind": "twin",
+   "path": "vaults/index.md"
+  },
+  {
+   "id": "about/participant.md",
+   "kind": "twin",
+   "path": "about/participant.md"
+  },
+  {
+   "id": "finder/index.md",
+   "kind": "twin",
+   "path": "finder/index.md"
+  },
+  {
+   "id": "finder/interview.md",
+   "kind": "twin",
+   "path": "finder/interview.md"
+  },
+  {
+   "id": "finder/stages.md",
+   "kind": "twin",
+   "path": "finder/stages.md"
+  },
+  {
+   "id": "finder/routes.md",
+   "kind": "twin",
+   "path": "finder/routes.md"
+  },
+  {
+   "id": "finder/prompt.md",
+   "kind": "twin",
+   "path": "finder/prompt.md"
+  },
+  {
+   "id": "finder/record.md",
+   "kind": "twin",
+   "path": "finder/record.md"
+  },
+  {
+   "id": "plans/index.md",
+   "kind": "twin",
+   "path": "plans/index.md"
+  },
+  {
+   "id": "briefs/01__find-your-startup.md",
+   "kind": "twin",
+   "path": "briefs/01__find-your-startup.md"
+  },
+  {
+   "id": "briefs/02__note-the-initial-prompt.md",
+   "kind": "twin",
+   "path": "briefs/02__note-the-initial-prompt.md"
+  },
+  {
+   "id": "briefs/index.md",
+   "kind": "twin",
+   "path": "briefs/index.md"
+  },
+  {
+   "id": "articles/find-your-startup.md",
+   "kind": "twin",
+   "path": "articles/find-your-startup.md"
+  },
+  {
+   "id": "agent-articles/building-startups-sgit-ai.md",
+   "kind": "twin",
+   "path": "agent-articles/building-startups-sgit-ai.md"
+  },
+  {
+   "id": "articles/index.md",
+   "kind": "twin",
+   "path": "articles/index.md"
+  },
+  {
+   "id": "decisions/index.md",
+   "kind": "twin",
+   "path": "decisions/index.md"
+  },
+  {
+   "id": "team/engineer/index.md",
+   "kind": "twin",
+   "path": "team/engineer/index.md"
+  },
+  {
+   "id": "team/interviewer/index.md",
+   "kind": "twin",
+   "path": "team/interviewer/index.md"
+  },
+  {
+   "id": "team/journalist/index.md",
+   "kind": "twin",
+   "path": "team/journalist/index.md"
+  },
+  {
+   "id": "team/librarian/index.md",
+   "kind": "twin",
+   "path": "team/librarian/index.md"
+  },
+  {
+   "id": "team/index.md",
+   "kind": "twin",
+   "path": "team/index.md"
+  },
+  {
+   "id": "vault/index.md",
+   "kind": "twin",
+   "path": "vault/index.md"
+  },
+  {
+   "id": "review/index.md",
+   "kind": "twin",
+   "path": "review/index.md"
+  },
+  {
+   "id": "admin/versions.md",
+   "kind": "twin",
+   "path": "admin/versions.md"
+  },
+  {
+   "id": "admin/reality.md",
+   "kind": "twin",
+   "path": "admin/reality.md"
+  },
+  {
+   "id": "admin/corrections.md",
+   "kind": "twin",
+   "path": "admin/corrections.md"
+  },
+  {
+   "id": "admin/index.md",
+   "kind": "twin",
+   "path": "admin/index.md"
+  },
+  {
+   "id": "index.md",
+   "kind": "twin",
+   "path": "index.md"
+  }
+ ]
+}

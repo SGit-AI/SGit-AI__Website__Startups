@@ -1,0 +1,50 @@
+{
+ "what": "The intent, top down, from the brief: story > rules > examples; each example names the surface it will touch, in the brief's words, so the join can find it. Written by startups.engineer, an agent, from the voice memo of 20 October 2026 and the initial prompt; accepted by nobody yet, so every node is 'proposed': true until Dinis reads it back. Section numbers refer to the transcript's timestamps.",
+ "written_by": "startups.engineer",
+ "written_on": "2026-10-20",
+ "accepted_by": null,
+ "stories": [
+  {"id": "find-your-startup", "title": "A person finds their startup through an interview", "source": {"doc": "briefs/01__find-your-startup.md", "section": "0:02"}, "proposed": true,
+   "rules": [
+    {"id": "questions-change", "rule": "The next question depends on the last answer: a state machine, not a form.",
+     "examples": [{"id": "entry-decides", "example": "A person who picks 'I do not have a startup yet' is not asked for a sentence about the thing", "surface": "finder/interview.html"}]},
+    {"id": "ship-test", "rule": "Everything maps to one test: can it ship, can it reach users, now.",
+     "examples": [{"id": "ship-stage", "example": "The ship stage asks for the smallest version a stranger could use this week, the blocker and the cost", "surface": "finder/stages.html"}]},
+    {"id": "spectrum", "rule": "It works along the spectrum from no startup yet to a good plan that is not shipping.",
+     "examples": [{"id": "five-entries", "example": "Five entries on the where stage, each with its own route in", "surface": "finder/index.html"}]},
+    {"id": "no-judgement", "rule": "The finder does not pass judgement; it helps with focus and shipping; the output is in the person's words.",
+     "examples": [{"id": "record-in-own-words", "example": "The record's focus line is the person's; the interviewer may draft and must mark the draft", "surface": "finder/record.html"},
+                  {"id": "old-school-is-valid", "example": "A capital-first startup gets the old-school route, said plainly, with next steps", "surface": "finder/routes.html"}]}
+   ]},
+  {"id": "humans-and-agents", "title": "The same guidance works for a person on the site and for a model running the interview", "source": {"doc": "briefs/01__find-your-startup.md", "section": "0:02"}, "proposed": true,
+   "rules": [
+    {"id": "one-file", "rule": "One data file serves every surface.",
+     "examples": [{"id": "json-served", "example": "finder.json is published at finder/finder.json and the prompt names it", "surface": "finder/finder.json"},
+                  {"id": "pages-read-file", "example": "The stages and routes pages print the file's contents with ids", "surface": "finder/stages.html"}]},
+    {"id": "llm-first", "rule": "For now the finder is run by Claude or ChatGPT; the primitives come first, the programmatic version later.",
+     "examples": [{"id": "prompt", "example": "A prompt a person pastes that tells the model how to run the file", "surface": "finder/prompt.html"},
+                  {"id": "documents-mode", "example": "The prompt handles documents uploaded instead of answers", "surface": "finder/finder-prompt.md"}]}
+   ]},
+  {"id": "the-refactored-site", "title": "The startups section of sgit.ai becomes its own site, in the shape of the sibling sites", "source": {"doc": "briefs/02__note-the-initial-prompt.md", "section": "the message"}, "proposed": true,
+   "rules": [
+    {"id": "takes-over", "rule": "The two startups pages of sgit.ai move here.",
+     "examples": [{"id": "vaults-page", "example": "Build your startup on sgit vaults, as a page here", "surface": "vaults/index.html"},
+                  {"id": "plans-page", "example": "The business plans as a page generated from data", "surface": "plans/index.html"}]},
+    {"id": "sibling-shape", "rule": "The site is built, gated and released like gen-z-developers.sgit.ai and newsroom.sgit.ai.",
+     "examples": [{"id": "gate", "example": "validate.js fails the build; CI runs it before tagging", "surface": "admin/build/validate.js"},
+                  {"id": "themes", "example": "The five themes, chosen in the nav", "surface": "assets/themes.css"},
+                  {"id": "versions", "example": "The version in the nav links to the narrated release history", "surface": "admin/versions.html"}]},
+    {"id": "every-repository", "rule": "The repository carries what every sgit repository carries.",
+     "examples": [{"id": "brief-in-full", "example": "The memo published verbatim", "surface": "briefs/01__find-your-startup.html"},
+                  {"id": "reality", "example": "A reality file with a row per domain", "surface": "admin/reality.html"},
+                  {"id": "corrections", "example": "A corrections file", "surface": "admin/corrections.html"},
+                  {"id": "roles", "example": "Roles as files with issues", "surface": "team/index.html"},
+                  {"id": "review", "example": "A review folder with intent from the brief", "surface": "review/index.html"}]}
+   ]},
+  {"id": "the-book-opens-here", "title": "The finder is the first thing the book does", "source": {"doc": "briefs/01__find-your-startup.md", "section": "3:59"}, "proposed": true,
+   "rules": [
+    {"id": "question-for-dinis", "rule": "Whether and where the finder opens the book is decided on the book's site.",
+     "examples": [{"id": "brief-to-genz", "example": "A brief to gen-z-developers.sgit.ai's journalist, as a question", "surface": "team/journalist/issues/open/002__the-finder-as-the-opening-of-the-book.md"}]}
+   ]}
+ ]
+}

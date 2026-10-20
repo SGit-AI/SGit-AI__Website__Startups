@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build your startup on sgit vaults &middot; startups.sgit.ai</title>
+<meta name="description" content="For founders: a vault removes the four costs that usually stand between you and a first user (a database to run, hosting for your reader, an account, an install), so you can ship something usable, give it away briefly, take it away, and find out whether they missed it. What you get on day one, the loop from first vault to first customer, what you still bring, and the measured cost base.">
+<link rel="canonical" href="https://startups.sgit.ai/vaults/index.html">
+<meta property="og:title" content="Build your startup on sgit vaults">
+<meta property="og:description" content="For founders: a vault removes the four costs that usually stand between you and a first user (a database to run, hosting for your reader, an account, an install), so you can ship something usable, give it away briefly, take it away, and find out whether they missed it. What you get on day one, the loop from first vault to first customer, what you still bring, and the measured cost base.">
+<meta property="og:url" content="https://startups.sgit.ai/vaults/index.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="startups.sgit.ai">
+<link rel="alternate" type="text/markdown" href="index.md" title="This page as markdown">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23123c3a%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%279%27 fill=%27none%27 stroke=%27%235fd3c4%27 stroke-width=%273%27 stroke-dasharray=%2742 14%27/%3E%3Cpath d=%27M22 7l5 3-4 4z%27 fill=%27%235fd3c4%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/themes.css">
+<script src="../assets/site.js"></script>
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../index.html">startups<span>.sgit.ai</span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+<div class="nav-items"><div class="ni"><a class="nl" href="../finder/index.html">Find your startup<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../finder/index.html">The finder</a><a class="sl" href="../finder/interview.html">Walk the interview</a><a class="sl" href="../finder/stages.html">The stages and questions</a><a class="sl" href="../finder/routes.html">The routes and rules</a><a class="sl" href="../finder/prompt.html">The prompt for Claude or ChatGPT</a><a class="sl" href="../finder/record.html">The record</a></div></div><div class="ni"><a class="nl here" href="../vaults/index.html">Build on vaults<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl here" href="../vaults/index.html">Build your startup on vaults</a><a class="sl" href="../plans/index.html">Business plans to build on</a></div></div><div class="ni"><a class="nl" href="../articles/index.html">Articles<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../articles/index.html">Articles</a><a class="sl" href="../decisions/index.html">Decisions</a><a class="sl" href="../briefs/index.html">The briefs</a></div></div><div class="ni"><a class="nl" href="../team/index.html">The team<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../team/index.html">The team</a><a class="sl" href="../vault/index.html">The vault</a><a class="sl" href="../review/index.html">The review</a><a class="sl" href="../admin/reality.html">What exists</a><a class="sl" href="../admin/index.html">Admin</a></div></div></div>
+<div class="nav-tools"><div class="theme-pick"></div><span class="ver">site <a href="../admin/versions.html" title="Site release history">v0.1.0</a></span></div>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../index.html">startups.sgit.ai</a> &rarr; <b>Build on vaults</b></div>
+<article class="doc"><p class="kicker">For founders building on vaults · moved here from sgit.ai/startups on 20 October 2026</p><h1>Build your startup on sgit vaults</h1><p class="lede">For founders: a vault removes the four costs that usually stand between you and a first user (a database to run, hosting for your reader, an account, an install), so you can ship something usable, give it away briefly, take it away, and find out whether they missed it. What you get on day one, the loop from first vault to first customer, what you still bring, and the measured cost base.</p><div class="body"><p>A large part of why sgit exists is to make it cheap enough to ship something a stranger can actually use, repeatedly, and to take it away again when you need to find out whether they missed it. That loop is hard mostly because the infrastructure under it is expensive: a database to run, hosting to pay for, an account for every reader, an install before anybody sees anything. <strong>A vault removes all four.</strong> This page is for founders who want to build on that. It was the startups section of sgit.ai until it outgrew a page; <a href="../finder/index.html">the finder</a> is what this site adds to it.</p>
+<p><strong>The operating model comes first, because the technology is the easy part.</strong> <a href="https://newsroom.sgit.ai/articles/the-question-is-whether-they-miss-it.html"><strong>For a startup, the most important question is whether they miss it</strong></a> is the model this is all built to serve: ship something somebody can use, give it away briefly, take it away, and find out whether anybody noticed. Be profitable before you raise, so the investors are calling you. Open source everything, because the technology is not the moat. Read that first, then come back for the substrate. If you are not sure what to ship, <a href="../finder/index.html">the finder</a> is the interview that gets you to the first step.</p>
+<h2 id="what-you-get-on-day-one">What you get on day one</h2>
+<p>Not a platform to sign up for. A format, a CLI and a credential, all open source, that between them remove the four things that usually stand between you and a first user.</p>
+<table>
+<thead>
+<tr>
+<th>The usual cost</th>
+<th>On a vault</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A database to run</strong></td>
+<td>None. The store is encrypted files in cloud storage, read directly. Nothing runs between requests, so nothing is billed between requests.</td>
+</tr>
+<tr>
+<td><strong>Hosting for your reader</strong></td>
+<td>None. A vault carries its own app, and it opens in the browser with no server of yours in the path. It also runs from a plain static host or a bucket, so your deployment is a copy.</td>
+</tr>
+<tr>
+<td><strong>An account, and an install</strong></td>
+<td>Neither. <a href="https://sgit.ai/docs/credentials.html">A read key</a> is the whole credential: the address, the capability and the decryption key in one string. You send it. They open it.</td>
+</tr>
+<tr>
+<td><strong>Versioning you bolt on later</strong></td>
+<td>Already there. Every change is a commit, every version is retained, and a reader can see the history, which means you can take something away and put it back without losing what was there.</td>
+</tr>
+<tr>
+<td><strong>An audit story for the first serious customer</strong></td>
+<td>The server storing it cannot read it. That is the default, not a tier, and <a href="https://sgit.ai/security/index.html">the security model</a> states exactly what the server does see.</td>
+</tr>
+</tbody>
+</table>
+<p>The numbers behind that are measured rather than claimed. <a href="https://sgit.ai/demos/fractal-graphs/performance.html">Performance, cost, and running everywhere</a> has the full set, and the shape of the bill is the part founders care about: storage and egress only, no instance hours, and query compute paid by the reader's own device.</p>
+<h2 id="first-vault-to-first-customer">First vault to first customer</h2>
+<p>The point of the model is a short loop. Here is what it looks like on this stack, with the page that owns each step.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What, and where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Put the thing in a vault</strong></td>
+<td><code>pip install sgit-ai</code>, create, commit, push. <a href="https://sgit.ai/docs/quickstart.html">Five minutes</a>, and the same verbs as git.</td>
+</tr>
+<tr>
+<td><strong>2. Make it usable, not demoable</strong></td>
+<td>Publish content with no code at all, or ship an app inside the vault. <a href="https://sgit.ai/docs/surfaces.html">Pick the surface first</a>: that choice decides more than anything after it.</td>
+</tr>
+<tr>
+<td><strong>3. Give a read key to five people</strong></td>
+<td>No onboarding to build, no invites, no seats. If the content is meant to be open, use the prefix that says so. The finder's miss stage asks you to name the five.</td>
+</tr>
+<tr>
+<td><strong>4. Take it away</strong></td>
+<td>Rotate the key and the trial is over. Nothing else about the product changes, which is the point: you are testing whether they miss it, not whether they liked the email.</td>
+</tr>
+<tr>
+<td><strong>5. Charge, if they came back</strong></td>
+<td>The stack does not do billing, and you should not want it to. What it gives you is a cost base low enough that a small price can be a profitable one.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>One honest caveat on step 4.</strong> <a href="https://sgit.ai/docs/credentials.html#read">Revocation is not retroactive.</a> Anybody who cloned while they had the key keeps what they cloned. For a trial that is usually fine, and it is better to know it now than to design as though a key could be recalled.</p>
+<h2 id="what-you-still-have-to-bring">What you still have to bring</h2>
+<p>A vault is a storage, distribution and versioning layer. It is not a product, and it is deliberately not several things.</p>
+<ul>
+<li><strong>Billing and payments.</strong> Not here, not planned. Use whatever charges cards.</li>
+<li><strong>Identity and per-user accounts.</strong> A read key is a capability, not a login. If you need to know who opened something rather than that it was opened, that is yours to build.</li>
+<li><strong>Server-side search and query.</strong> The server cannot read the content, so it cannot index it. Whatever the client needs, the client downloads, which is fine at a megabyte and a design problem at a gigabyte.</li>
+<li><strong>The judgement about what to ship.</strong> The finder helps with the focus; the shipping is yours. It is worth saying, because the cheapest part of this is now the part everybody used to spend their seed round on.</li>
+</ul>
+<p><a href="https://sgit.ai/docs/limitations.html">When not to use sgit</a> is the longer version of this list, and it is kept honest on purpose.</p>
+<h2 id="the-arguments-this-rests-on-and-where-they-live">The arguments this rests on, and where they live</h2>
+<p>The market you are building into is described in <a href="https://newsroom.sgit.ai/articles/saas-apocalypse-decided-by-inertia-not-by-ai.html">The SaaS apocalypse will be decided by inertia, not by AI</a>: most users were never happy, most features were never used, most licences sit idle, and the portability and APIs the incumbents starved to protect their moats are what an agent now needs. One market gets its own worked example, because it is the one where both the traffic and the law are moving at once: <a href="https://newsroom.sgit.ai/articles/future-of-news-story-vault-not-paywall.html">The future of news is the story vault, not the paywall</a>.</p>
+<p>Two of the three pillars have a whole site to themselves.</p>
+<ul>
+<li><a href="https://open-source.sgit.ai/"><strong>open-source.sgit.ai</strong></a>: why giving away the technology is the commercial choice rather than the charitable one, and why it is the better exit for a founder who wants to leave with their tools. "Open source is a strategy. It is not a charity."</li>
+<li><a href="https://subscriptions.sgit.ai/"><strong>subscriptions.sgit.ai</strong></a>: the pricing trap most founders walk into by default. Charging rent for something nobody is using is a worse business than being paid when you deliver. "A subscription is a discount for regular use, not rent on something you ignore."</li>
+</ul>
+<h2 id="business-plans-to-build-on">Business plans to build on</h2>
+<p>Complete business plans, published as vaults, for other people to build companies on. Each one is written to be taken and run, with the numbers marked as hypotheses, the mock-ups included, and the prototypes enough to serve the first customer. <a href="../plans/index.html"><strong>All the plans, and how to take one</strong></a>.</p>
+<h2 id="evidence-rather-than-a-pitch">Evidence, rather than a pitch</h2>
+<p>Everything above is how sgit.ai itself is built, which is the only reason to believe any of it.</p>
+<ul>
+<li><strong>The published vaults carry their read keys</strong>, each with a page describing what it does and the vault running live inside it. <a href="https://sgit.ai/demos/vaults/index.html">Open any of them</a> with no account and nothing installed.</li>
+<li><strong>The method is written down</strong>, including the mistakes that produced each rule. <a href="https://sgit.ai/demos/vaults/publishing.html">The publishing method</a> is written to be followed by somebody else's agent.</li>
+<li><strong>The measurements are repeatable</strong>, with the commands printed. <a href="https://sgit.ai/demos/fractal-graphs/performance.html">Performance and cost</a>.</li>
+<li><strong>One person, working with agents.</strong> The whole estate is built this way, which is the actual claim about how small a team this needs.</li>
+</ul>
+<h2 id="where-to-start">Where to start</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Find what to ship</strong></td>
+<td><a href="../finder/index.html">The finder</a>: an interview, run by Claude or ChatGPT or walked on this site, that ends in your own description of what to ship, to whom, by when.</td>
+</tr>
+<tr>
+<td><strong>Read the model</strong></td>
+<td><a href="https://newsroom.sgit.ai/articles/the-question-is-whether-they-miss-it.html">The most important question is whether they miss it</a></td>
+</tr>
+<tr>
+<td><strong>Ship something today</strong></td>
+<td><a href="https://sgit.ai/docs/quickstart.html">Quickstart</a>, then <a href="https://sgit.ai/docs/surfaces.html">pick your surface</a></td>
+</tr>
+<tr>
+<td><strong>Build with agents</strong></td>
+<td><a href="https://sgit.ai/docs/agents.html">The agent guide</a> and <a href="https://sgit.ai/skills/index.html">the skills</a>, since this is how the work actually gets done here</td>
+</tr>
+<tr>
+<td><strong>See what exists already</strong></td>
+<td><a href="https://sgit.ai/summit/startups.html">What exists, and what is still a design</a>, the sheet that says which is which</td>
+</tr>
+<tr>
+<td><strong>Raising, eventually</strong></td>
+<td><a href="https://sgit.ai/investors/index.html">sgit.ai for investors</a>, published in the open, which is the same rule this site follows</td>
+</tr>
+</tbody>
+</table>
+<p><strong>This page moved here from sgit.ai on 20 October 2026</strong>, at that site's v0.7.87, as its last paragraph said it would when the section outgrew a page. Until sgit.ai's page carries a notice pointing here, both exist; that is on <a href="../team/librarian/index.html">the librarian's board</a>. If you are building on vaults, the most useful thing you can send is what broke.</p></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>startups.sgit.ai: find your startup, then build it on vaults. By Dinis Cruz and this site's agents. Content CC BY 4.0; code under the repository licence. <a href="../about/participant.html">Participant disclosure</a>.</span>
+<span>Part of <a href="https://sgit.ai">sgit.ai</a> &middot; <a href="https://github.com/SGit-AI/SGit-AI__Website__Startups">GitHub</a> &middot; <a href="../admin/reality.html">what exists</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a> &middot; <a href="index.md">this page as markdown</a></span>
+</div></footer>
+</body>
+</html>

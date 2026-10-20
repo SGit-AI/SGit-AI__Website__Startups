@@ -1,0 +1,564 @@
+{
+ "what": "Every source file, with its hash; the gate recomputes these and fails if they differ (freshness).",
+ "provenance": {
+  "tool": "review/tools/derive.py",
+  "version": "0.1.0",
+  "site": "v0.1.0",
+  "derived_at": "2026-10-20T14:57:32Z"
+ },
+ "files": [
+  {
+   "path": ".github/workflows/deploy-pages.yml",
+   "sha256": "13d00824c56b3b69744c9cf134a96b7048f3427d69fa49a268975dbf76b94030",
+   "language": "yaml",
+   "size": 8856,
+   "lines": 185
+  },
+  {
+   "path": "BRIEF-CORRECTIONS.md",
+   "sha256": "87eb1ccbc6dd05da03d4e2e784ad1b115053c371ad84b90a02a4e5d9732f2343",
+   "language": "markdown",
+   "size": 3357,
+   "lines": 13
+  },
+  {
+   "path": "CLAUDE.md",
+   "sha256": "d10c4a81892a4b45298f536f54566719ee0445a1a9d56a864a6158da003d461c",
+   "language": "markdown",
+   "size": 5781,
+   "lines": 80
+  },
+  {
+   "path": "CNAME",
+   "sha256": "8a55993e099c3b4d50a13eb670e0215f7972531c8c6579886147f4a22cb2095a",
+   "language": "text",
+   "size": 17,
+   "lines": 1
+  },
+  {
+   "path": "LICENSES.md",
+   "sha256": "0887af68d2e25ae9cd2c7681a18dd4ca0f5369b7fdd56323e09b3cfd99fa6a0a",
+   "language": "markdown",
+   "size": 1332,
+   "lines": 21
+  },
+  {
+   "path": "README.md",
+   "sha256": "af2234df36423365b3760738b01229f7a74125576509f210e3f64fe96d432d46",
+   "language": "markdown",
+   "size": 5927,
+   "lines": 92
+  },
+  {
+   "path": "REALITY.md",
+   "sha256": "8ba1989ab1d8e5c11fa4f694695060af94e32b02f50cd1e6fe2f6a81cfefc688",
+   "language": "markdown",
+   "size": 5062,
+   "lines": 22
+  },
+  {
+   "path": "admin/build/build.py",
+   "sha256": "27041acfe14fcbb46739d398335ac94d1e6cadfed83cac953fb1fd246d75b8f7",
+   "language": "python",
+   "size": 73149,
+   "lines": 910
+  },
+  {
+   "path": "admin/build/release.py",
+   "sha256": "0218ea077d26c6dc2394a5f1699eb48aab7074fd1dfa13214b6263dc3568274e",
+   "language": "python",
+   "size": 8475,
+   "lines": 170
+  },
+  {
+   "path": "admin/build/test_finder.mjs",
+   "sha256": "11598b9ea4e716a27148accddee96699a577d2de6e8b3acb788649aaa5ae16de",
+   "language": "javascript",
+   "size": 5392,
+   "lines": 64
+  },
+  {
+   "path": "admin/build/test_interview.mjs",
+   "sha256": "b0cd4b65b7185500155a2181229cb8bb824fabaa50f43dbeee3b236ec5724299",
+   "language": "javascript",
+   "size": 8778,
+   "lines": 125
+  },
+  {
+   "path": "admin/build/validate.js",
+   "sha256": "11841c6e19abfb39542e2f05242281b58a438e80882dbd1b2b822bd7d0a3d53b",
+   "language": "javascript",
+   "size": 13002,
+   "lines": 222
+  },
+  {
+   "path": "admin/build/version.txt",
+   "sha256": "8c807b66253a61439efeeaf99bc84231ab1533fbfef98ae9451baddd7e62d32e",
+   "language": "text",
+   "size": 6,
+   "lines": 1
+  },
+  {
+   "path": "admin/content/agent-articles/01__building-startups-sgit-ai.md",
+   "sha256": "69193bbca26e916b654925294c4113bffd79cb5b6b423281e82a07fa11b21442",
+   "language": "markdown",
+   "size": 10607,
+   "lines": 70
+  },
+  {
+   "path": "admin/content/articles/01__find-your-startup.md",
+   "sha256": "1ea435f74865ed442fb1b1b3ebc24e4cdce19dd423e6dd1c7a0e1fd5e65c59d0",
+   "language": "markdown",
+   "size": 12277,
+   "lines": 90
+  },
+  {
+   "path": "admin/content/briefs/01__find-your-startup.md",
+   "sha256": "0a0285aab9700deca92198d1c8b9cd48e7934fe99545fd77467a7fa1982ad2d9",
+   "language": "markdown",
+   "size": 6429,
+   "lines": 17
+  },
+  {
+   "path": "admin/content/briefs/02__note-the-initial-prompt.md",
+   "sha256": "59e74637d526ede6839ca02617e15757dc71dc42cfc0737a82549ecf987ae166",
+   "language": "markdown",
+   "size": 2442,
+   "lines": 19
+  },
+  {
+   "path": "admin/content/decisions/001__for-now-the-finder-needs-an-llm.md",
+   "sha256": "0fe1f11e474adeb26560ace256d88828f174f52fbc9f7b4d04c950d6d2b12e6d",
+   "language": "markdown",
+   "size": 1413,
+   "lines": 13
+  },
+  {
+   "path": "admin/content/decisions/002__it-works-for-humans-and-for-agents.md",
+   "sha256": "46e0d2bfaba07fda14c5b249371f888f1b4726550a897f625f3a37b2401e4fc7",
+   "language": "markdown",
+   "size": 890,
+   "lines": 13
+  },
+  {
+   "path": "admin/content/decisions/003__we-are-not-passing-judgement.md",
+   "sha256": "3be4342af42cdd2b1c65378dac14acafb3f5486dae10a437684baa56266a57af",
+   "language": "markdown",
+   "size": 1336,
+   "lines": 13
+  },
+  {
+   "path": "admin/content/finder/finder.json",
+   "sha256": "56691a3853058a06a82c16009a48cf2a3e683b7e5930dee1704cc73f48c9d2d9",
+   "language": "json",
+   "size": 22681,
+   "lines": 186
+  },
+  {
+   "path": "admin/content/finder/prompt.md",
+   "sha256": "9e68c3974eae15aeb39ba180f984b935a4334e7d198fc62b004f3b73fb33ebe6",
+   "language": "markdown",
+   "size": 3575,
+   "lines": 50
+  },
+  {
+   "path": "admin/content/finder/record.md",
+   "sha256": "216278d3e886faad718260cd32da33448fac4db74c59f3adddc5d8444a2ce8c7",
+   "language": "markdown",
+   "size": 1541,
+   "lines": 53
+  },
+  {
+   "path": "admin/content/pages/participant.md",
+   "sha256": "8f7be93347f3d6e31a8338001c367aa0975dce615bb5d5552d2445d6d812f494",
+   "language": "markdown",
+   "size": 4015,
+   "lines": 37
+  },
+  {
+   "path": "admin/content/pages/vaults.md",
+   "sha256": "01a72b8dba4d66f90bfe189eca5dd1a048db826f4d9d1ca1371e22b2b453039d",
+   "language": "markdown",
+   "size": 9764,
+   "lines": 83
+  },
+  {
+   "path": "admin/content/plans.json",
+   "sha256": "5e0f271cc49321edbfd80877661cd125692341cbe6a04fc5d631c8693036b345",
+   "language": "json",
+   "size": 8436,
+   "lines": 49
+  },
+  {
+   "path": "admin/content/vault.json",
+   "sha256": "59e6b1481617d02f34ea81920f5c7d1466a683e1d3348f2c0c5ca3ef27c83182",
+   "language": "json",
+   "size": 694,
+   "lines": 10
+  },
+  {
+   "path": "admin/content/versions.json",
+   "sha256": "10bf50e9705fff8f2c2c6a1eaa909586c9b978996f652c0719b8144ec25bfbbd",
+   "language": "json",
+   "size": 1437,
+   "lines": 10
+  },
+  {
+   "path": "admin/credentials/README.md",
+   "sha256": "7baf38b7ac153679a16fc3084e787f6477c646d0f08d8ce17434a2fc511f602a",
+   "language": "markdown",
+   "size": 1290,
+   "lines": 19
+  },
+  {
+   "path": "assets/components/sg-base/sg-base.css",
+   "sha256": "70674394241531ed42f8e6d71c8b671784954d57e010f7ab22a17f69d953fc81",
+   "language": "css",
+   "size": 26,
+   "lines": 1
+  },
+  {
+   "path": "assets/components/sg-base/sg-base.html",
+   "sha256": "20aeb15d31a7e0ccbff02db14bb93ec671cd85dcc7a38bb30c194421824b01ae",
+   "language": "html",
+   "size": 14,
+   "lines": 1
+  },
+  {
+   "path": "assets/components/sg-base/sg-base.js",
+   "sha256": "0680e7643145ff453b81f7d92200d92a493f9e9233d5059db14d3068fa4bc84f",
+   "language": "javascript",
+   "size": 2587,
+   "lines": 73
+  },
+  {
+   "path": "assets/components/sg-finder/sg-finder.css",
+   "sha256": "ee58e2ab01482d3f35127054f5f9c0b9520438ed9bea246dfa15c3394618404b",
+   "language": "css",
+   "size": 3892,
+   "lines": 46
+  },
+  {
+   "path": "assets/components/sg-finder/sg-finder.html",
+   "sha256": "555689d57bfa5e938e2e715cb997e6e1200b079a5fa7f96308271ae5fdfea67e",
+   "language": "html",
+   "size": 1406,
+   "lines": 33
+  },
+  {
+   "path": "assets/components/sg-finder/sg-finder.js",
+   "sha256": "5be7d68cce5086b199028889a11c7d7b463464ec6d781224e6295389acc5f4b0",
+   "language": "javascript",
+   "size": 8136,
+   "lines": 172
+  },
+  {
+   "path": "assets/site.css",
+   "sha256": "5a86e9cb3f8ea90235d31cf334ac96aa01c13befb5980543f231e6f3b023d314",
+   "language": "css",
+   "size": 13910,
+   "lines": 197
+  },
+  {
+   "path": "assets/site.js",
+   "sha256": "e80742d17b26fca81e5a7a647eab7845ef6723c72050c3dad38a685dbcfb3852",
+   "language": "javascript",
+   "size": 5902,
+   "lines": 98
+  },
+  {
+   "path": "assets/themes.css",
+   "sha256": "fc5895d8469f9b01709a2ca4e8d1790fa35b621198bb81eeb9f95f44fa3041a9",
+   "language": "css",
+   "size": 10681,
+   "lines": 177
+  },
+  {
+   "path": "finder/finder-rules.js",
+   "sha256": "c9a82feb876e502deb1d42fee9eebe67303a4513143bd191421ad51873179b75",
+   "language": "javascript",
+   "size": 7932,
+   "lines": 151
+  },
+  {
+   "path": "finder/index.html",
+   "sha256": "c07a38e1c6bc50a85ce0711e7f1d17fae968344e4c5d667a7660583d9f3b604e",
+   "language": "html",
+   "size": 10631,
+   "lines": 63
+  },
+  {
+   "path": "finder/index.md",
+   "sha256": "5e145039a82aec1e221348b0bc5c1edca9f360a35333c70db90d15882b2aa2eb",
+   "language": "markdown",
+   "size": 5781,
+   "lines": 143
+  },
+  {
+   "path": "finder/interview.html",
+   "sha256": "cbbe089a12084fd75647e2472418c6381712b04967c2c7f6d1b8921a1b89ab89",
+   "language": "html",
+   "size": 5625,
+   "lines": 42
+  },
+  {
+   "path": "finder/interview.md",
+   "sha256": "0e538f6790fb813933627deb48b39d64805b81e02167c62293c0a055184b39f0",
+   "language": "markdown",
+   "size": 1270,
+   "lines": 18
+  },
+  {
+   "path": "finder/prompt.html",
+   "sha256": "48abe81defc1fad5e26eab13a93f7b1fec2efa319765fb07d5cafe94244b8f8a",
+   "language": "html",
+   "size": 9711,
+   "lines": 93
+  },
+  {
+   "path": "finder/prompt.md",
+   "sha256": "434325a6bc75c469d06224773d547271ab9ce5e8452675057c4fd822c1ae4b05",
+   "language": "markdown",
+   "size": 5588,
+   "lines": 79
+  },
+  {
+   "path": "finder/record.html",
+   "sha256": "dbb9d9cdbf4181a4e92b5f2d958d20ffb875acff9fde2ccfdb007db0a7f67935",
+   "language": "html",
+   "size": 7373,
+   "lines": 98
+  },
+  {
+   "path": "finder/record.md",
+   "sha256": "71241a3d1fe430f21203327031fdfe67d5865e6b6622b9a8ddae9d11239cf581",
+   "language": "markdown",
+   "size": 3273,
+   "lines": 84
+  },
+  {
+   "path": "finder/routes.html",
+   "sha256": "be8cccd7660d8a6b84235867d1e78738a1ec9ca5d76297d4fa725fc4ac49e5a7",
+   "language": "html",
+   "size": 10699,
+   "lines": 44
+  },
+  {
+   "path": "finder/routes.md",
+   "sha256": "f0c969de4e8b1bd986108f619486d5a1af25c1011a7b711fb9751695ccbf59fc",
+   "language": "markdown",
+   "size": 5642,
+   "lines": 95
+  },
+  {
+   "path": "finder/stages.html",
+   "sha256": "751d327ff00b27eb32e3950c8c9d4367e490b7809ee3561f98264ac023c96e65",
+   "language": "html",
+   "size": 18753,
+   "lines": 43
+  },
+  {
+   "path": "finder/stages.md",
+   "sha256": "04166a1be498a56ed5668145d3a4f60de3c8cdafe2a4cdfd8c1e3aae31a11fa4",
+   "language": "markdown",
+   "size": 10667,
+   "lines": 282
+  },
+  {
+   "path": "review/BRIEF-CORRECTIONS.md",
+   "sha256": "b933aab0fd2bd324f6ae483d19455b997111de37e57e50a65e031c5ee971b30b",
+   "language": "markdown",
+   "size": 838,
+   "lines": 5
+  },
+  {
+   "path": "review/README.md",
+   "sha256": "f2dfc353748202191ed8edc44d15231c6b1261efc4acff1edd338072b6bcb851",
+   "language": "markdown",
+   "size": 1846,
+   "lines": 18
+  },
+  {
+   "path": "review/intent/components.json",
+   "sha256": "e84eaf19d8c70315bf21c20dee88f4527a510e1dabd4ba52063d7436d176cf90",
+   "language": "json",
+   "size": 3126,
+   "lines": 21
+  },
+  {
+   "path": "review/intent/deploy.json",
+   "sha256": "a9db178321c8009c834a2d8d774f499d70d7a20dbd8a3dcdecffbe033f5552a3",
+   "language": "json",
+   "size": 1202,
+   "lines": 16
+  },
+  {
+   "path": "review/intent/flows.json",
+   "sha256": "8bd72fe00638021f6922341431d838c8ebb006e1c4aeb14fd8222127515d8aa2",
+   "language": "json",
+   "size": 3090,
+   "lines": 36
+  },
+  {
+   "path": "review/intent/stories.json",
+   "sha256": "f8550cd7ef9545aaeb8b1334d517452c86d1617d353b5c75e9f541b417450f98",
+   "language": "json",
+   "size": 5545,
+   "lines": 50
+  },
+  {
+   "path": "review/self/README.md",
+   "sha256": "f1497f8005e7eacbdc44f7bb71e74233a757ed8a08c8e3fae575df19f325c8e1",
+   "language": "markdown",
+   "size": 283,
+   "lines": 3
+  },
+  {
+   "path": "review/tools/derive.py",
+   "sha256": "27529f8a103ffcef10723167c171afbeb7267af58c34b6c41dc3ae4b1dc0ba15",
+   "language": "python",
+   "size": 6828,
+   "lines": 108
+  },
+  {
+   "path": "robots.txt",
+   "sha256": "6aa3621fbf395b73db467e3e0ab9f9d973ce980a975e2221541365ea242e5639",
+   "language": "text",
+   "size": 69,
+   "lines": 3
+  },
+  {
+   "path": "team/ISSUES.md",
+   "sha256": "d0590a765f88f24dbad562ac7dfe792f9ce400be3eb029ef75d484db8444c73a",
+   "language": "markdown",
+   "size": 1134,
+   "lines": 10
+  },
+  {
+   "path": "team/engineer/index.md",
+   "sha256": "47372d565ce24f802548b95d02026a5580e94f6aa8dc0dd3f1bc8c13277f4348",
+   "language": "markdown",
+   "size": 4108,
+   "lines": 71
+  },
+  {
+   "path": "team/engineer/issues/open/001__the-review-navigator.md",
+   "sha256": "86a6164737a199f5c7cd87cd12592e231791aeed5d5080633d47c725be5c1ff5",
+   "language": "markdown",
+   "size": 850,
+   "lines": 7
+  },
+  {
+   "path": "team/engineer/issues/open/002__the-honest-row-on-nfrs.md",
+   "sha256": "9a7036027e338f2eedd2ae19e5568c07654f09f33a5260bffb8cd3b6799d711f",
+   "language": "markdown",
+   "size": 681,
+   "lines": 7
+  },
+  {
+   "path": "team/engineer/issues/open/003__verify-the-first-deploy.md",
+   "sha256": "eceb21b44dd1050dc6284ce800e39168a4c8b0dff4bbc2e9a6070eefe8d7c8d7",
+   "language": "markdown",
+   "size": 636,
+   "lines": 7
+  },
+  {
+   "path": "team/engineer/role.md",
+   "sha256": "dab1d47dfaf3d67a60d1e7ec5c069f65ab39aff4d88e4dba5ce5b0934c4d2c19",
+   "language": "markdown",
+   "size": 2996,
+   "lines": 32
+  },
+  {
+   "path": "team/index.md",
+   "sha256": "b75a81179f2a390e9fb70ed7214fc468f6768e00d7c3290594cbc36a6f11ff74",
+   "language": "markdown",
+   "size": 3493,
+   "lines": 60
+  },
+  {
+   "path": "team/interviewer/index.md",
+   "sha256": "e4dd581229a895a333e53b11ec213656ed6046a6b6eea4873389a1f9b787cb9d",
+   "language": "markdown",
+   "size": 4036,
+   "lines": 68
+  },
+  {
+   "path": "team/interviewer/issues/open/001__run-the-first-interview-with-dinis.md",
+   "sha256": "be600212653534820af90b6b8dd0dcaec670474dc69db6e7ddce24cfc3555229",
+   "language": "markdown",
+   "size": 645,
+   "lines": 7
+  },
+  {
+   "path": "team/interviewer/role.md",
+   "sha256": "183c3e36515c4212f6f92f59d6ac5fcd7f863e229d6a7d64e919b5992ba22fdd",
+   "language": "markdown",
+   "size": 3038,
+   "lines": 31
+  },
+  {
+   "path": "team/journalist/briefs/v0.1.0__find-your-startup.md",
+   "sha256": "e926b1f6298dcfc7aea86fd009d793801e1be51b46581a13f2845d51752b2176",
+   "language": "markdown",
+   "size": 426,
+   "lines": 7
+  },
+  {
+   "path": "team/journalist/index.md",
+   "sha256": "f40b454523e08770470b0495bebd32759cfd8fb7d5e439179e5a5ba8c580fb3b",
+   "language": "markdown",
+   "size": 5013,
+   "lines": 71
+  },
+  {
+   "path": "team/journalist/issues/open/001__the-storyboard-version-of-the-finder.md",
+   "sha256": "165d806c30f18c4173149380815fa6ade369373c1b29c2c3899904c0cceb6452",
+   "language": "markdown",
+   "size": 715,
+   "lines": 7
+  },
+  {
+   "path": "team/journalist/issues/open/002__the-finder-as-the-opening-of-the-book.md",
+   "sha256": "bdcb3c58b3165b1900d67659407d9195b56157c27c14bc3e10ef885b38dc19c5",
+   "language": "markdown",
+   "size": 799,
+   "lines": 7
+  },
+  {
+   "path": "team/journalist/role.md",
+   "sha256": "e6577044663c423d9d4e231d73f9ce597711cc6834f93b1cbb8ba87f66daf4ec",
+   "language": "markdown",
+   "size": 3853,
+   "lines": 33
+  },
+  {
+   "path": "team/librarian/index.md",
+   "sha256": "67ebb40bff6d69275b0103fc65504103bbbb414ffc8004ddd734878e6e9c439c",
+   "language": "markdown",
+   "size": 3974,
+   "lines": 68
+  },
+  {
+   "path": "team/librarian/issues/blocked/002__sgit-ai-startups-pages-point-here.md",
+   "sha256": "715fa5428fc5accd1655b042b8005638f6e539c6e3969b739759df6025c7bf2d",
+   "language": "markdown",
+   "size": 689,
+   "lines": 9
+  },
+  {
+   "path": "team/librarian/issues/open/001__the-finder-as-a-fractal-semantic-graph.md",
+   "sha256": "32581020d2477c8d8a506558963b7b6bd9fadafc02e2fcaa152aae467102a4ca",
+   "language": "markdown",
+   "size": 692,
+   "lines": 7
+  },
+  {
+   "path": "team/librarian/role.md",
+   "sha256": "6fa8a2275504157cb3ae4a0b5cb9025fd475570c98f9a36574bc7bc013c5a0ed",
+   "language": "markdown",
+   "size": 2882,
+   "lines": 31
+  }
+ ]
+}

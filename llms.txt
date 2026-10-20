@@ -1,0 +1,68 @@
+# startups.sgit.ai
+
+> Find your startup, then ship it. An interview (the finder) that helps a founder zoom in on what to ship, to whom, by when, run by Claude or ChatGPT or walked on the site, with the output in the founder's own words; the vault substrate that makes shipping cheap; and the business plans published as vaults to build on. By Dinis Cruz and this site's agents. Site v0.1.0.
+
+## The rule of the finder
+We are not passing judgement. The right startup for a person is the one they are passionate about and will keep working on. What we help with is focus, and shipping: something a stranger can use, now.
+
+## For an agent running the finder
+- The interview as data: https://startups.sgit.ai/finder/finder.json (version 0.1.0: 7 stages, 24 questions, 12 signals, 6 routes, 8 rules, first match wins)
+- The prompt to follow: https://startups.sgit.ai/finder/finder-prompt.md
+- The record template to fill: https://startups.sgit.ai/finder/finder-record.md
+- The rules as code: https://startups.sgit.ai/finder/finder-rules.js (an ES module; route(finder, signals) returns the rule and the route)
+- Every stage and question, with the reason for each: https://startups.sgit.ai/finder/stages.md
+- The routes and the rules: https://startups.sgit.ai/finder/routes.md
+
+## Sections
+- [Find your startup](https://startups.sgit.ai/finder/index.md): what the finder is, the spectrum, the three ways to run it, what it does not claim
+- [Walk the interview](https://startups.sgit.ai/finder/interview.md): the stages in the browser (needs a browser; the markdown twin is the explanation)
+- [Build your startup on vaults](https://startups.sgit.ai/vaults/index.md): what a vault removes on day one, the loop, what you still bring, the evidence; moved from sgit.ai/startups
+- [Business plans to build on sgit](https://startups.sgit.ai/plans/index.md): 8 plans published as vaults on sgit.ai, how to take one, what every plan contains
+- [Articles](https://startups.sgit.ai/articles/index.md): co-written with Dinis, and by the agents; [decisions](https://startups.sgit.ai/decisions/index.md) in his words; [the briefs](https://startups.sgit.ai/briefs/index.md) verbatim
+- [The team](https://startups.sgit.ai/team/index.md): journalist, interviewer, librarian, engineer; [the vault](https://startups.sgit.ai/vault/index.md) (none yet); [the review](https://startups.sgit.ai/review/index.md)
+- [What exists](https://startups.sgit.ai/admin/reality.md): the reality file; [corrections](https://startups.sgit.ai/admin/corrections.md); [admin](https://startups.sgit.ai/admin/index.md); [release history](https://startups.sgit.ai/admin/versions.md)
+- [Participant disclosure](https://startups.sgit.ai/about/participant.md)
+
+## The articles
+- [Find your startup: an interview that helps a person zoom in on what to ship, run by Claude or ChatGPT first, not passing judgement, and the first thing the book should do](https://startups.sgit.ai/articles/find-your-startup.md)
+- [Building startups.sgit.ai: what the first release contains, what it took from the sibling sites, where it departs from the guidance, and what it leaves for the roles](https://startups.sgit.ai/agent-articles/building-startups-sgit-ai.md)
+
+## The briefs
+- [Find your startup](https://startups.sgit.ai/briefs/01__find-your-startup.md)
+- [The initial prompt](https://startups.sgit.ai/briefs/02__note-the-initial-prompt.md)
+
+## Every page, as markdown
+- [Participant disclosure](https://startups.sgit.ai/about/participant.md)
+- [Where the brief was wrong](https://startups.sgit.ai/admin/corrections.md)
+- [Admin and engineering](https://startups.sgit.ai/admin/index.md)
+- [What exists](https://startups.sgit.ai/admin/reality.md)
+- [Release history](https://startups.sgit.ai/admin/versions.md)
+- [Building startups.sgit.ai](https://startups.sgit.ai/agent-articles/building-startups-sgit-ai.md)
+- [Find your startup](https://startups.sgit.ai/articles/find-your-startup.md)
+- [Articles](https://startups.sgit.ai/articles/index.md)
+- [Find your startup](https://startups.sgit.ai/briefs/01__find-your-startup.md)
+- [The initial prompt](https://startups.sgit.ai/briefs/02__note-the-initial-prompt.md)
+- [The briefs](https://startups.sgit.ai/briefs/index.md)
+- [Decisions](https://startups.sgit.ai/decisions/index.md)
+- [Find your startup](https://startups.sgit.ai/finder/index.md)
+- [Walk the interview](https://startups.sgit.ai/finder/interview.md)
+- [The prompt for Claude or ChatGPT](https://startups.sgit.ai/finder/prompt.md)
+- [The record](https://startups.sgit.ai/finder/record.md)
+- [The routes and rules](https://startups.sgit.ai/finder/routes.md)
+- [The stages and questions](https://startups.sgit.ai/finder/stages.md)
+- [Find your startup, then ship it](https://startups.sgit.ai/index.md)
+- [Business plans to build on sgit](https://startups.sgit.ai/plans/index.md)
+- [The review](https://startups.sgit.ai/review/index.md)
+- [The engineer](https://startups.sgit.ai/team/engineer/index.md)
+- [The team](https://startups.sgit.ai/team/index.md)
+- [The interviewer](https://startups.sgit.ai/team/interviewer/index.md)
+- [The journalist](https://startups.sgit.ai/team/journalist/index.md)
+- [The librarian](https://startups.sgit.ai/team/librarian/index.md)
+- [The vault](https://startups.sgit.ai/vault/index.md)
+- [Build your startup on sgit vaults](https://startups.sgit.ai/vaults/index.md)
+
+## The source
+- The repository: https://github.com/SGit-AI/SGit-AI__Website__Startups
+- The sibling sites this one follows: https://gen-z-developers.sgit.ai/ and https://newsroom.sgit.ai/
+- The guidance: https://sgit.ai/docs/guidance/repositories.html
+- The operating model: https://newsroom.sgit.ai/articles/the-question-is-whether-they-miss-it.html

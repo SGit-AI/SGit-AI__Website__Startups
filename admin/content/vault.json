@@ -1,0 +1,10 @@
+{
+ "what": "The vaults this site uses. None as of v0.1.0. When one is created, only its READ key goes here; the write key is held by Dinis and exists nowhere in this repository. validate.js refuses any string carrying sgit's private-key prefix anywhere in the tree.",
+ "public": null,
+ "would_hold": {
+  "records/": "finder records people choose to publish, each with its permission line; the interviewer's",
+  "interviews/": "transcripts of interviews run by a model, with the person's permission",
+  "findings/": "what interviews showed about the questions, for the librarian",
+  "plans/": "a business plan written on this site, when there is one, in the shape of sgit.ai's plan vaults"
+ }
+}

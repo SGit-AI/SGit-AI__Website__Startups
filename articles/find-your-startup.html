@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find your startup &middot; startups.sgit.ai</title>
+<meta name="description" content="I keep coming back to the question of how we empower people to focus and to do the thing, and for a startup the thing is shipping. We have enough material now, especially the book, for a startups site of its own, and the first thing on it is a finder. An online questionnaire, a who-done-it of questi">
+<link rel="canonical" href="https://startups.sgit.ai/articles/find-your-startup.html">
+<meta property="og:title" content="Find your startup">
+<meta property="og:description" content="I keep coming back to the question of how we empower people to focus and to do the thing, and for a startup the thing is shipping. We have enough material now, especially the book, for a startups site of its own, and the first thing on it is a finder. An online questionnaire, a who-done-it of questi">
+<meta property="og:url" content="https://startups.sgit.ai/articles/find-your-startup.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="startups.sgit.ai">
+<link rel="alternate" type="text/markdown" href="find-your-startup.md" title="This page as markdown">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23123c3a%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%279%27 fill=%27none%27 stroke=%27%235fd3c4%27 stroke-width=%273%27 stroke-dasharray=%2742 14%27/%3E%3Cpath d=%27M22 7l5 3-4 4z%27 fill=%27%235fd3c4%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/themes.css">
+<script src="../assets/site.js"></script>
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../index.html">startups<span>.sgit.ai</span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+<div class="nav-items"><div class="ni"><a class="nl" href="../finder/index.html">Find your startup<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../finder/index.html">The finder</a><a class="sl" href="../finder/interview.html">Walk the interview</a><a class="sl" href="../finder/stages.html">The stages and questions</a><a class="sl" href="../finder/routes.html">The routes and rules</a><a class="sl" href="../finder/prompt.html">The prompt for Claude or ChatGPT</a><a class="sl" href="../finder/record.html">The record</a></div></div><div class="ni"><a class="nl" href="../vaults/index.html">Build on vaults<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../vaults/index.html">Build your startup on vaults</a><a class="sl" href="../plans/index.html">Business plans to build on</a></div></div><div class="ni"><a class="nl here" href="../articles/index.html">Articles<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../articles/index.html">Articles</a><a class="sl" href="../decisions/index.html">Decisions</a><a class="sl" href="../briefs/index.html">The briefs</a></div></div><div class="ni"><a class="nl" href="../team/index.html">The team<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../team/index.html">The team</a><a class="sl" href="../vault/index.html">The vault</a><a class="sl" href="../review/index.html">The review</a><a class="sl" href="../admin/reality.html">What exists</a><a class="sl" href="../admin/index.html">Admin</a></div></div></div>
+<div class="nav-tools"><div class="theme-pick"></div><span class="ver">site <a href="../admin/versions.html" title="Site release history">v0.1.0</a></span></div>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../index.html">startups.sgit.ai</a> &rarr; <a href="../articles/index.html">Articles</a> &rarr; <b>Find your startup</b></div>
+<article class="doc"><p class="kicker">article &middot; 2026-10-20 &middot; site v0.1.0 &middot; <a href="find-your-startup.md">markdown</a></p><h1>Find your startup: an interview that helps a person zoom in on what to ship, run by Claude or ChatGPT first, not passing judgement, and the first thing the book should do</h1><p class="byline">By Dinis Cruz, co-written with this site&rsquo;s journalist, <code>startups.journalist</code>, in Dinis Cruz&rsquo;s voice; the editorial responsibility is Dinis Cruz&rsquo;s.</p><div class="src"><b>Abstract.</b> I keep coming back to the question of how we empower people to focus and to do the thing, and for a startup the thing is shipping. We have enough material now, especially the book, for a startups site of its own, and the first thing on it is a finder. An online questionnaire, a who-done-it of questions where the next question depends on the last, built as a state machine, powered by a fractal semantic graph and by an LLM where it needs one, and deterministic where it can be. The question is find your startup. It maps the person against everything I have been pushing here, which comes down to one thing: can you ship it, can you get it into the hands of users, now. There is a spectrum, from the person starting from zero to the person with a good plan who is not shipping, and we are not passing judgement anywhere on it: the right startup is the one you are passionate about. I am a framework person, I arrive at my profitable startups a few components later, and that is fine. What we can help with is focus, and the output is the person&#x27;s own description, in their own words, of what they should be focusing on. For now it is designed to be run by Claude or ChatGPT interviewing the person, or reading the documents they upload, because you need an agent behind the scenes; the programmatic version comes after we have the primitives and some examples, which I will do myself. And it is how the book should start.</div><div class="body"><h2 id="in-short">In short</h2>
+<ul>
+<li><strong>A startups site of its own.</strong> We have enough material, especially the book; the startups section of sgit.ai becomes startups.sgit.ai.</li>
+<li><strong>The first thing on it is a finder.</strong> Find your startup: a questionnaire where the questions change with the answers, a state machine, powered by a fractal semantic graph.</li>
+<li><strong>One test runs through it.</strong> Can you ship it? Can you get it into the hands of users, now?</li>
+<li><strong>A spectrum, not a type.</strong> From the person with no startup yet to the person with a good plan who is not shipping it.</li>
+<li><strong>We are not passing judgement.</strong> The right startup is the one you are passionate about. We help with focus, and with shipping.</li>
+<li><strong>The output is in your words.</strong> Your own description of what you should be focusing on, which may be: go old school and raise.</li>
+<li><strong>For humans and for agents.</strong> It works from the website and it is designed to be run by Claude or ChatGPT interviewing you.</li>
+<li><strong>LLM first, programmatic later.</strong> Assume it needs an agent behind the scenes; once the primitives exist, some of it can be made deterministic.</li>
+<li><strong>It is how the book should start.</strong> The first thing the book should do is help the reader zoom in.</li>
+</ul>
+<h2 id="the-question">The question I keep coming back to</h2>
+<p>How do we empower people to focus, and to do the thing right? I want to help people, and for a startup the thing is shipping. I think we have enough material now for this to be a site of its own, especially with the book, and the first thing I would put on it is an online questionnaire. The question is: find your startup.</p>
+<p>What makes it interesting is that it is not a form. It is a who-done-it of questions, where the next question depends on the answer to the last one. That goes back to an idea I have had for a long time, dynamic questionnaires, and we can now build the state machines behind them properly. It is powered by a fractal semantic graph: the questions, the signals an answer sets, the routes and the rules that connect them are nodes and edges, and a graph can be zoomed into. Where it needs a model, it uses one. Where it can be deterministic, it should be, because a rule you can read is a rule you can argue with.</p>
+<h2 id="what-it-maps">What it maps against</h2>
+<p>The mapping takes everything I have been pushing here and reduces it to one thing. It has to be something that will ship. Something that can be done right now, and executed. Not a plan for a thing: the thing, in the hands of a user, so that you can give it away, take it away, and find out whether they missed it. That model is written up in <a href="https://newsroom.sgit.ai/articles/the-question-is-whether-they-miss-it.html">the most important question is whether they miss it</a>, and the finder is a way to get a person to the first step of it.</p>
+<p>So the questions are about the person and the thing, and about the distance between the thing and a stranger using it. What do you naturally build? What exists today? What is the smallest version somebody could use this week? What is stopping you? Who are the five people you would hand it to? How and when do you take it away? Can you charge, and at a profit? Each answer sets a signal, and the rules read the signals and pick a route.</p>
+<h2 id="the-spectrum">The spectrum</h2>
+<p>There is a spectrum here, and the finder has to work along the whole of it. At one end is the person who has not figured out where their startup is. They start from zero: what do you want to do, what do you want to build, how do you want to build it. At the other end is the person who already has a very good plan and a really good idea, and what we can bring them is focus.</p>
+<p>To be honest, almost everybody I meet has a really good idea. What they are not doing is shipping. They are doing the typical thing: it is not ready yet, I just want to get this one feature out, and every other excuse in the book for why it is not ready. I would argue that is the problem. They have to ship it. So the finder lists the excuses, by name, so a person can pick theirs and see it written down, and the route it gives them is the smallest version in a stranger's hands by a date.</p>
+<h2 id="not-judging">We are not passing judgement</h2>
+<p>This is the part I think is most important. The right startup for a person is the one they are passionate about, the one they want to work on. Look at my own example. I am a framework person. I build things, I refactor, so I naturally focus on the components and the infrastructure, and I arrive at my real startups, I should say my profitable and effective startups, three or four startups and a number of components later. I think that is okay. The finder has a route for it: ship the component.</p>
+<p>So the finder never says whether an idea is good. What it helps with is focus, and it helps open the door for the person to ship. And the answer can be: here is your focus. Or it can be: sorry, you have to go old school, you are going to have to raise a lot of money to pull this off. That is a valid outcome, said plainly. It all comes down to whether you can ship it and get it to users, and some startups cannot do that without capital first.</p>
+<p>The output is the person's own words. Their own description of this is what I should be focusing on. The interviewer drafts from their answers; they correct it until it reads as theirs. Not our verdict, their record.</p>
+<h2 id="humans-and-agents">For humans and for agents</h2>
+<p>I want this to work from the website, maybe through the storyboards we are working on, but it is almost designed to be worked by another LLM. If somebody is not sure what their startup is, where they should focus, what their direction of travel should be, we can help with that on a website or with Claude or ChatGPT driving it directly, in their own account. So the guidance has to work for humans and for agents, and it is written once: one file holds the stages, the questions, the signals, the routes and the rules, and every surface reads it.</p>
+<h2 id="llm-first">Start with the LLM, make it programmatic later</h2>
+<p>Thinking about what can be done on the web and what needs a model, I think the second is better to start with. My idea is to get Claude to interview the person. So for now this is designed to be used by Claude or ChatGPT, because you need that data analysis, you need an agent behind the scenes. What we build first are the primitives, the toolkit a model can run, and I will show some examples by doing it myself. Once we have done a whole part of this, we can find a better way to do some of it programmatically.</p>
+<p>Two ways in, both of which work well now: the person uploads a whole bunch of documents, a plan, a deck, their notes, and the model reads them and fills in what it can; or they just have Claude or ChatGPT interview them.</p>
+<h2 id="the-book">The first thing the book should do</h2>
+<p>This is also a great way to start the book. The first thing the book should do is help the reader zoom in: find your startup, and come up with your own words for what you should be focusing on. The record the finder writes is that first page. Where exactly it goes in the book is a decision for the book's own site, <a href="https://gen-z-developers.sgit.ai/">gen-z-developers.sgit.ai</a>, and I have put it to them as a question rather than a change.</p>
+<h2 id="not-claimed">What this does not claim</h2>
+<ul>
+<li><strong>The finder has not been run with anyone yet.</strong> The questions and the rules are a first version from this memo; the first interviews, mine included, will change them.</li>
+<li><strong>The storyboard version does not exist.</strong> Nor does any programmatic version beyond the rules a page can apply in the browser.</li>
+<li><strong>It is not a verdict on anyone's idea</strong>, and it is not written to be one.</li>
+<li><strong>The counts are small and will move.</strong> Seven stages, twenty-four questions, six routes, eight rules, as of this release; the finder page prints the current numbers from the file.</li>
+</ul>
+<h2 id="the-brief">The brief</h2>
+<p>For the roles on this site, in order. Each item says what done looks like; the questions for me are kept apart at the end.</p>
+<ol>
+<li><strong>The engineer:</strong> the site, in the shape every repository in the estate carries: the brief in full, the reality and corrections files, one version going up on every push, the gate, the review folder, the roles, the licences and the disclosure, the markdown twin for every page and <code>llms.txt</code>. Done when the first release is live at startups.sgit.ai from the dev branch and the gate is green.</li>
+<li><strong>The librarian:</strong> the finder as data. <code>finder.json</code> with the stages, questions, signals, routes and rules, each with an id, so that the prompt, the page and the test read one file. Done when the test proves every rule's signals exist and every route is reachable.</li>
+<li><strong>The interviewer:</strong> the prompt for Claude or ChatGPT, the record template, and the in-browser walk-through of the same data. Done when a person can paste the prompt and get a record, and can walk the stages on the site and copy the same record out, with nothing sent anywhere.</li>
+<li><strong>The journalist:</strong> this article, the brief verbatim, the decisions from the memo, and the agent article accounting for the build. Done when they are published with their markdown twins.</li>
+<li><strong>The interviewer, next:</strong> run the finder with me, from this memo and whatever documents I give it, and publish the record as the first example. Done when the example is on the site, marked as mine.</li>
+<li><strong>The librarian, next:</strong> the finder as a graph in the grammar of <a href="https://graphs.sgit.ai/">graphs.sgit.ai</a>: nodes and edges, zoomable, so a stage opens into its questions and a question into its signals. Done when the graph is generated from <code>finder.json</code> and nothing is written twice.</li>
+</ol>
+<p>Questions for me, not tasks: whether the finder opens the book, and where, which is for the book's site to decide with me; whether the storyboard version is worth building before the programmatic one; and whether the spectrum's five entries are the right five.</p>
+<h2 id="sources">Where this comes from</h2>
+<ul>
+<li><a href="/briefs/01__find-your-startup.html">The voice memo</a>, transcribed by otter.ai on 20 October 2026, published verbatim.</li>
+<li><a href="https://newsroom.sgit.ai/articles/the-question-is-whether-they-miss-it.html">The most important question is whether they miss it</a>, the operating model the finder maps against.</li>
+<li><a href="https://sgit.ai/startups/index.html">Build your startup on sgit vaults</a>, the section of sgit.ai this site takes over, read at site v0.7.87.</li>
+<li>The counts are read from <code>finder.json</code> by the build; the finder page prints them.</li>
+</ul>
+<p><em>Written by Dinis Cruz with this site's journalist, an agent, from the memo above. Licensed CC BY 4.0.</em></p></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>startups.sgit.ai: find your startup, then build it on vaults. By Dinis Cruz and this site's agents. Content CC BY 4.0; code under the repository licence. <a href="../about/participant.html">Participant disclosure</a>.</span>
+<span>Part of <a href="https://sgit.ai">sgit.ai</a> &middot; <a href="https://github.com/SGit-AI/SGit-AI__Website__Startups">GitHub</a> &middot; <a href="../admin/reality.html">what exists</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a> &middot; <a href="find-your-startup.md">this page as markdown</a></span>
+</div></footer>
+</body>
+</html>

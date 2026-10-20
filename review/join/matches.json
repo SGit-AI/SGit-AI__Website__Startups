@@ -1,0 +1,207 @@
+{
+ "what": "Each intent example or flow step whose surface exists in the tree.",
+ "provenance": {
+  "tool": "review/tools/derive.py",
+  "version": "0.1.0",
+  "site": "v0.1.0",
+  "derived_at": "2026-10-20T14:57:32Z"
+ },
+ "coverage": 1.0,
+ "matches": [
+  {
+   "intent": "find-your-startup/questions-change/entry-decides",
+   "surface": "finder/interview.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "find-your-startup/ship-test/ship-stage",
+   "surface": "finder/stages.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "find-your-startup/spectrum/five-entries",
+   "surface": "finder/index.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "find-your-startup/no-judgement/record-in-own-words",
+   "surface": "finder/record.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "find-your-startup/no-judgement/old-school-is-valid",
+   "surface": "finder/routes.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "humans-and-agents/one-file/json-served",
+   "surface": "finder/finder.json",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "humans-and-agents/one-file/pages-read-file",
+   "surface": "finder/stages.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "humans-and-agents/llm-first/prompt",
+   "surface": "finder/prompt.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "humans-and-agents/llm-first/documents-mode",
+   "surface": "finder/finder-prompt.md",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-refactored-site/takes-over/vaults-page",
+   "surface": "vaults/index.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-refactored-site/takes-over/plans-page",
+   "surface": "plans/index.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-refactored-site/sibling-shape/gate",
+   "surface": "admin/build/validate.js",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-refactored-site/sibling-shape/themes",
+   "surface": "assets/themes.css",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-refactored-site/sibling-shape/versions",
+   "surface": "admin/versions.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-refactored-site/every-repository/brief-in-full",
+   "surface": "briefs/01__find-your-startup.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-refactored-site/every-repository/reality",
+   "surface": "admin/reality.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-refactored-site/every-repository/corrections",
+   "surface": "admin/corrections.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-refactored-site/every-repository/roles",
+   "surface": "team/index.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-refactored-site/every-repository/review",
+   "surface": "review/index.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "the-book-opens-here/question-for-dinis/brief-to-genz",
+   "surface": "team/journalist/issues/open/002__the-finder-as-the-opening-of-the-book.md",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-by-model/1",
+   "surface": "finder/prompt.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-by-model/2",
+   "surface": "finder/finder.json",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-by-model/3",
+   "surface": "finder/finder.json",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-by-model/4",
+   "surface": "finder/routes.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-by-model/5",
+   "surface": "finder/finder-record.md",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-by-model/6",
+   "surface": "finder/record.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:documents-first/1",
+   "surface": "finder/finder-prompt.md",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:documents-first/2",
+   "surface": "finder/finder-record.md",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:documents-first/3",
+   "surface": "finder/finder.json",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:documents-first/4",
+   "surface": "finder/routes.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-on-the-page/1",
+   "surface": "finder/interview.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-on-the-page/2",
+   "surface": "assets/components/sg-finder/sg-finder.js",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-on-the-page/3",
+   "surface": "finder/finder-rules.js",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-on-the-page/4",
+   "surface": "finder/interview.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:interview-on-the-page/5",
+   "surface": "finder/prompt.html",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:release/1",
+   "surface": "admin/build/release.py",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:release/2",
+   "surface": ".github/workflows/deploy-pages.yml",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:release/3",
+   "surface": "admin/build/version.txt",
+   "how": "surface exists in the tree"
+  },
+  {
+   "intent": "flow:release/4",
+   "surface": "admin/versions.html",
+   "how": "surface exists in the tree"
+  }
+ ]
+}

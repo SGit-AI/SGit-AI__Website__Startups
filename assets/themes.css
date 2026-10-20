@@ -1,0 +1,177 @@
+/* startups.sgit.ai: the five themes, and the whole of the site's colour.
+
+   The same five as newsroom.sgit.ai (assets/themes/themes.css there), with the same values, so the family of sites
+   reads the same: Newsprint (the default, the look this site has had), Night, Paper, Blueprint and Ember. One
+   attribute on <html> picks the theme, data-theme="night", set before the first paint by assets/site.js; absent or
+   unknown is Newsprint.
+
+   THE RULE: a stylesheet on this site names a colour through a token, and every token is defined here, in all five
+   themes. Loaded after the other stylesheets, so these definitions win.
+
+   One deliberate exception keeps its own colour in every theme, the way a printed cover does: the band on the
+   home page and the finder (--brand). Code blocks stay dark, as a terminal does.
+
+   The tokens beyond the newsroom's are this site's status colours (the badges, the routes, the stages):
+   a family per hue, -ink for text, -line for a border, -bg for a fill. */
+
+/* ---------- Newsprint: warm off-white and teal. The default. ---------- */
+:root,
+:root[data-theme="newsprint"] {
+  --bg:#faf9f5; --panel:#ffffff; --panel2:#f2f0e9; --line:#e5e1d5; --line2:#d5d0c2;
+  --fg:#1c1d21; --dim:#5c5f66; --dim2:#8a8d94;
+  --head:#101114; --text:#34363c; --code-ink:#24343f;
+  --accent:#0f766e; --accent-dk:#115e59; --on-accent:#ffffff;
+  --yellow:#a16207; --warm:#b45309; --red:#b91c1c;
+  --tint:rgba(15,118,110,.07); --tint-line:rgba(15,118,110,.35); --tint-solid:#e6f4ee;
+  --input-bg:#ffffff; --mark:#fffbeb; --row-alt:#fcfbf8;
+  --ins:#dcfce7; --del:#fee2e2;
+  --solid:#0c2a3d; --on-solid:#ffffff;
+  --nav-bg:rgba(250,249,245,.92);
+  --shadow:0 1px 2px rgba(28,29,33,.05),0 4px 14px rgba(28,29,33,.04);
+  --shadow-pop:0 6px 24px rgba(28,29,33,.13);
+  --c-teal-ink:#115e59; --c-teal-line:#99d6ce; --c-teal-bg:#eefbf8;
+  --c-orange-ink:#b45309; --c-orange-line:#f0c9a0; --c-orange-bg:#fff7ed; --c-orange-deep:#7c3a0b;
+  --c-blue-ink:#1d4ed8; --c-blue-line:#bfd3f8; --c-blue-bg:#eff6ff;
+  --c-green-ink:#15803d; --c-green-line:#a7e3b9; --c-green-bg:#ecfdf3;
+  --c-red-ink:#b91c1c; --c-red-line:#f5c2c2; --c-red-bg:#fef2f2;
+  --c-violet-ink:#6b21a8; --c-violet-line:#d8c8f5; --c-violet-bg:#f5f0ff;
+  --c-amber-ink:#a16207; --c-amber-line:#e9d48a; --c-amber-bg:#fefce8;
+  color-scheme:light;
+}
+
+/* ---------- Night: dark, teal lifted two steps so it holds 4.5:1 on the dark page. ---------- */
+:root[data-theme="night"] {
+  --bg:#0f1115; --panel:#161a21; --panel2:#1c2129; --line:#2a303a; --line2:#3a4150;
+  --fg:#e6e8ec; --dim:#a3a9b5; --dim2:#7c8391;
+  --head:#f4f5f7; --text:#c9cdd4; --code-ink:#d5d9e0;
+  --accent:#2dd4bf; --accent-dk:#5eead4; --on-accent:#06211d;
+  --yellow:#e3b341; --warm:#f0a35a; --red:#ff7b72;
+  --tint:rgba(45,212,191,.10); --tint-line:rgba(45,212,191,.38); --tint-solid:#163a36;
+  --input-bg:#0f1115; --mark:#3a3216; --row-alt:#191d25;
+  --ins:rgba(34,197,94,.22); --del:rgba(239,68,68,.24);
+  --solid:#e6e8ec; --on-solid:#0f1115;
+  --nav-bg:rgba(15,17,21,.9);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.35);
+  --shadow-pop:0 6px 24px rgba(0,0,0,.55);
+  --c-teal-ink:#5eead4; --c-teal-line:rgba(94,234,212,.4); --c-teal-bg:rgba(45,212,191,.12);
+  --c-orange-ink:#fdba74; --c-orange-line:rgba(251,146,60,.45); --c-orange-bg:rgba(251,146,60,.13); --c-orange-deep:#fed7aa;
+  --c-blue-ink:#93c5fd; --c-blue-line:rgba(96,165,250,.45); --c-blue-bg:rgba(96,165,250,.13);
+  --c-green-ink:#86efac; --c-green-line:rgba(74,222,128,.42); --c-green-bg:rgba(74,222,128,.12);
+  --c-red-ink:#fca5a5; --c-red-line:rgba(248,113,113,.45); --c-red-bg:rgba(248,113,113,.13);
+  --c-violet-ink:#c4b5fd; --c-violet-line:rgba(167,139,250,.45); --c-violet-bg:rgba(167,139,250,.14);
+  --c-amber-ink:#fcd34d; --c-amber-line:rgba(251,191,36,.42); --c-amber-bg:rgba(251,191,36,.12);
+  color-scheme:dark;
+}
+
+/* ---------- Paper: warm cream and terracotta, for reading long pieces. ---------- */
+:root[data-theme="paper"] {
+  --bg:#f7f1e6; --panel:#fffcf6; --panel2:#efe6d6; --line:#e2d6c0; --line2:#cfc0a4;
+  --fg:#221c15; --dim:#655849; --dim2:#8d7f6b;
+  --head:#1d1811; --text:#3d3328; --code-ink:#3b2b22;
+  --accent:#a8442a; --accent-dk:#8e3620; --on-accent:#fff7f2;
+  --yellow:#8a6a18; --warm:#9a5b12; --red:#96271a;
+  --tint:rgba(168,68,42,.08); --tint-line:rgba(168,68,42,.38); --tint-solid:#f6e3da;
+  --input-bg:#fffcf6; --mark:#f8e9b8; --row-alt:#fbf6ec;
+  --ins:#e2f0d4; --del:#f6dcd7;
+  --solid:#3a2a1c; --on-solid:#fff7f2;
+  --nav-bg:rgba(247,241,230,.92);
+  --shadow:0 1px 2px rgba(70,52,30,.07),0 4px 14px rgba(70,52,30,.06);
+  --shadow-pop:0 6px 24px rgba(70,52,30,.16);
+  --c-teal-ink:#1f6b5f; --c-teal-line:#a9cfc3; --c-teal-bg:#eaf3ec;
+  --c-orange-ink:#9a4a12; --c-orange-line:#e3c29b; --c-orange-bg:#f8eadb; --c-orange-deep:#6e300b;
+  --c-blue-ink:#2b4a9a; --c-blue-line:#c3cce6; --c-blue-bg:#eceef5;
+  --c-green-ink:#2f6b2a; --c-green-line:#b9d5a8; --c-green-bg:#ecf2e2;
+  --c-red-ink:#96271a; --c-red-line:#e6bdb3; --c-red-bg:#f6e2dc;
+  --c-violet-ink:#5e2a83; --c-violet-line:#d6c6e3; --c-violet-bg:#f1eaf3;
+  --c-amber-ink:#8a6a18; --c-amber-line:#dcc68a; --c-amber-bg:#f8efd2;
+  color-scheme:light;
+}
+
+/* ---------- Blueprint: white and electric blue. The cool, high-contrast one. ---------- */
+:root[data-theme="blueprint"] {
+  --bg:#ffffff; --panel:#ffffff; --panel2:#f1f3f7; --line:#dde1e9; --line2:#c4cad6;
+  --fg:#101318; --dim:#596270; --dim2:#828c9c;
+  --head:#0b0e13; --text:#2f3744; --code-ink:#1f2a44;
+  --accent:#1b4dff; --accent-dk:#1540d6; --on-accent:#ffffff;
+  --yellow:#946a00; --warm:#b45309; --red:#c81e1e;
+  --tint:rgba(27,77,255,.07); --tint-line:rgba(27,77,255,.35); --tint-solid:#e8edff;
+  --input-bg:#ffffff; --mark:#fff6c2; --row-alt:#f8f9fb;
+  --ins:#dcfce7; --del:#fee2e2;
+  --solid:#0b1a3a; --on-solid:#ffffff;
+  --nav-bg:rgba(255,255,255,.92);
+  --shadow:0 1px 2px rgba(16,19,24,.05),0 4px 14px rgba(16,19,24,.05);
+  --shadow-pop:0 6px 24px rgba(16,19,24,.14);
+  --c-teal-ink:#0f766e; --c-teal-line:#99d6ce; --c-teal-bg:#eefbf8;
+  --c-orange-ink:#b45309; --c-orange-line:#f0c9a0; --c-orange-bg:#fff7ed; --c-orange-deep:#7c3a0b;
+  --c-blue-ink:#1540d6; --c-blue-line:#b9c8fb; --c-blue-bg:#e8edff;
+  --c-green-ink:#15803d; --c-green-line:#a7e3b9; --c-green-bg:#ecfdf3;
+  --c-red-ink:#c81e1e; --c-red-line:#f5c2c2; --c-red-bg:#fef2f2;
+  --c-violet-ink:#6b21a8; --c-violet-line:#d8c8f5; --c-violet-bg:#f5f0ff;
+  --c-amber-ink:#946a00; --c-amber-line:#e9d48a; --c-amber-bg:#fefce8;
+  color-scheme:light;
+}
+
+/* ---------- Ember: dark and amber, warm where Night is cool. ---------- */
+:root[data-theme="ember"] {
+  --bg:#16130f; --panel:#1d1914; --panel2:#262019; --line:#352d24; --line2:#4a3f33;
+  --fg:#f1e9dc; --dim:#b3a692; --dim2:#8a7c68;
+  --head:#f7f1e7; --text:#d2c6b3; --code-ink:#e6dbc8;
+  --accent:#e0a22b; --accent-dk:#f0bb56; --on-accent:#231705;
+  --yellow:#e5c565; --warm:#ffb070; --red:#ff8a78;
+  --tint:rgba(224,162,43,.10); --tint-line:rgba(224,162,43,.4); --tint-solid:#3a2d12;
+  --input-bg:#16130f; --mark:#4a3a12; --row-alt:#201b16;
+  --ins:rgba(132,204,22,.2); --del:rgba(248,113,113,.22);
+  --solid:#f1e9dc; --on-solid:#16130f;
+  --nav-bg:rgba(22,19,15,.9);
+  --shadow:0 1px 2px rgba(0,0,0,.45),0 4px 14px rgba(0,0,0,.4);
+  --shadow-pop:0 6px 24px rgba(0,0,0,.6);
+  --c-teal-ink:#7ee0cf; --c-teal-line:rgba(94,234,212,.38); --c-teal-bg:rgba(45,212,191,.11);
+  --c-orange-ink:#ffb070; --c-orange-line:rgba(255,176,112,.45); --c-orange-bg:rgba(255,176,112,.13); --c-orange-deep:#ffd2ad;
+  --c-blue-ink:#a9c4ff; --c-blue-line:rgba(147,180,255,.42); --c-blue-bg:rgba(147,180,255,.12);
+  --c-green-ink:#b5e48c; --c-green-line:rgba(163,230,53,.38); --c-green-bg:rgba(163,230,53,.11);
+  --c-red-ink:#ff9d8f; --c-red-line:rgba(255,138,120,.45); --c-red-bg:rgba(255,138,120,.13);
+  --c-violet-ink:#d3c2ff; --c-violet-line:rgba(196,176,255,.42); --c-violet-bg:rgba(196,176,255,.12);
+  --c-amber-ink:#e5c565; --c-amber-line:rgba(229,197,101,.42); --c-amber-bg:rgba(229,197,101,.12);
+  color-scheme:dark;
+}
+
+/* Print is paper: every theme prints as Newsprint. */
+@media print{
+  :root[data-theme]{
+    --bg:#ffffff; --panel:#ffffff; --panel2:#f2f0e9; --line:#e5e1d5; --line2:#d5d0c2;
+    --fg:#1c1d21; --dim:#5c5f66; --dim2:#8a8d94; --head:#101114; --text:#34363c; --code-ink:#24343f;
+    --accent:#0f766e; --accent-dk:#115e59; --on-accent:#ffffff; --row-alt:#fcfbf8; --mark:#fffbeb;
+    --solid:#0c2a3d; --on-solid:#ffffff; --shadow:none; --shadow-pop:none;
+    color-scheme:light;
+  }
+}
+
+/* ---------- the picker ----------
+   A pill in the nav's tools: the current theme's swatch and name; the menu lists the five, each with its own swatch,
+   name and a word on what it is. Drawn by assets/site.js; without script there is no control and the page is
+   Newsprint, which is fine. */
+.theme-pick{position:relative;flex:none}
+.theme-pick > button{display:inline-flex;align-items:center;gap:.45rem;font:inherit;font-size:.8rem;
+  padding:.28rem .65rem;border:1px solid var(--line2);border-radius:999px;background:var(--panel);
+  color:var(--fg);cursor:pointer;line-height:1.2;white-space:nowrap}
+.theme-pick > button:hover,.theme-pick > button[aria-expanded="true"]{border-color:var(--accent)}
+.theme-pick .sw{display:inline-block;width:.62rem;height:.62rem;border-radius:50%;flex:none;
+  background:var(--sw,var(--accent));box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.theme-pick .caret{font-size:.55em;opacity:.55}
+.theme-pick ul{position:absolute;top:100%;right:0;margin:.4rem 0 0;padding:.4rem;min-width:14.5rem;
+  list-style:none;z-index:70;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  box-shadow:var(--shadow-pop)}
+.theme-pick ul[hidden]{display:none}
+.theme-pick li button{display:flex;align-items:center;gap:.6rem;width:100%;font:inherit;font-size:.86rem;
+  text-align:left;padding:.42rem .6rem;border:0;border-radius:6px;background:none;color:var(--fg);cursor:pointer}
+.theme-pick li button:hover,.theme-pick li button:focus-visible{background:var(--panel2);outline:none}
+.theme-pick li button[aria-current="true"]{color:var(--accent-dk);font-weight:600}
+.theme-pick li button .n{display:block;font-size:.74rem;font-weight:400;color:var(--dim)}
+.theme-pick li button:focus-visible{box-shadow:inset 0 0 0 2px var(--accent)}
+/* each entry's swatch is ITS theme's accent, so the list reads as five colours */
+.theme-pick .sw-newsprint{--sw:#0f766e} .theme-pick .sw-night{--sw:#2dd4bf}
+.theme-pick .sw-paper{--sw:#a8442a} .theme-pick .sw-blueprint{--sw:#1b4dff} .theme-pick .sw-ember{--sw:#e0a22b}
+@media (max-width:520px){
+  .theme-pick > button{padding:.28rem .5rem}
+  .theme-pick > button .name,.theme-pick > button .caret{display:none}
+}

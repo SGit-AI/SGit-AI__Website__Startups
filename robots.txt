@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://startups.sgit.ai/sitemap.xml

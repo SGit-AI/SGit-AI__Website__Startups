@@ -1,0 +1,21 @@
+{
+ "what": "The architecture as the brief and the guidance draw it, as far down as design can see. 'honest_depth' marks where design stops seeing. Proposed by startups.engineer on 2026-10-20.",
+ "components": [
+  {"id": "content",    "title": "The authored content",       "path": "admin/content/",     "holds": ["briefs", "articles", "agent-articles", "decisions", "finder/finder.json", "finder/prompt.md", "finder/record.md", "plans.json", "versions.json", "vault.json", "pages/"], "honest_depth": "file", "proposed": true},
+  {"id": "build",      "title": "The build",                  "path": "admin/build/build.py", "reads": ["content", "team", "review"], "writes": ["pages", "twins", "llms.txt", "sitemap.xml", "finder/finder.json"], "honest_depth": "function", "proposed": true},
+  {"id": "gate",       "title": "The gate",                   "path": "admin/build/validate.js", "reads": ["pages", "twins", "finder/finder.json", "review/graph/files.json"], "honest_depth": "check", "proposed": true},
+  {"id": "test",       "title": "The finder's test",          "path": "admin/build/test_finder.mjs", "reads": ["finder/finder.json", "finder/finder-rules.js"], "honest_depth": "case", "proposed": true},
+  {"id": "release",    "title": "The release script",         "path": "admin/build/release.py", "runs": ["build", "gate", "test", "tripwire"], "honest_depth": "step", "proposed": true},
+  {"id": "pipeline",   "title": "The deploy pipeline",        "path": ".github/workflows/deploy-pages.yml", "runs": ["gate", "test"], "honest_depth": "job", "proposed": true},
+  {"id": "rules",      "title": "The finder's rules module",  "path": "finder/finder-rules.js", "used_by": ["sg-finder", "test"], "honest_depth": "function", "proposed": true},
+  {"id": "sg-base",    "title": "The base component",         "path": "assets/components/sg-base/", "contract": ["static jsUrl", "resourceName", "onReady"], "honest_depth": "method", "proposed": true},
+  {"id": "sg-finder",  "title": "The interview component",    "path": "assets/components/sg-finder/", "extends": "sg-base", "reads": ["finder/finder.json", "rules"], "keeps": "localStorage startups.finder.v1", "honest_depth": "method", "proposed": true},
+  {"id": "themes",     "title": "The themes and the site script", "path": "assets/", "files": ["site.css", "themes.css", "site.js"], "honest_depth": "file", "proposed": true},
+  {"id": "team",       "title": "The roles",                  "path": "team/", "honest_depth": "file", "proposed": true},
+  {"id": "review",     "title": "The review folder",          "path": "review/", "holds": ["intent", "graph", "join", "tools"], "missing": ["ui", "changes", "streams", "checks", "self"], "honest_depth": "file", "proposed": true}
+ ],
+ "edges": [
+  ["build", "reads", "content"], ["build", "writes", "pages"], ["gate", "checks", "pages"], ["release", "runs", "build"], ["release", "runs", "gate"], ["release", "runs", "test"],
+  ["pipeline", "runs", "gate"], ["pipeline", "runs", "test"], ["sg-finder", "extends", "sg-base"], ["sg-finder", "imports", "rules"], ["test", "imports", "rules"], ["gate", "checks", "review"]
+ ]
+}

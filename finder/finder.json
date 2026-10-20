@@ -1,0 +1,186 @@
+{
+ "what": "Find your startup: the interview as data. Stages in order, the questions in each, the signals an answer sets, the routes, and the rules that pick a route from the signals, first match wins. The in-browser walk-through (finder/interview.html), the prompt for Claude or ChatGPT (finder/prompt.md), the pages that describe the finder and the test (admin/build/test_finder.mjs) all read this file; nothing about the interview is written anywhere else.",
+ "version": "0.1.0",
+ "status": "first version, written 20 October 2026 from the brief; the questions and the rules are a proposal for Dinis to correct",
+ "rule_of_the_finder": "We are not passing judgement. The right startup for a person is the one they are passionate about and will keep working on. What we help with is focus, and shipping: something a stranger can use, now.",
+ "entries": [
+  {"id": "blank",    "label": "I do not have a startup yet",                     "what": "Start from zero: what you want to build, how you want to work, what you already have."},
+  {"id": "many",     "label": "I have several ideas and cannot pick",             "what": "Bring focus: the one that can ship first, and what the others wait for."},
+  {"id": "one",      "label": "I have one idea and have not shipped it",          "what": "The usual case. A good idea, and every reason in the book why it is not ready yet."},
+  {"id": "plan",     "label": "I have a plan, maybe a company, and I want focus", "what": "A plan already written; we zoom in on the thing to ship next and what to stop doing."},
+  {"id": "shipping", "label": "I am shipping and want the next step",             "what": "Give it away, take it away, find out whether they miss it, then charge."}
+ ],
+ "stages": [
+  {"id": "where", "title": "Where you are",   "ask": "Which of the five are you? There is no wrong answer; it decides which questions come next.",
+   "why": "The finder is a spectrum, from the person who has not figured out their startup to the person with a good plan who is not shipping it. The route in is the first thing to know."},
+  {"id": "you",   "title": "You",             "ask": "What you naturally build, what you have shipped, how much time you have and who you can reach.",
+   "why": "The person comes before the idea. A framework builder arrives at their product startup a few components later, and that is fine; the finder has to know who it is talking to."},
+  {"id": "thing", "title": "The thing",       "ask": "The thing in one sentence, the first user and what they do on day one, what exists today, how wide it is.",
+   "why": "Most people we meet have a good idea. The question is never whether it is good; it is what the smallest usable piece of it is."},
+  {"id": "ship",  "title": "The ship test",   "ask": "Can a stranger use it on their own this week? What is stopping you? What does it cost to run?",
+   "why": "Shipping is how you find out what is true. Not a demo, not a video, not a walkthrough: a thing somebody else can go and use. The excuses are listed so they can be named."},
+  {"id": "miss",  "title": "The miss test",   "ask": "The five people you will give it to, how, when you take it away, and what missing it looks like.",
+   "why": "The only question that matters: when it is taken away, do they miss it? If they shrug, there is no why now. If they ask for it back, you have something to sell."},
+  {"id": "money", "title": "The money",       "ask": "Whether you can charge, in what shape, and whether you can reach the first paying user without raising.",
+   "why": "Can you charge, and can you charge at a profit? Two questions, and the second decides whether you can wait, which is most of a negotiating position. Needing to raise first is a valid answer, and the finder says so."},
+  {"id": "focus", "title": "Your focus",      "ask": "The record, in your own words: what you will ship, to whom, by when, what you are not doing, and the route.",
+   "why": "The output is not our verdict. It is the person's own description of what they should be focusing on, written so they can read it back, correct it and act on it."}
+ ],
+ "questions": [
+  {"id": "where.entry", "stage": "where", "kind": "choice", "ask": "Where are you?", "why": "Picks the route in.",
+   "options": [
+    {"id": "blank",    "label": "I do not have a startup yet",                     "signals": {"entry": "blank"}},
+    {"id": "many",     "label": "I have several ideas and cannot pick",             "signals": {"entry": "many"}},
+    {"id": "one",      "label": "I have one idea and have not shipped it",          "signals": {"entry": "one"}},
+    {"id": "plan",     "label": "I have a plan, maybe a company, and I want focus", "signals": {"entry": "plan"}},
+    {"id": "shipping", "label": "I am shipping and want the next step",             "signals": {"entry": "shipping"}}
+   ]},
+
+  {"id": "you.build", "stage": "you", "kind": "choice", "ask": "What do you naturally build?", "why": "Where a person's work gravitates is where their first shippable thing is. A component builder's product is a component.",
+   "options": [
+    {"id": "product",   "label": "Products that people outside tech use",             "signals": {"builder": "product"}},
+    {"id": "component", "label": "Components and tools that other builders use",       "signals": {"builder": "component"}},
+    {"id": "framework", "label": "Frameworks, infrastructure, the thing under the thing", "signals": {"builder": "framework"}},
+    {"id": "content",   "label": "Writing, teaching, explaining",                     "signals": {"builder": "content"}},
+    {"id": "service",   "label": "Services: I do the work for people, with tools",     "signals": {"builder": "service"}}
+   ]},
+  {"id": "you.shipped", "stage": "you", "kind": "choice", "ask": "What have you shipped before that a stranger used on their own?", "why": "Shipped is a skill. Somebody who has done it once knows what it costs; somebody who has not needs the first time to be small.",
+   "options": [
+    {"id": "never",   "label": "Nothing yet",                         "signals": {"shipped": "never"}},
+    {"id": "once",    "label": "Once, or a long time ago",            "signals": {"shipped": "once"}},
+    {"id": "often",   "label": "Several times, it is what I do",      "signals": {"shipped": "often"}}
+   ]},
+  {"id": "you.time", "stage": "you", "kind": "choice", "ask": "How much time can you put in, and for how long?", "why": "Runway is time, not money. The finder sizes the first ship to the time available, not the other way round.",
+   "options": [
+    {"id": "evenings", "label": "Evenings and weekends",                        "signals": {"runway": "evenings"}},
+    {"id": "half",     "label": "About half my time",                           "signals": {"runway": "half"}},
+    {"id": "short",    "label": "All of it, for less than six months",          "signals": {"runway": "short"}},
+    {"id": "long",     "label": "All of it, for a year or more",                "signals": {"runway": "long"}}
+   ]},
+  {"id": "you.reach", "stage": "you", "kind": "choice", "ask": "Who could you hand it to this month, by name?", "why": "Five people you can reach is the whole of the first go-to-market. No onboarding, no invites, no seats: a key or a link.",
+   "options": [
+    {"id": "nobody", "label": "Nobody yet",                       "signals": {"reach": "nobody"}},
+    {"id": "few",    "label": "One or two people",                "signals": {"reach": "few"}},
+    {"id": "five",   "label": "Five or more, and I know who",     "signals": {"reach": "five"}}
+   ]},
+  {"id": "thing.want", "stage": "thing", "kind": "text", "ask": "What do you want to build, and how do you want to work?", "why": "For the person starting from zero this is the thing stage: before any idea, what you want to do and how you want to build it. The answer is the material the first ship comes from.", "for": ["blank"]},
+
+  {"id": "thing.sentence", "stage": "thing", "kind": "text", "ask": "Say it in one sentence: who uses it, to do what.", "why": "If it does not fit in a sentence it is not one thing yet. The sentence is the first line of the record.", "not_for": ["blank"]},
+  {"id": "thing.user", "stage": "thing", "kind": "text", "ask": "Who is the first user, and what do they do on day one?", "why": "Not the market: one person, and the first thing they do. Day one is the smallest thing that has to work.", "not_for": ["blank"]},
+  {"id": "thing.instead", "stage": "thing", "kind": "text", "ask": "What do they do today instead?", "why": "The alternative is the real competitor, and usually it is a spreadsheet, an email or nothing.", "not_for": ["blank"]},
+  {"id": "thing.exists", "stage": "thing", "kind": "choice", "ask": "What exists today?", "why": "The honest state. A video of a demo is not a thing somebody can use.", "not_for": ["blank"],
+   "options": [
+    {"id": "nothing",   "label": "Nothing yet, or notes and a plan",                        "signals": {"exists": "nothing"}},
+    {"id": "demo",      "label": "A demo, a video or a deck",                               "signals": {"exists": "demo"}},
+    {"id": "prototype", "label": "A prototype I can walk somebody through",                 "signals": {"exists": "prototype"}},
+    {"id": "usable",    "label": "Something a stranger can use on their own, today",        "signals": {"exists": "usable"}}
+   ]},
+  {"id": "thing.scope", "stage": "thing", "kind": "choice", "ask": "How wide is it?", "why": "A platform is several startups. The finder looks for the one that ships first.", "not_for": ["blank"],
+   "options": [
+    {"id": "one",      "label": "One thing, for one kind of person",          "signals": {"scope": "one"}},
+    {"id": "few",      "label": "A few things, for a couple of audiences",    "signals": {"scope": "few"}},
+    {"id": "platform", "label": "A platform, a marketplace, an ecosystem",   "signals": {"scope": "platform"}}
+   ]},
+
+  {"id": "ship.smallest", "stage": "ship", "kind": "text", "ask": "What is the smallest version a stranger could use this week?", "why": "Held together with tape is fine. Nobody using it cares how it was built."},
+  {"id": "ship.blocker", "stage": "ship", "kind": "choice", "ask": "What is stopping you from shipping that this week?", "why": "Every excuse in the book, listed, so the person can pick theirs and see it named.",
+   "options": [
+    {"id": "not-ready", "label": "It is not ready yet",                                "signals": {"blocker": "not-ready"}},
+    {"id": "feature",   "label": "One more feature, then it is ready",                 "signals": {"blocker": "feature"}},
+    {"id": "nobody",    "label": "I have not asked anyone to use it",                  "signals": {"blocker": "nobody"}},
+    {"id": "money",     "label": "I need money, people or permission first",           "signals": {"blocker": "money"}},
+    {"id": "fear",      "label": "Showing it before it is good",                       "signals": {"blocker": "fear"}},
+    {"id": "none",      "label": "Nothing. I could ship this week",                    "signals": {"blocker": "none"}}
+   ]},
+  {"id": "ship.cost", "stage": "ship", "kind": "choice", "ask": "What does it cost to run, with nobody using it?", "why": "To ship often the standing cost has to be near nothing. A server and a database is a cost; capital before a first user is a different kind of startup.",
+   "options": [
+    {"id": "zero",    "label": "Near zero: static files, no server, no database",           "signals": {"cost": "zero"}},
+    {"id": "server",  "label": "A server and a database, a few pounds a month",              "signals": {"cost": "server"}},
+    {"id": "people",  "label": "People: it needs someone doing work for each customer",      "signals": {"cost": "people"}},
+    {"id": "capital", "label": "Capital: hardware, licences, regulation, before anyone can use it", "signals": {"cost": "capital"}}
+   ]},
+  {"id": "ship.date", "stage": "ship", "kind": "text", "ask": "A date for the smallest version to be in a stranger's hands.", "why": "A date is a decision. Without one the record has nothing to check later."},
+
+  {"id": "miss.five", "stage": "miss", "kind": "text", "ask": "The five people, by name or by role.", "why": "The first users are people you can name. The trial is for them, not for a market."},
+  {"id": "miss.give", "stage": "miss", "kind": "text", "ask": "How you give it to them: a link, a key, a file, a visit.", "why": "Giving it away should cost you nothing to set up. If it needs onboarding, the thing is not small enough yet."},
+  {"id": "miss.take", "stage": "miss", "kind": "text", "ask": "How and when you take it away.", "why": "The part almost nobody does deliberately. The trial expired; nothing else changes; no apology. Decide the date before you give it."},
+  {"id": "miss.sign", "stage": "miss", "kind": "text", "ask": "What does missing it look like? What would they say or do?", "why": "Write down the signal before the trial so you cannot talk yourself into one afterwards. A shrug means no why now."},
+
+  {"id": "money.charge", "stage": "money", "kind": "choice", "ask": "Do you know what they would pay?", "why": "Is the price one they are happy to pay, inside the zone where they get more than they give up. A guess is fine; it is the first hypothesis.",
+   "options": [
+    {"id": "know",  "label": "Yes, and I know why",             "signals": {"charge": "know"}},
+    {"id": "guess", "label": "I have a guess",                  "signals": {"charge": "guess"}},
+    {"id": "none",  "label": "No idea yet",                     "signals": {"charge": "none"}}
+   ]},
+  {"id": "money.shape", "stage": "money", "kind": "choice", "ask": "In what shape?", "why": "A subscription is a discount for regular use, not rent on something ignored. Pay on demand is usually the healthier shape for both sides.",
+   "options": [
+    {"id": "demand", "label": "Pay for what they use, on demand",            "signals": {"shape": "demand"}},
+    {"id": "once",   "label": "Pay once",                                   "signals": {"shape": "once"}},
+    {"id": "sub",    "label": "A subscription",                             "signals": {"shape": "subscription"}},
+    {"id": "other",  "label": "Somebody else pays: a company, a sponsor, a grant", "signals": {"shape": "other"}}
+   ]},
+  {"id": "money.raise", "stage": "money", "kind": "choice", "ask": "Can you reach the first paying user without outside money?", "why": "The worst time to raise is before you are profitable. But some startups cannot reach a first user without capital, and the honest answer is to say so and plan for it.",
+   "options": [
+    {"id": "yes",    "label": "Yes, on my own time and near-zero running cost",   "signals": {"raise": "no"}},
+    {"id": "some",   "label": "I need some: a few months of cost, which I can cover or find", "signals": {"raise": "some"}},
+    {"id": "cannot", "label": "No. Without raising there is no first user",         "signals": {"raise": "must"}}
+   ]},
+
+  {"id": "focus.words",   "stage": "focus", "kind": "text", "ask": "Your focus, in your own words: what you will ship, to whom, by when.", "why": "The person writes this, or the interviewer drafts it from the answers above and the person corrects it until it is theirs."},
+  {"id": "focus.not",     "stage": "focus", "kind": "text", "ask": "What you are not doing, for now.", "why": "Focus is mostly a list of things that wait. Writing them down is how they stop pulling."}
+ ],
+ "signals": [
+  {"id": "entry",   "what": "Where the person is on the spectrum",                     "values": ["blank", "many", "one", "plan", "shipping"]},
+  {"id": "builder", "what": "What the person naturally builds",                        "values": ["product", "component", "framework", "content", "service"]},
+  {"id": "shipped", "what": "Whether they have shipped to a stranger before",          "values": ["never", "once", "often"]},
+  {"id": "runway",  "what": "Time available",                                          "values": ["evenings", "half", "short", "long"]},
+  {"id": "reach",   "what": "People they can hand it to this month",                   "values": ["nobody", "few", "five"]},
+  {"id": "exists",  "what": "The honest state of the thing",                           "values": ["nothing", "demo", "prototype", "usable"]},
+  {"id": "scope",   "what": "How wide the thing is",                                   "values": ["one", "few", "platform"]},
+  {"id": "blocker", "what": "The named reason it has not shipped",                     "values": ["not-ready", "feature", "nobody", "money", "fear", "none"]},
+  {"id": "cost",    "what": "The standing cost with nobody using it",                  "values": ["zero", "server", "people", "capital"]},
+  {"id": "charge",  "what": "Whether a price is known",                                "values": ["know", "guess", "none"]},
+  {"id": "shape",   "what": "The shape of the money",                                  "values": ["demand", "once", "subscription", "other"]},
+  {"id": "raise",   "what": "Whether outside money is needed before a first paying user", "values": ["no", "some", "must"]}
+ ],
+ "routes": [
+  {"id": "start-the-loop",  "title": "Start the loop",
+   "what": "There is no startup yet, and that is fine. The route is the loop itself: make the smallest thing somebody you know could use, from what you already build and know, hand it to them, and see what they do with it. The startup is found by shipping, not by thinking about shipping.",
+   "when": "No idea yet.",
+   "next": ["Write down what you naturally build and three people you could make something for.", "Pick the one thing you could put in their hands in two weeks.", "Come back to the finder with that as the thing."]},
+  {"id": "old-school",      "title": "Go old school",
+   "what": "This one cannot reach a first user without capital: hardware, a licence, a regulated market, people on day one. There is no shame in it, and no shortcut either. The route is to raise, which means the plan has to be the product for a while: the evidence a stranger can check, the smallest capital that reaches the first user, and the terms you can wait for.",
+   "when": "The standing cost is capital, or there is no first user without raising.",
+   "next": ["Find the smallest thing that can be shipped before the capital: a study, a waiting list, a paid pilot, a component.", "Write the plan as a vault somebody else could check: facts apart from assumptions.", "Be the one the investors call: ship that smaller thing first."]},
+  {"id": "next-step",       "title": "Give it away, take it away",
+   "what": "Already shipping. The next step is the test almost nobody runs on purpose: hand it to five people for a short window, take it away, and ask whether they miss it. If they ask for it back, price it. If they shrug, you have learnt the most useful thing a startup can learn, early.",
+   "when": "Already shipping to strangers.",
+   "next": ["Name the five, the window and the take-away date.", "Write the signal that counts as missing it before the window opens.", "If they miss it: a price, in the shape the money question chose."]},
+  {"id": "zoom-in",         "title": "Zoom in",
+   "what": "Too wide to ship. Several ideas, or one idea that is a platform. The route is to pick the slice that one person can use on day one and ship that, with the rest written down as what waits. A platform is what a product becomes after it has been missed.",
+   "when": "Several ideas, or a scope of platform.",
+   "next": ["List the slices; for each, who uses it and what they do on day one.", "Pick the one with the shortest path to a stranger's hands.", "Put the rest in the not-doing list, dated."]},
+  {"id": "component-first", "title": "Ship the component",
+   "what": "You build components, tools or infrastructure, and the product is not there yet. That is a normal path; the author of this site arrived at his product startups a few components later. The route is to ship the component as the thing: open source, usable by another builder this week, with a read key or a package name as the whole distribution.",
+   "when": "A component or framework builder whose product does not exist yet.",
+   "next": ["Name the component another builder would use on its own.", "Publish it where they already look: a package, a repository, a vault.", "Watch who uses it; the product is in what they ask for next."]},
+  {"id": "ship-now",        "title": "Ship it this week",
+   "what": "It can be done now. Whatever the blocker is called, the route is the same: the smallest version a stranger can use, in their hands by the date on the record, with the five people and the take-away date already written down. It is not ready yet is the problem, not the reason.",
+   "when": "Everything else.",
+   "next": ["Ship the smallest version to the five by the date on the record.", "Run the miss test as written.", "Come back with what happened; the record gets a second version."]}
+ ],
+ "rules": [
+  {"id": "R1", "if": {"entry": ["blank"]},                                                   "then": "start-the-loop",  "because": "No startup yet: the loop is the route."},
+  {"id": "R2", "if": {"cost": ["capital"]},                                                  "then": "old-school",      "because": "Capital before a first user."},
+  {"id": "R3", "if": {"raise": ["must"]},                                                    "then": "old-school",      "because": "No first user without raising."},
+  {"id": "R4", "if": {"entry": ["shipping"]},                                                "then": "next-step",       "because": "Already shipping: the miss test is next."},
+  {"id": "R5", "if": {"entry": ["many"]},                                                    "then": "zoom-in",         "because": "Several ideas: pick the slice."},
+  {"id": "R6", "if": {"scope": ["platform"]},                                                "then": "zoom-in",         "because": "A platform is several startups."},
+  {"id": "R7", "if": {"builder": ["component", "framework"], "exists": ["nothing", "demo"]}, "then": "component-first", "because": "A component builder with no product yet ships the component."},
+  {"id": "R8", "if": {},                                                                     "then": "ship-now",        "because": "Everything else can ship this week."}
+ ],
+ "record": {
+  "what": "The output: the person's startup in their own words. finder/record.md is the template; the interview page and the prompt fill it from the answers.",
+  "fields": ["where", "sentence", "user", "exists", "smallest", "date", "five", "give", "take", "sign", "money", "route", "not", "focus"]
+ }
+}

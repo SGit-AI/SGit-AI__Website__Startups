@@ -1,0 +1,33 @@
+<div class="finder">
+  <nav class="rail" aria-label="Stages"></nav>
+  <section class="stage">
+    <h2 class="stage-title"></h2>
+    <p class="stage-ask"></p>
+    <p class="stage-why"></p>
+    <div class="questions"></div>
+    <div class="nav">
+      <button type="button" class="prev">Previous stage</button>
+      <button type="button" class="next primary">Next stage</button>
+    </div>
+  </section>
+  <aside class="route" hidden>
+    <p class="k">The route so far</p>
+    <h3 class="route-title"></h3>
+    <p class="route-rule"></p>
+    <p class="route-what"></p>
+    <p class="k">Signals set by your answers</p>
+    <code class="signals"></code>
+  </aside>
+  <section class="record" hidden>
+    <h2>Your record</h2>
+    <p class="small">In your words, from your answers, with the route and the rule that picked it. Nothing has been sent anywhere; the answers live in this browser until you clear them.</p>
+    <label class="namefield">Your name, for the record <input type="text" class="name" placeholder="optional"></label>
+    <textarea rows="24" spellcheck="false"></textarea>
+    <div class="nav">
+      <button type="button" class="copy primary">Copy as markdown</button>
+      <button type="button" class="save">Save as a file</button>
+      <span class="copied" aria-live="polite"></span>
+      <button type="button" class="reset danger">Clear my answers</button>
+    </div>
+  </section>
+</div>

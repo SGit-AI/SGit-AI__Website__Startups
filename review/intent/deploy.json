@@ -1,0 +1,16 @@
+{
+ "what": "Environments, pipelines and roles as the guidance and the siblings specify them. Proposed by startups.engineer on 2026-10-20.",
+ "environments": [
+  {"id": "local",  "what": "A checkout with Python 3 (the markdown module) and Node 18 or later; python3 admin/build/build.py; node admin/build/validate.js; node admin/build/test_finder.mjs", "proposed": true},
+  {"id": "ci",     "what": "GitHub Actions on push to dev or main and on pull requests: validate, then on dev tag vX.Y.Z, then deploy the working tree to GitHub Pages", "proposed": true},
+  {"id": "live",   "what": "https://startups.sgit.ai/, GitHub Pages, CNAME in the repository, DNS and Pages wired by Dinis on 2026-10-20", "proposed": true}
+ ],
+ "branches": [
+  {"id": "dev",  "what": "The release branch: every push is a release, tagged by CI", "proposed": true},
+  {"id": "main", "what": "Deploy-only, a fallback while the Pages environment restricts dev", "proposed": true}
+ ],
+ "roles": [
+  {"id": "github-actions", "reaches": ["contents: write for the tag", "pages: write", "id-token: write"], "proposed": true}
+ ],
+ "secrets": "None. The site builds and deploys with no secret; admin/credentials/ is empty and ignored."
+}

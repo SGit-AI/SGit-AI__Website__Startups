@@ -1,0 +1,36 @@
+{
+ "what": "The journeys the brief describes, as ordered steps naming the surfaces they pass through. Proposed by startups.engineer on 2026-10-20 from the memo; not yet accepted.",
+ "flows": [
+  {"id": "interview-by-model", "title": "A person is interviewed by Claude or ChatGPT", "proposed": true,
+   "steps": [
+    {"n": 1, "step": "The person opens the prompt page and copies the prompt", "surface": "finder/prompt.html"},
+    {"n": 2, "step": "The model fetches or is given finder.json", "surface": "finder/finder.json"},
+    {"n": 3, "step": "The model asks the where question, then the stages in order, one question at a time", "surface": "finder/finder.json"},
+    {"n": 4, "step": "The model applies the rules and names the one that fired", "surface": "finder/routes.html"},
+    {"n": 5, "step": "The model writes the record from the template, in the person's words", "surface": "finder/finder-record.md"},
+    {"n": 6, "step": "The person keeps the record; the next interview starts from it", "surface": "finder/record.html"}
+   ]},
+  {"id": "documents-first", "title": "A person uploads documents instead of answering", "proposed": true,
+   "steps": [
+    {"n": 1, "step": "The person gives the model a plan, a deck or notes with the prompt", "surface": "finder/finder-prompt.md"},
+    {"n": 2, "step": "The model reads them and fills the answers it can find, marked (from documents)", "surface": "finder/finder-record.md"},
+    {"n": 3, "step": "The model shows the answers one stage at a time and the person confirms or changes each", "surface": "finder/finder.json"},
+    {"n": 4, "step": "As interview-by-model from step 4", "surface": "finder/routes.html"}
+   ]},
+  {"id": "interview-on-the-page", "title": "A person walks the stages in the browser", "proposed": true,
+   "steps": [
+    {"n": 1, "step": "The person opens the interview page; the component loads finder.json", "surface": "finder/interview.html"},
+    {"n": 2, "step": "The person answers stage by stage; answers stay in this browser", "surface": "assets/components/sg-finder/sg-finder.js"},
+    {"n": 3, "step": "The rules module picks the route and shows the rule", "surface": "finder/finder-rules.js"},
+    {"n": 4, "step": "The record is written as markdown; the person copies or saves it", "surface": "finder/interview.html"},
+    {"n": 5, "step": "The person takes the record to a model with the prompt for the follow-up the page cannot do", "surface": "finder/prompt.html"}
+   ]},
+  {"id": "release", "title": "A release of the site", "proposed": true,
+   "steps": [
+    {"n": 1, "step": "The engineer runs release.py: fetch, bump, build, validate, test, tripwire", "surface": "admin/build/release.py"},
+    {"n": 2, "step": "The commit subject carries the version; the push to dev runs the pipeline", "surface": ".github/workflows/deploy-pages.yml"},
+    {"n": 3, "step": "CI validates, tags and deploys; the script polls the live version", "surface": "admin/build/version.txt"},
+    {"n": 4, "step": "The release history carries one sentence per release", "surface": "admin/versions.html"}
+   ]}
+ ]
+}

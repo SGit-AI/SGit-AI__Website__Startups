@@ -1,0 +1,11 @@
+{
+ "what": "Intent whose surface nothing in the tree provides yet, each a finding.",
+ "provenance": {
+  "tool": "review/tools/derive.py",
+  "version": "0.1.0",
+  "site": "v0.1.0",
+  "derived_at": "2026-10-20T14:57:32Z"
+ },
+ "coverage": 1.0,
+ "gaps": []
+}
