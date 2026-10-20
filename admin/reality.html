@@ -22,12 +22,12 @@
 <a class="brand" href="../index.html">startups<span>.sgit.ai</span></a>
 <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
 <div class="nav-items"><div class="ni"><a class="nl" href="../finder/index.html">Find your startup<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../finder/index.html">The finder</a><a class="sl" href="../finder/interview.html">Walk the interview</a><a class="sl" href="../finder/stages.html">The stages and questions</a><a class="sl" href="../finder/routes.html">The routes and rules</a><a class="sl" href="../finder/prompt.html">The prompt for Claude or ChatGPT</a><a class="sl" href="../finder/record.html">The record</a></div></div><div class="ni"><a class="nl" href="../vaults/index.html">Build on vaults<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../vaults/index.html">Build your startup on vaults</a><a class="sl" href="../plans/index.html">Business plans to build on</a></div></div><div class="ni"><a class="nl" href="../articles/index.html">Articles<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../articles/index.html">Articles</a><a class="sl" href="../decisions/index.html">Decisions</a><a class="sl" href="../briefs/index.html">The briefs</a></div></div><div class="ni"><a class="nl here" href="../team/index.html">The team<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../team/index.html">The team</a><a class="sl" href="../vault/index.html">The vault</a><a class="sl" href="../review/index.html">The review</a><a class="sl here" href="../admin/reality.html">What exists</a><a class="sl" href="../admin/index.html">Admin</a></div></div></div>
-<div class="nav-tools"><div class="theme-pick"></div><span class="ver">site <a href="../admin/versions.html" title="Site release history">v0.1.0</a></span></div>
+<div class="nav-tools"><div class="theme-pick"></div><span class="ver">site <a href="../admin/versions.html" title="Site release history">v0.1.1</a></span></div>
 </div></nav>
 <main><div class="inner">
 <div class="crumbs"><a href="../index.html">startups.sgit.ai</a> &rarr; <a href="../admin/index.html">Admin</a> &rarr; <b>What exists</b></div>
 <h1>What exists</h1><article class="doc"><div class="body"><p>What exists on startups.sgit.ai, by domain, kept current by whoever ships. The rule, from the Send repository's Librarian by way of <a href="https://sgit.ai/docs/guidance/repositories.html">Every sgit repository</a>: a feature that is not in this file does not exist, and nobody may say a thing works because a brief describes it. A row changes in the same commit as the thing it describes. Rendered at <code>/admin/reality.html</code>.</p>
-<p>Last changed: 2026-10-20, site v0.1.0.</p>
+<p>Last changed: 2026-10-20, site v0.1.1.</p>
 <table>
 <thead>
 <tr>
@@ -74,7 +74,7 @@
 </tr>
 <tr>
 <td><strong>The team</strong></td>
-<td>4 roles (journalist, interviewer, librarian, engineer), <code>role.md</code> each, 8 issues open, 1 blocked, 0 done; <code>team/ISSUES.md</code>.</td>
+<td>4 roles (journalist, interviewer, librarian, engineer), <code>role.md</code> each, 7 issues open, 1 blocked, 1 done; <code>team/ISSUES.md</code>.</td>
 <td>A session that has run as a role. A debrief. The board as a page beyond the role pages.</td>
 </tr>
 <tr>
@@ -94,8 +94,8 @@
 </tr>
 <tr>
 <td><strong>Release and deploy</strong></td>
-<td><code>admin/build/release.py</code>: fetch, bump, build, validate, test, tripwire on the staged diff, commit <code>site vX.Y.Z: ...</code>, push, poll the live site. <code>.github/workflows/deploy-pages.yml</code>: validate, tag, deploy from <code>dev</code>. Dinis created <code>dev</code> and wired GitHub Pages and the domain on 20 October 2026.</td>
-<td>The first deploy, verified live (engineer, issue 003). The release script's live poll, proven.</td>
+<td><code>admin/build/release.py</code>: fetch, bump, build, validate, test, tripwire on the staged diff, commit <code>site vX.Y.Z: ...</code>, push, poll the live site. <code>.github/workflows/deploy-pages.yml</code>: validate, tag, deploy from <code>dev</code>. Dinis created <code>dev</code> and wired GitHub Pages and the domain on 20 October 2026. Verified live at v0.1.0 on 20 October 2026: the first push to <code>dev</code> ran validate, test, tag (<code>v0.1.0</code> on the release commit) and deploy, and https://startups.sgit.ai/ served the version 54 seconds after the push. v0.1.1 is the first release made by <code>release.py</code> itself, live poll included.</td>
+<td>A second person's push, to see the pipeline refuse a wrong version.</td>
 </tr>
 <tr>
 <td><strong>Credentials</strong></td>

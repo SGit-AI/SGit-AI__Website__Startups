@@ -2,7 +2,7 @@
 
 > The engineer: its mandate, what it refuses, and its work.
 
-*Source: <https://startups.sgit.ai/team/engineer/index.html> · site v0.1.0 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/team/engineer/index.html> · site v0.1.1 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -43,19 +43,18 @@
 
 The folder is the status: an issue moves between open/, blocked/ and done/ with a `git mv`. Another role may read this folder; only this role writes into it. Briefs arrive here; debriefs are what the role reports back, stamped with the version.
 
-### Issues: open (3)
+### Issues: open (2)
 
 - [001__the-review-navigator](issues/open/001__the-review-navigator.md)
 - [002__the-honest-row-on-nfrs](issues/open/002__the-honest-row-on-nfrs.md)
-- [003__verify-the-first-deploy](issues/open/003__verify-the-first-deploy.md)
 
 ### Issues: blocked (0)
 
 - none
 
-### Issues: done (0)
+### Issues: done (1)
 
-- none
+- [003__verify-the-first-deploy](issues/done/003__verify-the-first-deploy.md)
 
 ### Briefs
 

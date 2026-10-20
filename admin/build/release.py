@@ -114,7 +114,8 @@ class Release:
 
     def commit_and_push(self, version):
         subject = f"site {version}: {self.args.what}"
-        self.run("git", "commit", "-q", "-m", subject)
+        msg = subject + (f"\n\n{self.args.body}" if self.args.body else "")
+        self.run("git", "commit", "-q", "-m", msg)
         br = self.branch()
         self.push(br)
         if self.args.dev and br != "dev":
@@ -164,6 +165,7 @@ class Release:
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--what", help="one sentence for the release history and the commit subject")
+    ap.add_argument("--body", help="text for the commit message after the subject, such as attribution trailers")
     ap.add_argument("--minor", action="store_true", help="bump the middle number (only when Dinis says a change is major)")
     ap.add_argument("--dev", action="store_true", help="also push the branch to dev, which is a release")
     ap.add_argument("--tripwire", action="store_true", help="only scan the staged diff")

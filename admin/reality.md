@@ -2,7 +2,7 @@
 
 > What exists on startups.sgit.ai, by domain, and what does not yet.
 
-*Source: <https://startups.sgit.ai/admin/reality.html> · site v0.1.0 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
+*Source: <https://startups.sgit.ai/admin/reality.html> · site v0.1.1 · this file is generated from the same content as the page, so the two cannot drift. Every page on this site has a `.md` twin; internal links below point at them.*
 
 ---
 
@@ -10,7 +10,7 @@
 
 What exists on startups.sgit.ai, by domain, kept current by whoever ships. The rule, from the Send repository's Librarian by way of [Every sgit repository](https://sgit.ai/docs/guidance/repositories.html): a feature that is not in this file does not exist, and nobody may say a thing works because a brief describes it. A row changes in the same commit as the thing it describes. Rendered at `/admin/reality.html`.
 
-Last changed: 2026-10-20, site v0.1.0.
+Last changed: 2026-10-20, site v0.1.1.
 
 | Domain | Exists | Does not exist yet |
 |---|---|---|
@@ -21,11 +21,11 @@ Last changed: 2026-10-20, site v0.1.0.
 | **Build on vaults** | `vaults/index.html`: the section moved from sgit.ai/startups/index.html at site v0.7.87, 20 October 2026, with the operating model, the day-one table, the loop, what a founder still brings, and the evidence. | The notice on sgit.ai's old page pointing here (librarian, issue 002, blocked on sgit.ai's team). |
 | **Business plans** | `plans/index.html` from `admin/content/plans.json`: the 8 plans published as vaults on sgit.ai as of 20 October 2026, each with its link; how to take one; what every plan contains. | A plan written on this site. The plans' text, which lives in their vaults on sgit.ai and is linked, not copied. |
 | **Articles and decisions** | 1 co-written article in Dinis's voice; 1 agent article by the engineer; 3 decisions from the memo; the brief verbatim and the initial prompt. | A second article. Any decision not in the memo. |
-| **The team** | 4 roles (journalist, interviewer, librarian, engineer), `role.md` each, 8 issues open, 1 blocked, 0 done; `team/ISSUES.md`. | A session that has run as a role. A debrief. The board as a page beyond the role pages. |
+| **The team** | 4 roles (journalist, interviewer, librarian, engineer), `role.md` each, 7 issues open, 1 blocked, 1 done; `team/ISSUES.md`. | A session that has run as a role. A debrief. The board as a page beyond the role pages. |
 | **The vault** | Nothing. `vault/index.html` says what a vault would hold and why none is needed yet. | A working vault; a read key on the vault page. |
 | **The review folder** | `review/intent/` (stories, flows, components, deploy) from the brief; `review/graph/files.json` and `surfaces.json` derived by `review/tools/derive.py`; `review/join/matches.json` and `gaps.json` with the coverage figure; `review/README.md`; `review/index.html` written by the build. The gate fails if `files.json` is older than the tree. | The navigator as web components (engineer, issue 001). Methods, classes and change files. `review/self/` beyond a README. |
 | **The gate** | `admin/build/validate.js`: version agreement, internal links and orphans, twins and `llms.txt`, canonical and og:url, no external script, stylesheet or image, the key tripwire, div balance, em-dashes in content, the sitemap both ways, the finder's data, the review folder's freshness, parse checks on every script. Run in CI before the tag. | A linter or a formatter, as on every sibling site. |
-| **Release and deploy** | `admin/build/release.py`: fetch, bump, build, validate, test, tripwire on the staged diff, commit `site vX.Y.Z: ...`, push, poll the live site. `.github/workflows/deploy-pages.yml`: validate, tag, deploy from `dev`. Dinis created `dev` and wired GitHub Pages and the domain on 20 October 2026. | The first deploy, verified live (engineer, issue 003). The release script's live poll, proven. |
+| **Release and deploy** | `admin/build/release.py`: fetch, bump, build, validate, test, tripwire on the staged diff, commit `site vX.Y.Z: ...`, push, poll the live site. `.github/workflows/deploy-pages.yml`: validate, tag, deploy from `dev`. Dinis created `dev` and wired GitHub Pages and the domain on 20 October 2026. Verified live at v0.1.0 on 20 October 2026: the first push to `dev` ran validate, test, tag (`v0.1.0` on the release commit) and deploy, and https://startups.sgit.ai/ served the version 54 seconds after the push. v0.1.1 is the first release made by `release.py` itself, live poll included. | A second person's push, to see the pipeline refuse a wrong version. |
 | **Credentials** | `admin/credentials/` ignored by git, its README kept; the tripwire in the gate and in the release script. | Any credential; the directory is empty. |
 | **Licences and disclosure** | `LICENSE` (Apache 2.0), `LICENSES.md`, `about/participant.html`. | The honest column row on nfrs.sgit.ai (engineer, issue 002). |
 

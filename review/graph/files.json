@@ -3,8 +3,8 @@
  "provenance": {
   "tool": "review/tools/derive.py",
   "version": "0.1.0",
-  "site": "v0.1.0",
-  "derived_at": "2026-10-20T14:57:32Z"
+  "site": "v0.1.1",
+  "derived_at": "2026-10-20T14:59:30Z"
  },
  "files": [
   {
@@ -51,9 +51,9 @@
   },
   {
    "path": "REALITY.md",
-   "sha256": "8ba1989ab1d8e5c11fa4f694695060af94e32b02f50cd1e6fe2f6a81cfefc688",
+   "sha256": "cca364edd74efda5943c36a0958245c90ec620c82da8cc8848e416d0d95b673a",
    "language": "markdown",
-   "size": 5062,
+   "size": 5325,
    "lines": 22
   },
   {
@@ -65,10 +65,10 @@
   },
   {
    "path": "admin/build/release.py",
-   "sha256": "0218ea077d26c6dc2394a5f1699eb48aab7074fd1dfa13214b6263dc3568274e",
+   "sha256": "22913e42d3ee3731ce1aa0cab6e856b2ab81f35170665f5ff7fed8ab9f7bf252",
    "language": "python",
-   "size": 8475,
-   "lines": 170
+   "size": 8661,
+   "lines": 172
   },
   {
    "path": "admin/build/test_finder.mjs",
@@ -93,7 +93,7 @@
   },
   {
    "path": "admin/build/version.txt",
-   "sha256": "8c807b66253a61439efeeaf99bc84231ab1533fbfef98ae9451baddd7e62d32e",
+   "sha256": "52161cb817159321f458b064aa5efd48f692c0be657c705b5e21c2f9623c6d30",
    "language": "text",
    "size": 6,
    "lines": 1
@@ -198,10 +198,10 @@
   },
   {
    "path": "admin/content/versions.json",
-   "sha256": "10bf50e9705fff8f2c2c6a1eaa909586c9b978996f652c0719b8144ec25bfbbd",
+   "sha256": "e16a49b3b71047fa2ee2d8342a31ebe2ade68c58e7d1a6136b9ab63fb8194d2c",
    "language": "json",
-   "size": 1437,
-   "lines": 10
+   "size": 1781,
+   "lines": 15
   },
   {
    "path": "admin/credentials/README.md",
@@ -282,84 +282,84 @@
   },
   {
    "path": "finder/index.html",
-   "sha256": "c07a38e1c6bc50a85ce0711e7f1d17fae968344e4c5d667a7660583d9f3b604e",
+   "sha256": "69f27951532cf841c9628f35eb858eaf8d66dcc53ebf57daca51ce88040066fd",
    "language": "html",
    "size": 10631,
    "lines": 63
   },
   {
    "path": "finder/index.md",
-   "sha256": "5e145039a82aec1e221348b0bc5c1edca9f360a35333c70db90d15882b2aa2eb",
+   "sha256": "ccd7f0fce5b02c34d2deed63c54a536934bea1dabaf9dab68983f3009873f8fe",
    "language": "markdown",
    "size": 5781,
    "lines": 143
   },
   {
    "path": "finder/interview.html",
-   "sha256": "cbbe089a12084fd75647e2472418c6381712b04967c2c7f6d1b8921a1b89ab89",
+   "sha256": "8eb30745a7c47ee7d40eea2bc83773ac1b73ab6e255bf39995432ba5bddb489f",
    "language": "html",
    "size": 5625,
    "lines": 42
   },
   {
    "path": "finder/interview.md",
-   "sha256": "0e538f6790fb813933627deb48b39d64805b81e02167c62293c0a055184b39f0",
+   "sha256": "088b51c06a2b5ffd5c3ebcef53dd46a3df4294588348c0c148823d0c90e3de4e",
    "language": "markdown",
    "size": 1270,
    "lines": 18
   },
   {
    "path": "finder/prompt.html",
-   "sha256": "48abe81defc1fad5e26eab13a93f7b1fec2efa319765fb07d5cafe94244b8f8a",
+   "sha256": "93217694b61e42623e82aafdf4882f1a9dd0bb6996d05fa5a6b1c0ea4bf7c5d7",
    "language": "html",
    "size": 9711,
    "lines": 93
   },
   {
    "path": "finder/prompt.md",
-   "sha256": "434325a6bc75c469d06224773d547271ab9ce5e8452675057c4fd822c1ae4b05",
+   "sha256": "b9f779c674ceb281241ca23e893d173a6ddbd073618c03ab25301a444ad897fd",
    "language": "markdown",
    "size": 5588,
    "lines": 79
   },
   {
    "path": "finder/record.html",
-   "sha256": "dbb9d9cdbf4181a4e92b5f2d958d20ffb875acff9fde2ccfdb007db0a7f67935",
+   "sha256": "ae80c0b74063d833c7baa3b83a66c372b76d7ba77cf7144d36a82dd3783eb990",
    "language": "html",
    "size": 7373,
    "lines": 98
   },
   {
    "path": "finder/record.md",
-   "sha256": "71241a3d1fe430f21203327031fdfe67d5865e6b6622b9a8ddae9d11239cf581",
+   "sha256": "65ce5d1dc9df835a4315b48dcbfcfde64927ac129c53852d81db02cb6ecd8273",
    "language": "markdown",
    "size": 3273,
    "lines": 84
   },
   {
    "path": "finder/routes.html",
-   "sha256": "be8cccd7660d8a6b84235867d1e78738a1ec9ca5d76297d4fa725fc4ac49e5a7",
+   "sha256": "c6fd3d2d46ee3605864a04f09be2fd84dd7f39f7a51ac26b718863b5d43b9075",
    "language": "html",
    "size": 10699,
    "lines": 44
   },
   {
    "path": "finder/routes.md",
-   "sha256": "f0c969de4e8b1bd986108f619486d5a1af25c1011a7b711fb9751695ccbf59fc",
+   "sha256": "b07ce32d0d62b77af88ed3ae47a65eb385f1654f352d79b302d96c45d756eb41",
    "language": "markdown",
    "size": 5642,
    "lines": 95
   },
   {
    "path": "finder/stages.html",
-   "sha256": "751d327ff00b27eb32e3950c8c9d4367e490b7809ee3561f98264ac023c96e65",
+   "sha256": "fe44b22ea3b5118a92f7415c3f3883daf2286ca4a608399b96517cf8ca05045d",
    "language": "html",
    "size": 18753,
    "lines": 43
   },
   {
    "path": "finder/stages.md",
-   "sha256": "04166a1be498a56ed5668145d3a4f60de3c8cdafe2a4cdfd8c1e3aae31a11fa4",
+   "sha256": "6a925f87e84f078392f6bb60ed139721f53cd842949895137915143ebb37362d",
    "language": "markdown",
    "size": 10667,
    "lines": 282
@@ -436,10 +436,17 @@
   },
   {
    "path": "team/engineer/index.md",
-   "sha256": "47372d565ce24f802548b95d02026a5580e94f6aa8dc0dd3f1bc8c13277f4348",
+   "sha256": "663604a4e132a51d2615a813be3f9990a4a0e113ac1c5d5f9b27dc6f9ac1797a",
    "language": "markdown",
-   "size": 4108,
-   "lines": 71
+   "size": 4101,
+   "lines": 70
+  },
+  {
+   "path": "team/engineer/issues/done/003__verify-the-first-deploy.md",
+   "sha256": "59f72d1fb6862e506e6a2fe4806c6eaf41249ba455633917783f333e9543113e",
+   "language": "markdown",
+   "size": 1003,
+   "lines": 9
   },
   {
    "path": "team/engineer/issues/open/001__the-review-navigator.md",
@@ -456,13 +463,6 @@
    "lines": 7
   },
   {
-   "path": "team/engineer/issues/open/003__verify-the-first-deploy.md",
-   "sha256": "eceb21b44dd1050dc6284ce800e39168a4c8b0dff4bbc2e9a6070eefe8d7c8d7",
-   "language": "markdown",
-   "size": 636,
-   "lines": 7
-  },
-  {
    "path": "team/engineer/role.md",
    "sha256": "dab1d47dfaf3d67a60d1e7ec5c069f65ab39aff4d88e4dba5ce5b0934c4d2c19",
    "language": "markdown",
@@ -471,14 +471,14 @@
   },
   {
    "path": "team/index.md",
-   "sha256": "b75a81179f2a390e9fb70ed7214fc468f6768e00d7c3290594cbc36a6f11ff74",
+   "sha256": "477c129c1a55591c68b2cbf81bc1495a7c3bf82ce9cb0c152750a40050f5f22a",
    "language": "markdown",
    "size": 3493,
    "lines": 60
   },
   {
    "path": "team/interviewer/index.md",
-   "sha256": "e4dd581229a895a333e53b11ec213656ed6046a6b6eea4873389a1f9b787cb9d",
+   "sha256": "daabd5eed543eaba5589b3e1a316d24a8795b89addf90eac84f92beaf5ceed96",
    "language": "markdown",
    "size": 4036,
    "lines": 68
@@ -506,7 +506,7 @@
   },
   {
    "path": "team/journalist/index.md",
-   "sha256": "f40b454523e08770470b0495bebd32759cfd8fb7d5e439179e5a5ba8c580fb3b",
+   "sha256": "62d725072e85bff8e049b2229208c04f61fb6aeafbfeb80ef976213fed864e6b",
    "language": "markdown",
    "size": 5013,
    "lines": 71
@@ -534,7 +534,7 @@
   },
   {
    "path": "team/librarian/index.md",
-   "sha256": "67ebb40bff6d69275b0103fc65504103bbbb414ffc8004ddd734878e6e9c439c",
+   "sha256": "cf66642d01305eb786bac916d0144c0865f446bb0803ba738af60518a63fe96e",
    "language": "markdown",
    "size": 3974,
    "lines": 68
